@@ -37,6 +37,20 @@ function App() {
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-violet-500/3 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '9s', animationDelay: '1.5s' }}
           ></div>
+
+          {/* Additional subtle glows */}
+          <div 
+            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-cyan-500/4 rounded-full blur-[100px] animate-glow-pulse"
+            style={{ animationDuration: '10s', animationDelay: '2s' }}
+          ></div>
+          <div 
+            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-pink-500/4 rounded-full blur-[120px] animate-glow-pulse"
+            style={{ animationDuration: '12s', animationDelay: '3s' }}
+          ></div>
+          <div 
+            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-emerald-500/3 rounded-full blur-[90px] animate-glow-pulse"
+            style={{ animationDuration: '14s', animationDelay: '4s' }}
+          ></div>
         </div>
         
         {/* Animated background grid - reduced opacity */}
@@ -52,6 +66,42 @@ function App() {
                 animationDuration: `${5 + Math.random() * 10}s`
               }}
             />
+          ))}
+        </div>
+
+        {/* Twinkling stars */}
+        <div className="fixed inset-0 overflow-hidden opacity-40">
+          {[...Array(30)].map((_, i) => (
+            <div
+              key={`star-${i}`}
+              className="absolute animate-twinkle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            >
+              <div className="w-1 h-1 bg-white rounded-full shadow-sm shadow-white/50"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Floating star particles */}
+        <div className="fixed inset-0 overflow-hidden opacity-30">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={`floating-star-${i}`}
+              className="absolute animate-star-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${6 + Math.random() * 8}s`
+              }}
+            >
+              ✨
+            </div>
           ))}
         </div>
 

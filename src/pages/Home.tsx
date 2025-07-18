@@ -133,6 +133,23 @@ export function Home() {
               />
             ))}
           </div>
+
+          {/* Extra subtle star field */}
+          <div className="absolute inset-0 overflow-hidden opacity-20">
+            {[...Array(40)].map((_, i) => (
+              <div
+                key={`home-star-${i}`}
+                className="absolute w-0.5 h-0.5 bg-white rounded-full animate-twinkle"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 6}s`,
+                  animationDuration: `${3 + Math.random() * 4}s`,
+                  boxShadow: '0 0 4px rgba(255,255,255,0.5)'
+                }}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Hero Section */}
