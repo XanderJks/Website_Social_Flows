@@ -208,10 +208,10 @@ export function Home() {
                     className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Start uw SocialFlows project"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl"></div>
-                    <div className="absolute inset-0 bg-white/15 backdrop-blur-xl rounded-2xl border border-blue-400/40 group-hover:bg-white/25 group-hover:border-blue-300/60 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-600 to-gray-700 rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-white/15 backdrop-blur-xl rounded-2xl border border-slate-400/40 group-hover:bg-white/25 group-hover:border-slate-300/60 transition-all duration-300"></div>
                     <span className="relative z-10 font-black text-white drop-shadow-lg">Start Gratis Demo</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/60 to-indigo-600/60 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-500/60 to-gray-600/60 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
                   </button>
                   
                   <button 
@@ -219,9 +219,9 @@ export function Home() {
                     className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Bekijk onze features"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-2xl rounded-2xl border border-emerald-400/40 group-hover:bg-gradient-to-r group-hover:from-emerald-600/40 group-hover:to-teal-600/40 group-hover:border-emerald-300/60 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600/30 to-slate-600/30 backdrop-blur-2xl rounded-2xl border border-gray-400/40 group-hover:bg-gradient-to-r group-hover:from-gray-600/40 group-hover:to-slate-600/40 group-hover:border-gray-300/60 transition-all duration-300"></div>
                     <span className="relative z-10 font-bold text-white drop-shadow-lg">Bekijk Features</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/40 to-teal-500/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-500/40 to-slate-500/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                   </button>
                 </div>
 
