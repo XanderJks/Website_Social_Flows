@@ -392,12 +392,104 @@
   .btn-primary,
   .btn-secondary {
     backdrop-filter: blur(15px);
+    @apply px-4 py-2 text-sm;
   }
   
   /* Reduce gradient complexity on mobile */
   .gradient-text {
     background-size: 200% 200%;
     animation-duration: 8s;
+  }
+  
+  /* Mobile-specific zoom out styles */
+  .text-hero {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+  
+  .text-display {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  /* Smaller spacing on mobile */
+  .mobile-compact {
+    @apply py-8 px-4;
+  }
+  
+  /* Smaller buttons on mobile */
+  .btn-mobile-small {
+    @apply px-3 py-1.5 text-xs;
+  }
+  
+  /* Compact feature cards on mobile */
+  .feature-card {
+    @apply p-4;
+  }
+  
+  /* Smaller navigation on mobile */
+  .nav-mobile-compact {
+    @apply px-3 py-2 text-xs;
+  }
+  
+  /* Reduce form spacing on mobile */
+  .form-mobile-compact {
+    @apply space-y-3;
+  }
+  
+  .form-mobile-compact input,
+  .form-mobile-compact textarea {
+    @apply py-2 px-3 text-sm;
+  }
+  
+  /* Smaller icons on mobile */
+  .icon-mobile-small {
+    @apply w-6 h-6;
+  }
+  
+  /* Compact grid on mobile */
+  .grid-mobile-compact {
+    @apply gap-4;
+  }
+  
+  /* Smaller headings on mobile */
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  h3 {
+    @apply text-xl;
+  }
+  
+  /* Smaller text sizes on mobile */
+  .text-lg {
+    @apply text-base;
+  }
+  
+  .text-xl {
+    @apply text-lg;
+  }
+  
+  .text-2xl {
+    @apply text-xl;
+  }
+  
+  .text-3xl {
+    @apply text-2xl;
+  }
+  
+  .text-4xl {
+    @apply text-3xl;
+  }
+  
+  .text-5xl {
+    @apply text-4xl;
+  }
+  
+  .text-6xl {
+    @apply text-5xl;
   }
 }
 
