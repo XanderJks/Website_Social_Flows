@@ -87,24 +87,6 @@ function App() {
           ))}
         </div>
 
-        {/* Floating star particles */}
-        <div className="fixed inset-0 overflow-hidden opacity-30">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={`floating-star-${i}`}
-              className="absolute animate-star-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 8}s`,
-                animationDuration: `${6 + Math.random() * 8}s`
-              }}
-            >
-              ✨
-            </div>
-          ))}
-        </div>
-
         <Navigation />
         
         <Routes>
