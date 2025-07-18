@@ -125,16 +125,16 @@ export function Navigation() {
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center">
               <button 
-                className={`text-white hover:text-gray-300 transition-colors p-2 rounded-full hover:bg-white/10 ${
+                className={`text-white hover:text-gray-300 transition-colors rounded-full hover:bg-white/10 ${
                   isScrolled ? 'text-xs py-1.5 px-3' : 'text-sm py-2 px-4'
                 }`}
                 onClick={toggleMenu}
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? (
-                  <X size={isScrolled ? 18 : 20} className="transition-all duration-500" />
+                  <X size={isScrolled ? 16 : 18} className="transition-all duration-500" />
                 ) : (
-                  <Menu size={isScrolled ? 18 : 20} className="transition-all duration-500" />
+                  <Menu size={isScrolled ? 16 : 18} className="transition-all duration-500" />
                 )}
               </button>
             </div>
@@ -146,44 +146,44 @@ export function Navigation() {
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" onClick={toggleMenu}></div>
-          <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-80 max-w-sm">
-            <div className="bg-black/90 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl p-6">
-              <div className="space-y-4">
+          <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-72 max-w-sm">
+            <div className="bg-black/90 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl p-4">
+              <div className="space-y-3">
                 <button 
                   onClick={() => scrollToSection('features')}
-                  className="block w-full text-left px-6 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
                 >
                   Features
                 </button>
                 <button 
                   onClick={() => scrollToSection('process')}
-                  className="block w-full text-left px-6 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
                 >
                   Proces
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
-                  className="block w-full text-left px-6 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
                 >
                   Prijzen
                 </button>
                 <button 
                   onClick={() => scrollToSection('demo')}
-                  className="block w-full text-left px-6 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
                 >
                   Demo
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="block w-full text-left px-6 py-3 text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
+                  className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-white/10 rounded-xl transition-colors font-medium"
                 >
                   Contact
                 </button>
                 
-                <div className="pt-4 border-t border-white/10">
+                <div className="pt-3 border-t border-white/10">
                   <button 
                     onClick={() => scrollToSection('demo')}
-                    className="w-full relative group text-sm px-6 py-3 overflow-hidden rounded-xl"
+                    className="w-full relative group text-sm px-4 py-2 overflow-hidden rounded-xl"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-700 to-slate-800 rounded-xl"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
