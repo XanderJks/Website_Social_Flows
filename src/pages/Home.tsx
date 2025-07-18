@@ -346,7 +346,7 @@ export function Home() {
 
         {/* Process Section */}
         <section id="process" className="relative z-10 py-32" aria-labelledby="process-heading">
-          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
@@ -362,8 +362,15 @@ export function Home() {
               </p>
             </div>
             
-            <div className="relative">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-none mx-auto">
+            {/* Modern Timeline Layout */}
+            <div className="relative max-w-6xl mx-auto">
+              {/* Connection Lines - Desktop Only */}
+              <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              <div className="hidden lg:block absolute top-16 left-1/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
+              <div className="hidden lg:block absolute top-16 left-2/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
+              <div className="hidden lg:block absolute top-16 left-3/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6">
                 {[
                   {
                     step: '01',
@@ -376,8 +383,9 @@ export function Home() {
                       'Klantprofiel opstellen',
                       'Doelstellingen vaststellen'
                     ],
-                    gradient: 'from-purple-500/20 to-indigo-500/20',
-                    iconColor: 'text-indigo-400'
+                    gradient: 'from-blue-500/10 to-indigo-500/10',
+                    iconColor: 'text-blue-400',
+                    stepColor: 'bg-gradient-to-r from-blue-500 to-indigo-500'
                   },
                   {
                     step: '02',
@@ -390,8 +398,9 @@ export function Home() {
                       'Klantjourney mapping',
                       'AI strategie ontwikkeling'
                     ],
-                    gradient: 'from-indigo-500/20 to-blue-500/20',
-                    iconColor: 'text-purple-400'
+                    gradient: 'from-indigo-500/10 to-purple-500/10',
+                    iconColor: 'text-indigo-400',
+                    stepColor: 'bg-gradient-to-r from-indigo-500 to-purple-500'
                   },
                   {
                     step: '03',
@@ -404,8 +413,9 @@ export function Home() {
                       'Stem en persoonlijkheid',
                       'Uitgebreide test fase'
                     ],
-                    gradient: 'from-blue-500/20 to-purple-500/20',
-                    iconColor: 'text-blue-400'
+                    gradient: 'from-purple-500/10 to-pink-500/10',
+                    iconColor: 'text-purple-400',
+                    stepColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
                   },
                   {
                     step: '04',
@@ -418,81 +428,92 @@ export function Home() {
                       'Performance monitoring',
                       'Continue optimalisatie'
                     ],
-                    gradient: 'from-purple-500/20 to-indigo-500/20',
-                    iconColor: 'text-purple-400'
+                    gradient: 'from-pink-500/10 to-rose-500/10',
+                    iconColor: 'text-pink-400',
+                    stepColor: 'bg-gradient-to-r from-pink-500 to-rose-500'
                   }
                 ].map((step, index) => (
-                  <div key={index} className={`relative lg:px-4 flex flex-col max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
-                    {/* Step number circle */}
-                    <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-8 lg:mb-12">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-full border border-white/30 shadow-2xl`}></div>
-                      <span className="relative z-10 text-2xl font-black text-white drop-shadow-lg">{step.step}</span>
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-full blur-xl opacity-50`}></div>
+                  <div key={index} className={`relative flex flex-col scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
+                    {/* Modern Step Indicator */}
+                    <div className="relative z-10 flex items-center justify-center mx-auto mb-8">
+                      <div className={`w-12 h-12 rounded-2xl ${step.stepColor} flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300`}>
+                        <span className="text-white font-bold text-lg">{step.step}</span>
+                      </div>
                     </div>
                     
-                    {/* Process card */}
-                    <div className="relative group flex-1 flex flex-col">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
-                      <div className="relative p-8 lg:p-10 text-center flex-1 flex flex-col">
-                        <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
+                    {/* Sleek Process Card */}
+                    <div className="relative group flex-1 flex flex-col h-full">
+                      {/* Card Background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-white/[0.08] backdrop-blur-xl rounded-3xl border border-white/10 group-hover:border-white/20 transition-all duration-500 shadow-xl group-hover:shadow-2xl"></div>
+                      
+                      {/* Card Content */}
+                      <div className="relative p-8 text-center flex-1 flex flex-col">
+                        {/* Icon */}
+                        <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-14 h-14 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg border border-white/10`}>
                           <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
                         </div>
                         
-                        <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-white drop-shadow-lg">{step.title}</h3>
-                        <p className="text-white/80 mb-6 text-lg lg:text-xl leading-relaxed flex-1">
+                        {/* Title */}
+                        <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white leading-tight">{step.title}</h3>
+                        
+                        {/* Description */}
+                        <p className="text-white/70 mb-6 text-base leading-relaxed flex-1">
                           {step.description}
                         </p>
                         
-                        <ul className="space-y-3 text-left">
+                        {/* Features List */}
+                        <ul className="space-y-3 text-left mt-auto">
                           {step.details.map((detail, idx) => (
                             <li key={idx} className="flex items-start">
-                              <CheckCircle size={16} className="text-green-400 mr-3 mt-1 flex-shrink-0 drop-shadow-lg" aria-hidden="true" />
-                              <span className="text-white/90 text-sm lg:text-base">{detail}</span>
+                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-white/60 to-white/30 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                              <span className="text-white/80 text-sm">{detail}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500 -z-10`}></div>
+                      
+                      {/* Hover Glow */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-all duration-500 -z-10`}></div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             
-            {/* Timeline stats */}
-            <div className="mt-24 text-center max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {/* Modern Stats Section */}
+            <div className="mt-20 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
-                  <div className="relative p-6">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
+                  <div className="relative p-8">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-3">
                       1-2 weken
                     </div>
-                    <div className="text-white/80 font-medium">
+                    <div className="text-white/70 font-medium text-sm">
                       Gemiddelde implementatietijd
                     </div>
                   </div>
                 </div>
                 
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
-                  <div className="relative p-6">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
+                  <div className="relative p-8">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-3">
                       24/7
                     </div>
-                    <div className="text-white/80 font-medium">
+                    <div className="text-white/70 font-medium text-sm">
                       AI beschikbaarheid
                     </div>
                   </div>
                 </div>
                 
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
-                  <div className="relative p-6">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
+                  <div className="relative p-8">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
                       98%
                     </div>
-                    <div className="text-white/80 font-medium">
+                    <div className="text-white/70 font-medium text-sm">
                       Klantentevredenheid
                     </div>
                   </div>
