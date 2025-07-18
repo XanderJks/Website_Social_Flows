@@ -94,31 +94,31 @@ export function Home() {
         <div className="fixed inset-0 z-0">
           {/* Primary liquid glass orbs */}
           <div 
-            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-blue-400/20 via-indigo-500/15 to-purple-500/20 rounded-full blur-3xl animate-pulse"
+              className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-blue-500/25 via-indigo-600/20 to-purple-600/25 rounded-full blur-3xl animate-pulse"
             style={{ 
               animationDuration: '8s',
               filter: 'blur(80px)',
-              background: 'radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(99,102,241,0.15) 50%, rgba(139,92,246,0.2) 100%)'
+              background: 'radial-gradient(circle, rgba(37,99,235,0.25) 0%, rgba(79,70,229,0.2) 50%, rgba(124,58,237,0.25) 100%)'
             }}
           ></div>
           
           <div 
-            className="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-500/20 via-indigo-500/15 to-blue-400/20 rounded-full blur-3xl animate-pulse"
+            className="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-600/25 via-indigo-600/20 to-blue-500/25 rounded-full blur-3xl animate-pulse"
             style={{ 
               animationDuration: '12s', 
               animationDelay: '2s',
               filter: 'blur(70px)',
-              background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, rgba(99,102,241,0.15) 50%, rgba(59,130,246,0.2) 100%)'
+              background: 'radial-gradient(circle, rgba(124,58,237,0.25) 0%, rgba(79,70,229,0.2) 50%, rgba(37,99,235,0.25) 100%)'
             }}
           ></div>
           
           <div 
-            className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-tr from-indigo-400/18 via-blue-500/12 to-purple-500/18 rounded-full blur-3xl animate-pulse"
+            className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-tr from-indigo-500/22 via-blue-600/16 to-purple-600/22 rounded-full blur-3xl animate-pulse"
             style={{ 
               animationDuration: '10s', 
               animationDelay: '4s',
               filter: 'blur(60px)',
-              background: 'radial-gradient(circle, rgba(99,102,241,0.18) 0%, rgba(59,130,246,0.12) 50%, rgba(139,92,246,0.18) 100%)'
+              background: 'radial-gradient(circle, rgba(79,70,229,0.22) 0%, rgba(37,99,235,0.16) 50%, rgba(124,58,237,0.22) 100%)'
             }}
           ></div>
 
@@ -168,7 +168,7 @@ export function Home() {
                   <span className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl">
                     <Mic size={16} className="mr-3 text-blue-400" />
                     De toekomst van restaurant service
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/15 to-indigo-600/15 rounded-full blur-xl"></div>
                   </span>
                 </div>
                 
@@ -176,21 +176,21 @@ export function Home() {
                 <div className="space-y-8 mb-16">
                   {/* Primary Headline with enhanced glass effect */}
                   <div className="relative">
-                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
+                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 drop-shadow-2xl">
                       SocialFlows
                     </h1>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-indigo-500/20 to-purple-500/20 blur-3xl -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/25 via-indigo-600/25 to-purple-600/25 blur-3xl -z-10"></div>
                   </div>
                   
                   {/* Subtitle with liquid glass container */}
                   <div className="relative max-w-5xl mx-auto">
-                    <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl"></div>
+                    <div className="absolute inset-0 bg-white/8 backdrop-blur-xl rounded-3xl border border-white/15 shadow-2xl"></div>
                     <div className="relative p-8 text-xl sm:text-2xl lg:text-3xl font-light text-white/90 leading-tight">
                       <span className="block mb-3">
                         Voice AI assistenten voor restaurants
                       </span>
                       <span className="block">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 font-medium">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 font-semibold">
                           Automatiseer reserveringen en bestellingen
                         </span>
                       </span>
@@ -208,10 +208,10 @@ export function Home() {
                     className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Start uw SocialFlows project"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
-                    <span className="relative z-10 font-bold text-white drop-shadow-lg">Start Gratis Demo</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/50 to-indigo-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
+                    <span className="relative z-10 font-black text-white drop-shadow-lg">Start Gratis Demo</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/60 to-indigo-600/60 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
                   </button>
                   
                   <button 
@@ -219,9 +219,9 @@ export function Home() {
                     className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Bekijk onze features"
                   >
-                    <div className="absolute inset-0 bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"></div>
-                    <span className="relative z-10 font-semibold text-white drop-shadow-lg">Bekijk Features</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                    <div className="absolute inset-0 bg-white/15 backdrop-blur-2xl rounded-2xl border border-white/25 group-hover:bg-white/25 group-hover:border-white/35 transition-all duration-300"></div>
+                    <span className="relative z-10 font-bold text-white drop-shadow-lg">Bekijk Features</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/15 to-blue-600/25 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                   </button>
                 </div>
 
@@ -239,11 +239,11 @@ export function Home() {
                         <div className="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-2 drop-shadow-lg">
                           {stat.value}
                         </div>
-                        <div className="text-sm text-white/80 uppercase tracking-wider font-medium">
+                        <div className="text-sm text-white/80 uppercase tracking-wider font-semibold">
                           {stat.label}
                         </div>
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/25 to-indigo-600/25 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                     </div>
                   ))}
                 </div>

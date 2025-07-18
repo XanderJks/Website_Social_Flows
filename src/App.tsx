@@ -25,47 +25,47 @@ function App() {
         <div className="fixed inset-0 z-0">
           {/* Main center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-indigo-500/5 rounded-full blur-[140px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-indigo-600/8 rounded-full blur-[140px] animate-pulse"
             style={{ animationDuration: '6s' }}
           ></div>
           
           {/* Secondary center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-purple-500/5 rounded-full blur-[130px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-purple-600/8 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '8s', animationDelay: '1s' }}
           ></div>
 
           {/* Accent glows */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 w-[30rem] h-[30rem] bg-blue-500/3 rounded-full blur-[120px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 w-[30rem] h-[30rem] bg-blue-600/6 rounded-full blur-[120px] animate-pulse"
             style={{ animationDuration: '7s', animationDelay: '0.5s' }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-violet-500/3 rounded-full blur-[130px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-violet-600/6 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '9s', animationDelay: '1.5s' }}
           ></div>
 
           {/* Additional subtle glows */}
           <div 
-            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-cyan-500/4 rounded-full blur-[100px] animate-glow-pulse"
+            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-cyan-600/6 rounded-full blur-[100px] animate-glow-pulse"
             style={{ animationDuration: '10s', animationDelay: '2s' }}
           ></div>
           <div 
-            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-pink-500/4 rounded-full blur-[120px] animate-glow-pulse"
+            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-pink-600/6 rounded-full blur-[120px] animate-glow-pulse"
             style={{ animationDuration: '12s', animationDelay: '3s' }}
           ></div>
           <div 
-            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-emerald-500/3 rounded-full blur-[90px] animate-glow-pulse"
+            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-emerald-600/5 rounded-full blur-[90px] animate-glow-pulse"
             style={{ animationDuration: '14s', animationDelay: '4s' }}
           ></div>
         </div>
         
         {/* Animated background grid - reduced opacity */}
-        <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute inset-0 overflow-hidden opacity-15">
           {[...Array(particleCount)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-px h-px bg-white animate-float"
+              className="absolute w-0.5 h-0.5 bg-white animate-float"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -77,7 +77,7 @@ function App() {
         </div>
 
         {/* Twinkling stars */}
-        <div className="fixed inset-0 overflow-hidden opacity-40">
+        <div className="fixed inset-0 overflow-hidden opacity-50">
           {[...Array(starCount)].map((_, i) => (
             <div
               key={`star-${i}`}
@@ -89,7 +89,7 @@ function App() {
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             >
-              <div className="w-1 h-1 bg-white rounded-full shadow-sm shadow-white/50"></div>
+              <div className="w-1 h-1 bg-white rounded-full shadow-sm shadow-white/60"></div>
             </div>
           ))}
         </div>
