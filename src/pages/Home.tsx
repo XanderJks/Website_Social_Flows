@@ -176,7 +176,7 @@ export function Home() {
                 <div className="space-y-8 mb-16">
                   {/* Primary Headline with enhanced glass effect */}
                   <div className="relative">
-                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-white drop-shadow-2xl">
+                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none bg-gradient-to-br from-white via-gray-100 to-blue-100 bg-clip-text text-transparent drop-shadow-2xl">
                       SocialFlows
                     </h1>
                     <div className="absolute inset-0 bg-gradient-to-r from-white/25 via-gray-300/25 to-white/25 blur-3xl -z-10"></div>
@@ -187,15 +187,15 @@ export function Home() {
                     <div className="absolute inset-0 bg-white/8 backdrop-blur-xl rounded-3xl border border-white/15 shadow-2xl"></div>
                     <div className="relative p-8 text-xl sm:text-2xl lg:text-3xl font-light text-white/90 leading-tight">
                       <span className="block mb-3">
-                        Voice AI assistenten voor restaurants
+                        <span className="text-blue-200">Voice AI assistenten</span> voor restaurants
                       </span>
                       <span className="block">
-                        <span className="text-white font-bold">
+                        <span className="text-white font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                           Automatiseer reserveringen en bestellingen
                         </span>
                       </span>
                       <span className="block mt-3 text-lg lg:text-xl text-white/70">
-                        zodat u zich kunt focussen op geweldige gerechten
+                        zodat u zich kunt focussen op <span className="text-blue-200 font-medium">geweldige gerechten</span>
                       </span>
                     </div>
                   </div>
