@@ -211,6 +211,80 @@
   will-change: transform, opacity;
 }
 
+.animate-ai-pulse {
+  animation: ai-pulse 2s ease-in-out infinite;
+  will-change: transform, opacity, box-shadow;
+}
+
+.animate-ai-scan {
+  animation: ai-scan 3s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-neural-network {
+  animation: neural-network 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-data-flow {
+  animation: data-flow 2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes ai-pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale3d(1, 1, 1);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale3d(1.05, 1.05, 1);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+  }
+}
+
+@keyframes ai-scan {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes neural-network {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale3d(1, 1, 1) rotate(0deg);
+  }
+  33% {
+    opacity: 0.6;
+    transform: scale3d(1.1, 1.1, 1) rotate(120deg);
+  }
+  66% {
+    opacity: 0.8;
+    transform: scale3d(0.9, 0.9, 1) rotate(240deg);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) scale(0.8);
+  }
+}
+
 .animate-liquid-morph {
   animation: liquid-morph 20s ease-in-out infinite;
   will-change: transform, border-radius;
