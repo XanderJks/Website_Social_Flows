@@ -363,9 +363,6 @@ export function Home() {
             </div>
             
             <div className="relative">
-              {/* Process line */}
-              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-blue-500/50 transform -translate-y-1/2 hidden lg:block"></div>
-              
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 {[
                   {
