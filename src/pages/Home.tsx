@@ -162,13 +162,13 @@ export function Home() {
 
         {/* Hero Section */}
         <section id="home" className="relative z-20 pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-48 lg:pb-32 relative z-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 relative z-20">
             <div className="text-center">
               {/* Liquid Glass Hero Content */}
               <div className="max-w-6xl mx-auto">
                 {/* Overline with liquid glass effect */}
-                <div className="mb-8">
-                  <span className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl">
+                <div className="mb-6 sm:mb-8">
+                  <span className="inline-flex items-center px-4 py-2 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl">
                     <Mic size={16} className="mr-3 text-blue-400" />
                     <span className="text-white font-bold">De toekomst van restaurant service</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/15 to-indigo-600/15 rounded-full blur-xl"></div>
@@ -176,10 +176,10 @@ export function Home() {
                 </div>
                 
                 {/* Main Typography with liquid glass styling */}
-                <div className="space-y-8 mb-16">
+                <div className="space-y-4 sm:space-y-8 mb-8 sm:mb-16">
                   {/* Primary Headline with enhanced glass effect */}
                   <div className="relative">
-                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none bg-gradient-to-br from-white via-gray-100 to-blue-100 bg-clip-text text-transparent drop-shadow-2xl">
+                    <h1 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none bg-gradient-to-br from-white via-gray-100 to-blue-100 bg-clip-text text-transparent drop-shadow-2xl">
                       SocialFlows
                     </h1>
                     <div className="absolute inset-0 bg-gradient-to-r from-white/25 via-gray-300/25 to-white/25 blur-3xl -z-10"></div>
@@ -188,7 +188,7 @@ export function Home() {
                   {/* Subtitle with liquid glass container */}
                   <div className="relative max-w-5xl mx-auto">
                     <div className="absolute inset-0 bg-white/8 backdrop-blur-xl rounded-3xl border border-white/15 shadow-2xl"></div>
-                    <div className="relative p-8 text-xl sm:text-2xl lg:text-3xl font-light text-white/90 leading-tight">
+                    <div className="relative p-4 sm:p-8 text-lg sm:text-xl lg:text-3xl font-light text-white/90 leading-tight">
                       <span className="block mb-3">
                         <span className="text-blue-200">Voice AI assistenten</span> voor restaurants
                       </span>
@@ -197,7 +197,7 @@ export function Home() {
                           Automatiseer reserveringen en bestellingen
                         </span>
                       </span>
-                      <span className="block mt-3 text-lg lg:text-xl text-white/70">
+                      <span className="block mt-3 text-base sm:text-lg lg:text-xl text-white/70">
                         zodat u zich kunt focussen op <span className="text-blue-200 font-medium">geweldige gerechten</span>
                       </span>
                     </div>
@@ -205,10 +205,10 @@ export function Home() {
                 </div>
                 
                 {/* Liquid Glass Action Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-20">
                   <button 
                     onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
+                    className="relative group text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Start uw SocialFlows project"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-600 to-gray-700 rounded-2xl"></div>
@@ -219,7 +219,7 @@ export function Home() {
                   
                   <button 
                     onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
+                    className="relative group text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Bekijk onze features"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-600/30 to-slate-600/30 backdrop-blur-2xl rounded-2xl border border-gray-400/40 group-hover:bg-gradient-to-r group-hover:from-gray-600/40 group-hover:to-slate-600/40 group-hover:border-gray-300/60 transition-all duration-300"></div>
@@ -229,7 +229,7 @@ export function Home() {
                 </div>
 
                 {/* Liquid Glass Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mb-12 sm:mb-20">
                   {[
                     { value: '200+', label: 'Tevreden restaurants' },
                     { value: '24/7', label: 'AI beschikbaar' },
@@ -238,11 +238,11 @@ export function Home() {
                   ].map((stat, index) => (
                     <div key={index} className="relative group">
                       <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300"></div>
-                      <div className="relative p-6 text-center">
-                        <div className="text-4xl lg:text-5xl font-black text-white mb-2 drop-shadow-lg">
+                      <div className="relative p-3 sm:p-6 text-center">
+                        <div className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2 drop-shadow-lg">
                           {stat.value}
                         </div>
-                        <div className="text-sm text-white uppercase tracking-wider font-bold">
+                        <div className="text-xs sm:text-sm text-white uppercase tracking-wider font-bold">
                           {stat.label}
                         </div>
                       </div>
@@ -256,24 +256,24 @@ export function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="relative z-10 py-32" aria-labelledby="features-heading">
+        <section id="features" className="relative z-10 py-16 sm:py-32" aria-labelledby="features-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
+            <div className="text-center mb-12 sm:mb-24 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
+                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
                   <Bot size={16} className="mr-2" />
                   <span className="text-white font-bold">Geavanceerde AI technologie</span>
                 </span>
               </div>
-              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
+              <h2 id="features-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Alles wat uw restaurant nodig heeft
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
+              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 SocialFlows biedt een complete AI-assistent die uw restaurant helpt met telefonische bestellingen, reserveringen en klantenservice.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" ref={featuresRef}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto" ref={featuresRef}>
               {[
                 {
                   icon: PhoneCall,
@@ -317,22 +317,22 @@ export function Home() {
                   features: ['GDPR compliant', 'Data encryptie', '99.9% uptime'],
                   gradient: 'from-gray-500/15 to-slate-500/15'
                 }
-              ].map((feature, index) => (
-                <article key={index} className={`relative group max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
+              ].slice(0, 4).map((feature, index) => (
+                <article key={index} className={`relative group mx-auto scroll-hidden scroll-stagger-${index + 1} ${index >= 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`} data-animation="fade-in-up">
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
-                  <div className="relative p-8 h-full">
+                  <div className="relative p-6 sm:p-8 h-full">
                     <div className={`p-4 bg-gradient-to-br ${feature.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
                       <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">{feature.title}</h3>
-                    <p className="text-white/80 mb-8 text-lg leading-relaxed">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white drop-shadow-lg">{feature.title}</h3>
+                    <p className="text-white/80 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
                       {feature.description}
                     </p>
                     <ul className="space-y-3">
                       {feature.features.map((item, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle size={18} className="text-green-400 mr-3 drop-shadow-lg" aria-hidden="true" />
-                          <span className="text-white/90">{item}</span>
+                          <span className="text-white/90 text-sm sm:text-base">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -345,19 +345,19 @@ export function Home() {
         </section>
 
         {/* Process Section */}
-        <section id="process" className="relative z-10 py-32" aria-labelledby="process-heading">
+        <section id="process" className="relative z-10 py-16 sm:py-32" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
+            <div className="text-center mb-12 sm:mb-24 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
+                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-indigo-300 shadow-xl">
                   <Sparkles size={16} className="mr-2" />
                   <span className="text-white font-bold">Ons bewezen proces</span>
                 </span>
               </div>
-              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
+              <h2 id="process-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Zo implementeren we uw AI assistent
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
+              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Van eerste gesprek tot volledige implementatie. Ontdek hoe we uw restaurant transformeren in slechts 4 stappen.
               </p>
             </div>
@@ -370,7 +370,7 @@ export function Home() {
               <div className="hidden lg:block absolute top-16 left-2/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
               <div className="hidden lg:block absolute top-16 left-3/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6">
                 {[
                   {
                     step: '01',
@@ -447,17 +447,17 @@ export function Home() {
                       <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-white/[0.08] backdrop-blur-xl rounded-3xl border border-white/10 group-hover:border-white/20 transition-all duration-500 shadow-xl group-hover:shadow-2xl"></div>
                       
                       {/* Card Content */}
-                      <div className="relative p-8 text-center flex-1 flex flex-col">
+                      <div className="relative p-6 sm:p-8 lg:p-10 text-center flex-1 flex flex-col">
                         {/* Icon */}
                         <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-14 h-14 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg border border-white/10`}>
                           <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
                         </div>
                         
                         {/* Title */}
-                        <h3 className="text-xl lg:text-2xl font-bold mb-4 text-white leading-tight">{step.title}</h3>
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-white leading-tight">{step.title}</h3>
                         
                         {/* Description */}
-                        <p className="text-white/70 mb-6 text-base leading-relaxed flex-1">
+                        <p className="text-white/70 mb-6 text-base sm:text-lg leading-relaxed flex-1">
                           {step.description}
                         </p>
                         
@@ -466,7 +466,7 @@ export function Home() {
                           {step.details.map((detail, idx) => (
                             <li key={idx} className="flex items-start">
                               <div className="w-1.5 h-1.5 bg-gradient-to-r from-white/60 to-white/30 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-white/80 text-sm">{detail}</span>
+                              <span className="text-white/80 text-sm sm:text-base">{detail}</span>
                             </li>
                           ))}
                         </ul>
@@ -482,14 +482,14 @@ export function Home() {
             
             {/* Modern Stats Section */}
             <div className="mt-20 text-center">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
-                  <div className="relative p-8">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-3">
+                  <div className="relative p-6 sm:p-8">
+                    <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-3">
                       1-2 weken
                     </div>
-                    <div className="text-white/70 font-medium text-sm">
+                    <div className="text-white/70 font-medium text-xs sm:text-sm">
                       Gemiddelde implementatietijd
                     </div>
                   </div>
@@ -497,11 +497,11 @@ export function Home() {
                 
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
-                  <div className="relative p-8">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-3">
+                  <div className="relative p-6 sm:p-8">
+                    <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-3">
                       24/7
                     </div>
-                    <div className="text-white/70 font-medium text-sm">
+                    <div className="text-white/70 font-medium text-xs sm:text-sm">
                       AI beschikbaarheid
                     </div>
                   </div>
@@ -509,11 +509,11 @@ export function Home() {
                 
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
-                  <div className="relative p-8">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
+                  <div className="relative p-6 sm:p-8">
+                    <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
                       98%
                     </div>
-                    <div className="text-white/70 font-medium text-sm">
+                    <div className="text-white/70 font-medium text-xs sm:text-sm">
                       Klantentevredenheid
                     </div>
                   </div>
@@ -524,24 +524,24 @@ export function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative z-10 py-32" aria-labelledby="pricing-heading">
+        <section id="pricing" className="relative z-10 py-16 sm:py-32" aria-labelledby="pricing-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
+            <div className="text-center mb-12 sm:mb-24 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
+                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
                   <Target size={16} className="mr-2" />
                   <span className="text-white font-bold">Transparante prijzen</span>
                 </span>
               </div>
-              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
+              <h2 id="pricing-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Kies uw AI assistent plan
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
+              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Start met onze gratis demo en upgrade naar een plan dat past bij uw restaurant. Alle plannen bevatten setup en training.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" ref={pricingRef}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto" ref={pricingRef}>
               {[
                 {
                   name: 'Basic',
@@ -594,7 +594,7 @@ export function Home() {
                   gradient: 'from-indigo-500/20 to-purple-500/20'
                 }
               ].map((plan, index) => (
-                <div key={index} className={`relative group ${plan.popular ? 'scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
+                <div key={index} className={`relative group ${plan.popular ? 'sm:scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1} ${plan.popular ? 'sm:col-span-2 lg:col-span-1' : ''}`} data-animation="fade-in-up">
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                       <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
@@ -603,30 +603,30 @@ export function Home() {
                     </div>
                   )}
                   <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} backdrop-blur-xl rounded-3xl border ${plan.popular ? 'border-blue-500/50' : 'border-white/20'} group-hover:border-white/40 group-hover:shadow-2xl transition-all duration-500 shadow-2xl`}></div>
-                  <div className="relative p-8 h-full flex flex-col">
+                  <div className="relative p-6 sm:p-8 h-full flex flex-col">
                     <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                       <div className="flex items-baseline justify-center mb-4">
-                        <span className="text-5xl font-black text-white">
+                        <span className="text-4xl sm:text-5xl font-black text-white">
                           {plan.price}
                         </span>
                         <span className="text-white/60 ml-2">{plan.period}</span>
                       </div>
-                      <p className="text-white/70">{plan.description}</p>
+                      <p className="text-white/70 text-sm sm:text-base">{plan.description}</p>
                     </div>
                     
                     <ul className="space-y-4 mb-8 flex-1">
                       {plan.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle size={18} className="text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-white/90">{feature}</span>
+                          <span className="text-white/90 text-sm sm:text-base">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     
                     <button 
                       onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                      className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                      className={`w-full py-3 sm:py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base ${
                         plan.popular 
                           ? 'bg-gradient-to-r from-gray-600 to-slate-700 text-white hover:from-gray-500 hover:to-slate-600 shadow-lg hover:shadow-xl' 
                           : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
@@ -642,19 +642,19 @@ export function Home() {
             </div>
             
             <div className="text-center mt-16">
-              <p className="text-white/60 mb-4">Alle plannen bevatten volledige setup en training. Geen verborgen kosten.</p>
-              <div className="flex items-center justify-center space-x-8 text-white/40">
+              <p className="text-white/60 mb-4 text-sm sm:text-base">Alle plannen bevatten volledige setup en training. Geen verborgen kosten.</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-white/40">
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span>Geen contractverplichting</span>
+                  <span className="text-sm sm:text-base">Geen contractverplichting</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span>24/7 AI beschikbaar</span>
+                  <span className="text-sm sm:text-base">24/7 AI beschikbaar</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span>GDPR compliant</span>
+                  <span className="text-sm sm:text-base">GDPR compliant</span>
                 </div>
               </div>
             </div>
@@ -663,19 +663,19 @@ export function Home() {
 
         {/* Contact Section */}
         {/* Demo Meeting Section */}
-        <section id="demo" className="relative z-10 py-32" aria-labelledby="demo-heading">
+        <section id="demo" className="relative z-10 py-16 sm:py-32" aria-labelledby="demo-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 scroll-hidden" data-animation="fade-in-up">
+            <div className="text-center mb-12 sm:mb-16 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
+                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
                   <Calendar size={16} className="mr-2" />
                   <span className="text-white font-bold">Plan uw demo meeting</span>
                 </span>
               </div>
-              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
+              <h2 id="demo-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Plan uw persoonlijke demo
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
+              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Boek een persoonlijke demo van 15 minuten en ontdek hoe onze Voice AI assistent uw restaurant kan transformeren.
               </p>
             </div>
@@ -684,29 +684,29 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
-                <div className="relative p-8 md:p-12">
+                <div className="relative p-6 sm:p-8 md:p-12">
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                       Wat u kunt verwachten in onze demo:
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
                       <div className="flex items-center justify-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center">
                           <Mic size={18} className="text-blue-400" />
                         </div>
-                        <span className="text-white/90 font-medium">Live AI Demo</span>
+                        <span className="text-white/90 font-medium text-sm sm:text-base">Live AI Demo</span>
                       </div>
                       <div className="flex items-center justify-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl flex items-center justify-center">
                           <BarChart3 size={18} className="text-indigo-400" />
                         </div>
-                        <span className="text-white/90 font-medium">ROI Berekening</span>
+                        <span className="text-white/90 font-medium text-sm sm:text-base">ROI Berekening</span>
                       </div>
                       <div className="flex items-center justify-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-xl flex items-center justify-center">
                           <Target size={18} className="text-purple-400" />
                         </div>
-                        <span className="text-white/90 font-medium">Custom Strategie</span>
+                        <span className="text-white/90 font-medium text-sm sm:text-base">Custom Strategie</span>
                       </div>
                     </div>
                   </div>
@@ -716,7 +716,7 @@ export function Home() {
                     <iframe
                       src="https://cal.com/socialflows/demo"
                       width="100%"
-                      height="600"
+                      height="500"
                       className="rounded-xl"
                       style={{ border: 'none' }}
                       title="Plan uw SocialFlows demo"
@@ -724,7 +724,7 @@ export function Home() {
                   </div>
                   
                   <div className="text-center mt-8">
-                    <p className="text-white/60 text-sm">
+                    <p className="text-white/60 text-xs sm:text-sm">
                       Geen verplichtingen • Gratis 15 minuten demo • Direct inzicht in mogelijkheden
                     </p>
                   </div>
@@ -735,19 +735,19 @@ export function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative z-10 py-32" aria-labelledby="contact-heading">
+        <section id="contact" className="relative z-10 py-16 sm:py-32" aria-labelledby="contact-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 scroll-hidden" data-animation="fade-in-up">
+            <div className="text-center mb-12 sm:mb-16 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
+                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
                   <MessageSquare size={16} className="mr-2" />
                   <span className="text-white font-bold">Neem contact op</span>
                 </span>
               </div>
-              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
+              <h2 id="contact-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Klaar om te beginnen?
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
+              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Heeft u vragen of wilt u meer informatie? Neem direct contact met ons op via onderstaand formulier.
               </p>
             </div>
@@ -756,27 +756,27 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
-                <div className="relative p-12 md:p-16 overflow-hidden rounded-3xl">
+                <div className="relative p-6 sm:p-12 md:p-16 overflow-hidden rounded-3xl">
                   <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
                   <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
                   
-                  <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
                     <div>
-                      <h3 className="text-3xl font-bold mb-6 text-white">
+                      <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
                         Contactgegevens
                       </h3>
-                      <p className="text-white/80 text-lg mb-8 leading-relaxed">
+                      <p className="text-white/80 text-base sm:text-lg mb-8 leading-relaxed">
                         Ons team staat klaar om al uw vragen te beantwoorden en u te helpen met de implementatie van uw Voice AI assistent.
                       </p>
                       
-                      <div className="space-y-6 mb-10">
+                      <div className="space-y-4 sm:space-y-6 mb-10">
                         <div className="flex items-center">
                           <div className="w-12 h-12 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center mr-4">
                             <Mail size={20} className="text-blue-400" />
                           </div>
                           <div>
-                            <p className="font-medium text-white">Email</p>
-                            <p className="text-white/70">info@socialflows.nl</p>
+                            <p className="font-medium text-white text-sm sm:text-base">Email</p>
+                            <p className="text-white/70 text-sm sm:text-base">info@socialflows.nl</p>
                           </div>
                         </div>
                         
@@ -785,8 +785,8 @@ export function Home() {
                             <Phone size={20} className="text-indigo-400" />
                           </div>
                           <div>
-                            <p className="font-medium text-white">Telefoon</p>
-                            <p className="text-white/70">+31 (0)20 123 4567</p>
+                            <p className="font-medium text-white text-sm sm:text-base">Telefoon</p>
+                            <p className="text-white/70 text-sm sm:text-base">+31 (0)20 123 4567</p>
                           </div>
                         </div>
                         
@@ -795,8 +795,8 @@ export function Home() {
                             <MapPin size={20} className="text-purple-400" />
                           </div>
                           <div>
-                            <p className="font-medium text-white">Adres</p>
-                            <p className="text-white/70">Amsterdam, Nederland</p>
+                            <p className="font-medium text-white text-sm sm:text-base">Adres</p>
+                            <p className="text-white/70 text-sm sm:text-base">Amsterdam, Nederland</p>
                           </div>
                         </div>
                       </div>
@@ -804,50 +804,50 @@ export function Home() {
                     </div>
                     
                     <div>
-                      <form onSubmit={handleContactSubmit} className="space-y-6">
+                      <form onSubmit={handleContactSubmit} className="space-y-4 sm:space-y-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                           <div>
-                            <label className="block text-sm font-medium mb-2 text-white/90">Naam</label>
+                            <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Naam</label>
                             <input
                               type="text"
                               required
-                              className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
+                              className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm text-sm sm:text-base"
                               placeholder="Uw naam"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium mb-2 text-white/90">Email</label>
+                            <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Email</label>
                             <input
                               type="email"
                               required
-                              className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
+                              className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm text-sm sm:text-base"
                               placeholder="uw@email.nl"
                             />
                           </div>
                         </div>
                         
                         <div>
-                          <label className="block text-sm font-medium mb-2 text-white/90">Restaurant</label>
+                          <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Restaurant</label>
                           <input
                             type="text"
-                            className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
+                            className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm text-sm sm:text-base"
                             placeholder="Uw restaurant naam"
                           />
                         </div>
                         
                         <div>
-                          <label className="block text-sm font-medium mb-2 text-white/90">Bericht</label>
+                          <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Bericht</label>
                           <textarea
                             rows={4}
                             required
-                            className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white resize-none rounded-xl backdrop-blur-sm"
+                            className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white resize-none rounded-xl backdrop-blur-sm text-sm sm:text-base"
                             placeholder="Vertel ons over uw restaurant en hoe we kunnen helpen..."
                           ></textarea>
                         </div>
                         
                         <button
                           type="submit"
-                          className="w-full relative group text-lg px-8 py-4 overflow-hidden"
+                          className="w-full relative group text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 overflow-hidden"
                         >
                           <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-700 rounded-2xl"></div>
                           <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
