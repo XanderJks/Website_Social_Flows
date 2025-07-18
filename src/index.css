@@ -147,17 +147,6 @@
   background-clip: text;
 }
 
-/* Spline viewer styles */
-spline-viewer {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Enhanced liquid glass button styles */
 .btn-primary {
   @apply relative px-8 py-4 font-semibold text-white overflow-hidden

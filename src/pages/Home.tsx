@@ -135,12 +135,6 @@ export function Home() {
           </div>
         </div>
 
-        {/* Spline viewer with enhanced glass effect */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
-          <spline-viewer url="https://prod.spline.design/WD2J2PHPPYN42s9X/scene.splinecode"></spline-viewer>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/20"></div>
-        </div>
-        
         {/* Hero Section */}
         <section id="home" className="relative z-20 pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-48 lg:pb-32 relative z-20">
