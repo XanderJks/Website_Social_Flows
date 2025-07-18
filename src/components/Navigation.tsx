@@ -126,10 +126,10 @@ export function Navigation() {
             <div className="lg:hidden flex items-center">
               <button 
                 className="text-white hover:text-gray-300 transition-colors p-2 rounded-full hover:bg-white/10"
-                onClick={toggleMenu}
+                  isScrolled ? 'text-xs py-1.5 px-3' : 'text-sm py-2 px-4'
                 aria-label="Toggle mobile menu"
               >
-                {isMenuOpen ? (
+              isScrolled ? 'space-x-3 text-xs' : 'space-x-4 text-sm'
                   <X size={isScrolled ? 18 : 20} className="transition-all duration-500" />
                 ) : (
                   <Menu size={isScrolled ? 18 : 20} className="transition-all duration-500" />
