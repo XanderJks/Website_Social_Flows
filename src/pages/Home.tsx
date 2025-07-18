@@ -49,23 +49,26 @@ export function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            // Get animation type from data attribute
+            const animationType = entry.target.getAttribute('data-animation') || 'fade-in';
+            entry.target.classList.add(animationType);
+            entry.target.classList.add('scroll-visible');
+            entry.target.classList.remove('scroll-hidden');
           }
         });
       },
-      { threshold: 0.1, rootMargin: '20px' }
+      { 
+        threshold: 0.1, 
+        rootMargin: '50px 0px -50px 0px'
+      }
     );
 
-    const elements = [
-      ...(featuresRef.current?.children || []),
-      ...(benefitsRef.current?.children || []),
-      ...(pricingRef.current?.children || []),
-      contactRef.current
-    ].filter(Boolean);
+    // Get all elements with scroll animation classes
+    const elements = document.querySelectorAll('.scroll-hidden, [data-animation]');
 
     elements.forEach((element) => {
       if (element) {
-        element.classList.add('opacity-0');
+        element.classList.add('scroll-hidden');
         observer.observe(element);
       }
     });
@@ -253,24 +256,24 @@ export function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="features" ref={featuresRef} className="relative z-10 py-32" aria-labelledby="features-heading">
+        <section id="features" className="relative z-10 py-32" aria-labelledby="features-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-24">
-              <div className="mb-8">
+            <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
+              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Bot size={16} className="mr-2" />
                   <span className="text-white font-bold">Geavanceerde AI technologie</span>
                 </span>
               </div>
-              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
+              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Alles wat uw restaurant nodig heeft
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 SocialFlows biedt een complete AI-assistent die uw restaurant helpt met telefonische bestellingen, reserveringen en klantenservice.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" ref={featuresRef}>
               {[
                 {
                   icon: PhoneCall,
@@ -315,7 +318,7 @@ export function Home() {
                   gradient: 'from-gray-500/15 to-slate-500/15'
                 }
               ].map((feature, index) => (
-                <article key={index} className="relative group max-w-md mx-auto">
+                <article key={index} className={`relative group max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
                   <div className="relative p-8 h-full">
                     <div className={`p-4 bg-gradient-to-br ${feature.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
@@ -344,17 +347,17 @@ export function Home() {
         {/* Process Section */}
         <section id="process" className="relative z-10 py-32" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-24">
-              <div className="mb-8">
+            <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
+              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
                   <Sparkles size={16} className="mr-2" />
                   <span className="text-white font-bold">Ons bewezen proces</span>
                 </span>
               </div>
-              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
+              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Zo implementeren we uw AI assistent
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Van eerste gesprek tot volledige implementatie. Ontdek hoe we uw restaurant transformeren in slechts 4 stappen.
               </p>
             </div>
@@ -422,7 +425,7 @@ export function Home() {
                     iconColor: 'text-purple-400'
                   }
                 ].map((step, index) => (
-                  <div key={index} className="relative lg:px-8 flex flex-col max-w-sm mx-auto">
+                  <div key={index} className={`relative lg:px-8 flex flex-col max-w-sm mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
                     {/* Step number circle */}
                     <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-8 lg:mb-12">
                       <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-full border border-white/30 shadow-2xl`}></div>
@@ -503,24 +506,24 @@ export function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" ref={pricingRef} className="relative z-10 py-32" aria-labelledby="pricing-heading">
+        <section id="pricing" className="relative z-10 py-32" aria-labelledby="pricing-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-24">
-              <div className="mb-8">
+            <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
+              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Target size={16} className="mr-2" />
                   <span className="text-white font-bold">Transparante prijzen</span>
                 </span>
               </div>
-              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
+              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Kies uw AI assistent plan
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Start met onze gratis demo en upgrade naar een plan dat past bij uw restaurant. Alle plannen bevatten setup en training.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" ref={pricingRef}>
               {[
                 {
                   name: 'Basic',
@@ -573,7 +576,7 @@ export function Home() {
                   gradient: 'from-indigo-500/20 to-purple-500/20'
                 }
               ].map((plan, index) => (
-                <div key={index} className={`relative group ${plan.popular ? 'scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto`}>
+                <div key={index} className={`relative group ${plan.popular ? 'scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                       <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
@@ -644,22 +647,22 @@ export function Home() {
         {/* Demo Meeting Section */}
         <section id="demo" className="relative z-10 py-32" aria-labelledby="demo-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="mb-8">
+            <div className="text-center mb-16 scroll-hidden" data-animation="fade-in-up">
+              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Calendar size={16} className="mr-2" />
                   <span className="text-white font-bold">Plan uw demo meeting</span>
                 </span>
               </div>
-              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
+              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Plan uw persoonlijke demo
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Boek een persoonlijke demo van 15 minuten en ontdek hoe onze Voice AI assistent uw restaurant kan transformeren.
               </p>
             </div>
             
-            <div className="relative max-w-4xl mx-auto">
+            <div className="relative max-w-4xl mx-auto scroll-hidden scroll-stagger-4" data-animation="fade-in-up">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
@@ -714,24 +717,24 @@ export function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" ref={contactRef} className="relative z-10 py-32" aria-labelledby="contact-heading">
+        <section id="contact" className="relative z-10 py-32" aria-labelledby="contact-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="mb-8">
+            <div className="text-center mb-16 scroll-hidden" data-animation="fade-in-up">
+              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <MessageSquare size={16} className="mr-2" />
                   <span className="text-white font-bold">Neem contact op</span>
                 </span>
               </div>
-              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
+              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
                 Klaar om te beginnen?
               </h2>
-              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
                 Heeft u vragen of wilt u meer informatie? Neem direct contact met ons op via onderstaand formulier.
               </p>
             </div>
             
-            <div className="relative max-w-6xl mx-auto">
+            <div className="relative max-w-6xl mx-auto scroll-hidden scroll-stagger-4" data-animation="fade-in-up" ref={contactRef}>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>

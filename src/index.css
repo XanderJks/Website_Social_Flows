@@ -73,6 +73,49 @@
   to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translate3d(0, 40px, 0);
+  }
+  to { 
+    opacity: 1; 
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from { 
+    opacity: 0; 
+    transform: translate3d(-40px, 0, 0);
+  }
+  to { 
+    opacity: 1; 
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from { 
+    opacity: 0; 
+    transform: translate3d(40px, 0, 0);
+  }
+  to { 
+    opacity: 1; 
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes staggerFadeIn {
+  from { 
+    opacity: 0; 
+    transform: translate3d(0, 20px, 0);
+  }
+  to { 
+    opacity: 1; 
+    transform: translate3d(0, 0, 0);
+  }
+}
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
@@ -190,6 +233,44 @@
   will-change: transform, opacity;
 }
 
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.stagger-fade-in {
+  animation: staggerFadeIn 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+/* Scroll animation classes */
+.scroll-hidden {
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-stagger-1 { transition-delay: 0.1s; }
+.scroll-stagger-2 { transition-delay: 0.2s; }
+.scroll-stagger-3 { transition-delay: 0.3s; }
+.scroll-stagger-4 { transition-delay: 0.4s; }
+.scroll-stagger-5 { transition-delay: 0.5s; }
+.scroll-stagger-6 { transition-delay: 0.6s; }
 .pulse-animation {
   animation: pulse-animation 2s infinite ease-in-out;
   will-change: transform, opacity;
