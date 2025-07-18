@@ -38,6 +38,11 @@ export function Home() {
   const benefitsRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  
+  // Detect mobile for performance optimizations
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const particleCount = isMobile ? 10 : 20;
+  const starCount = isMobile ? 20 : 40;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,7 +53,7 @@ export function Home() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '20px' }
     );
 
     const elements = [
@@ -119,7 +124,7 @@ export function Home() {
 
           {/* Floating liquid particles */}
           <div className="absolute inset-0 overflow-hidden opacity-40">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(particleCount)].map((_, i) => (
               <div
                 key={i}
                 className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/40 to-indigo-500/40 rounded-full animate-float"
@@ -136,7 +141,7 @@ export function Home() {
 
           {/* Extra subtle star field */}
           <div className="absolute inset-0 overflow-hidden opacity-20">
-            {[...Array(40)].map((_, i) => (
+            {[...Array(starCount)].map((_, i) => (
               <div
                 key={`home-star-${i}`}
                 className="absolute w-0.5 h-0.5 bg-white rounded-full animate-twinkle"

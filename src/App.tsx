@@ -6,6 +6,13 @@ import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
 
 function App() {
+  // Detect if user is on mobile
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
+  // Reduce number of particles on mobile
+  const particleCount = isMobile ? 25 : 50;
+  const starCount = isMobile ? 15 : 30;
+
   return (
     <HelmetProvider>
       <div className="min-h-screen bg-black text-white overflow-hidden relative">
@@ -55,7 +62,7 @@ function App() {
         
         {/* Animated background grid - reduced opacity */}
         <div className="absolute inset-0 overflow-hidden opacity-10">
-          {[...Array(50)].map((_, i) => (
+          {[...Array(particleCount)].map((_, i) => (
             <div
               key={i}
               className="absolute w-px h-px bg-white animate-float"
@@ -71,7 +78,7 @@ function App() {
 
         {/* Twinkling stars */}
         <div className="fixed inset-0 overflow-hidden opacity-40">
-          {[...Array(30)].map((_, i) => (
+          {[...Array(starCount)].map((_, i) => (
             <div
               key={`star-${i}`}
               className="absolute animate-twinkle"

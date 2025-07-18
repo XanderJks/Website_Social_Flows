@@ -9,36 +9,52 @@
     font-family: 'Inter', sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     background: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Improved text readability */
   p {
     @apply leading-relaxed;
   }
+
+  /* Performance optimizations */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
     opacity: 0.3;
   }
   50% {
-    transform: translateY(-40px) scale(1.1);
+    transform: translate3d(0, -40px, 0) scale(1.1);
     opacity: 0.6;
   }
 }
 
 @keyframes liquid-float {
   0%, 100% {
-    transform: translateY(0) translateX(0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
     opacity: 0.4;
   }
   33% {
-    transform: translateY(-30px) translateX(20px) scale(1.2);
+    transform: translate3d(20px, -30px, 0) scale(1.2);
     opacity: 0.7;
   }
   66% {
-    transform: translateY(20px) translateX(-15px) scale(0.9);
+    transform: translate3d(-15px, 20px, 0) scale(0.9);
     opacity: 0.5;
   }
 }
@@ -53,8 +69,8 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, 30px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @keyframes pulse-glow {
@@ -63,8 +79,8 @@
 }
 
 @keyframes pulse-animation {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.05); }
+  0%, 100% { opacity: 1; transform: scale3d(1, 1, 1); }
+  50% { opacity: 0.7; transform: scale3d(1.05, 1.05, 1); }
 }
 
 @keyframes gradient-shift {
@@ -75,48 +91,48 @@
 @keyframes liquid-morph {
   0%, 100% { 
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale3d(1, 1, 1);
   }
   25% { 
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    transform: rotate(90deg) scale(1.1);
+    transform: rotate(90deg) scale3d(1.1, 1.1, 1);
   }
   50% { 
     border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
-    transform: rotate(180deg) scale(0.9);
+    transform: rotate(180deg) scale3d(0.9, 0.9, 1);
   }
   75% { 
     border-radius: 60% 40% 60% 30% / 70% 30% 50% 60%;
-    transform: rotate(270deg) scale(1.05);
+    transform: rotate(270deg) scale3d(1.05, 1.05, 1);
   }
 }
 
 @keyframes twinkle {
   0%, 100% { 
     opacity: 0.3;
-    transform: scale(0.8);
+    transform: scale3d(0.8, 0.8, 1);
   }
   50% { 
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale3d(1.2, 1.2, 1);
   }
 }
 
 @keyframes star-float {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 0.4;
   }
   25% {
-    transform: translateY(-15px) rotate(90deg);
+    transform: translate3d(0, -15px, 0) rotate(90deg);
     opacity: 0.8;
   }
   50% {
-    transform: translateY(-30px) rotate(180deg);
+    transform: translate3d(0, -30px, 0) rotate(180deg);
     opacity: 1;
   }
   75% {
-    transform: translateY(-15px) rotate(270deg);
+    transform: translate3d(0, -15px, 0) rotate(270deg);
     opacity: 0.8;
   }
 }
@@ -124,32 +140,37 @@
 @keyframes glow-pulse {
   0%, 100% {
     opacity: 0.4;
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
   50% {
     opacity: 0.8;
-    transform: scale(1.1);
+    transform: scale3d(1.1, 1.1, 1);
   }
 }
 
 .animate-float {
   animation: liquid-float linear infinite;
+  will-change: transform, opacity;
 }
 
 .animate-twinkle {
   animation: twinkle 2s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .animate-star-float {
   animation: star-float 8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .animate-glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .animate-liquid-morph {
   animation: liquid-morph 20s ease-in-out infinite;
+  will-change: transform, border-radius;
 }
 
 .typing-animation {
@@ -161,14 +182,17 @@
   animation: 
     typing 3s steps(30, end) forwards,
     blink 1s step-end infinite;
+  will-change: width;
 }
 
 .fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+  will-change: transform, opacity;
 }
 
 .pulse-animation {
   animation: pulse-animation 2s infinite ease-in-out;
+  will-change: transform, opacity;
 }
 
 .gradient-text {
@@ -178,6 +202,48 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  will-change: background-position;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Reduce animations on mobile */
+  .animate-float {
+    animation-duration: 12s;
+  }
+  
+  .animate-glow-pulse {
+    animation-duration: 4s;
+  }
+  
+  .animate-liquid-morph {
+    animation-duration: 30s;
+  }
+  
+  /* Reduce blur on mobile for better performance */
+  .glass {
+    backdrop-filter: blur(15px);
+  }
+  
+  .glass-strong {
+    backdrop-filter: blur(20px);
+  }
+  
+  .liquid-glass {
+    backdrop-filter: blur(18px);
+  }
+  
+  /* Optimize button effects */
+  .btn-primary,
+  .btn-secondary {
+    backdrop-filter: blur(15px);
+  }
+  
+  /* Reduce gradient complexity on mobile */
+  .gradient-text {
+    background-size: 200% 200%;
+    animation-duration: 8s;
+  }
 }
 
 /* Enhanced liquid glass button styles */
@@ -190,10 +256,11 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  will-change: transform, background, box-shadow;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: translate3d(0, -2px, 0) scale(1.02);
   background: linear-gradient(135deg, rgba(6, 182, 212, 0.9), rgba(59, 130, 246, 0.9));
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(6, 182, 212, 0.3);
@@ -207,10 +274,11 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  will-change: transform, background, box-shadow;
 }
 
 .btn-secondary:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: translate3d(0, -2px, 0) scale(1.02);
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
@@ -222,6 +290,7 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  contain: layout style paint;
 }
 
 .glass-strong {
@@ -229,6 +298,7 @@
   backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  contain: layout style paint;
 }
 
 .liquid-glass {
@@ -239,6 +309,7 @@
     0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     0 0 60px rgba(6, 182, 212, 0.1);
+  contain: layout style paint;
 }
 
 /* Feature card styles with liquid glass */
@@ -250,10 +321,12 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   max-width: 100%;
   width: 100%;
+  will-change: transform, background, box-shadow;
+  contain: layout style paint;
 }
 
 .feature-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translate3d(0, -8px, 0) scale(1.02);
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -261,10 +334,11 @@
 
 .feature-card-icon {
   @apply w-12 h-12 mb-6 transition-all duration-300;
+  will-change: transform;
 }
 
 .group:hover .feature-card-icon {
-  @apply transform scale-110;
+  transform: scale3d(1.1, 1.1, 1);
 }
 
 /* Code styling */
