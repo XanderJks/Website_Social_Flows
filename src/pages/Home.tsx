@@ -831,7 +831,7 @@ export function Home() {
                           <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-700 rounded-2xl"></div>
                           <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                           <span className="relative z-10 font-bold text-white drop-shadow-lg flex items-center justify-center">
-                            <MessageSquare size={20} className="mr-3" />
+                            <MessageSquare size={20} className="mr-3 animate-ai-pulse" />
                             Verstuur Bericht
                           </span>
                           <div className="absolute inset-0 bg-gradient-to-r from-gray-400/50 to-slate-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
