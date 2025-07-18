@@ -44,20 +44,16 @@ export function Home() {
   const particleCount = isMobile ? 10 : 20;
   const starCount = isMobile ? 20 : 40;
 
-  // Enhanced scroll animations with intersection observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Add different animation classes based on element index
-            const index = Array.from(entry.target.parentElement?.children || []).indexOf(entry.target);
-            const animations = ['animate-slide-up-fade', 'animate-slide-left-fade', 'animate-slide-right-fade', 'animate-scale-up-fade'];
-            entry.target.classList.add(animations[index % animations.length]);
+            entry.target.classList.add('fade-in');
           }
         });
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { threshold: 0.1, rootMargin: '20px' }
     );
 
     const elements = [
@@ -94,47 +90,44 @@ export function Home() {
       />
       
       <main className="relative min-h-screen overflow-hidden">
-        {/* Next-Level Interactive Background */}
+        {/* Liquid Glass Background Effects */}
         <div className="fixed inset-0 z-0">
-          {/* Interactive Aurora Background */}
-          <div className="interactive-bg"></div>
-          
           {/* Primary liquid glass orbs */}
           <div 
-            className="absolute top-1/4 left-1/6 w-96 h-96 modern-gradient rounded-full blur-3xl animate-aurora-shift"
+            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-blue-400/20 via-indigo-500/15 to-purple-500/20 rounded-full blur-3xl animate-pulse"
             style={{ 
               animationDuration: '8s',
               filter: 'blur(80px)',
-              background: 'radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(99,102,241,0.2) 50%, rgba(139,92,246,0.3) 100%)'
+              background: 'radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(99,102,241,0.15) 50%, rgba(139,92,246,0.2) 100%)'
             }}
           ></div>
           
           <div 
-            className="absolute top-1/3 right-1/4 w-80 h-80 modern-gradient rounded-full blur-3xl animate-aurora-shift"
+            className="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-500/20 via-indigo-500/15 to-blue-400/20 rounded-full blur-3xl animate-pulse"
             style={{ 
               animationDuration: '12s', 
               animationDelay: '2s',
               filter: 'blur(70px)',
-              background: 'radial-gradient(circle, rgba(139,92,246,0.3) 0%, rgba(99,102,241,0.2) 50%, rgba(59,130,246,0.3) 100%)'
+              background: 'radial-gradient(circle, rgba(139,92,246,0.2) 0%, rgba(99,102,241,0.15) 50%, rgba(59,130,246,0.2) 100%)'
             }}
           ></div>
           
           <div 
-            className="absolute bottom-1/4 left-1/3 w-72 h-72 modern-gradient rounded-full blur-3xl animate-aurora-shift"
+            className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-tr from-indigo-400/18 via-blue-500/12 to-purple-500/18 rounded-full blur-3xl animate-pulse"
             style={{ 
               animationDuration: '10s', 
               animationDelay: '4s',
               filter: 'blur(60px)',
-              background: 'radial-gradient(circle, rgba(99,102,241,0.25) 0%, rgba(59,130,246,0.15) 50%, rgba(139,92,246,0.25) 100%)'
+              background: 'radial-gradient(circle, rgba(99,102,241,0.18) 0%, rgba(59,130,246,0.12) 50%, rgba(139,92,246,0.18) 100%)'
             }}
           ></div>
 
-          {/* Sophisticated Floating Particles */}
+          {/* Floating liquid particles */}
           <div className="absolute inset-0 overflow-hidden opacity-40">
             {[...Array(particleCount)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/40 to-indigo-500/40 rounded-full animate-float-sophisticated"
+                className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/40 to-indigo-500/40 rounded-full animate-float"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -165,39 +158,39 @@ export function Home() {
         </div>
 
         {/* Hero Section */}
-        <section id="home" className="relative z-20 pt-20 modern-section">
+        <section id="home" className="relative z-20 pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-48 lg:pb-32 relative z-20">
             <div className="text-center">
-              {/* Ultra-Modern Hero Content */}
+              {/* Liquid Glass Hero Content */}
               <div className="max-w-6xl mx-auto">
-                {/* Enhanced Overline */}
+                {/* Overline with liquid glass effect */}
                 <div className="mb-8">
-                  <span className="inline-flex items-center px-8 py-4 glass-morphism text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl magnetic-element">
+                  <span className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl">
                     <Mic size={16} className="mr-3 text-blue-400" />
                     De toekomst van restaurant service
-                    <div className="absolute inset-0 modern-gradient rounded-full blur-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-xl"></div>
                   </span>
                 </div>
                 
-                {/* Ultra-Modern Typography */}
-                <div className="space-y-12 mb-20">
-                  {/* Primary Headline */}
+                {/* Main Typography with liquid glass styling */}
+                <div className="space-y-8 mb-16">
+                  {/* Primary Headline with enhanced glass effect */}
                   <div className="relative">
-                    <h1 className="ultra-modern-typography neon-text magnetic-element">
+                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
                       SocialFlows
                     </h1>
-                    <div className="absolute inset-0 modern-gradient blur-3xl -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-indigo-500/20 to-purple-500/20 blur-3xl -z-10"></div>
                   </div>
                   
-                  {/* Enhanced Subtitle */}
+                  {/* Subtitle with liquid glass container */}
                   <div className="relative max-w-5xl mx-auto">
-                    <div className="absolute inset-0 glass-morphism"></div>
+                    <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl"></div>
                     <div className="relative p-8 text-xl sm:text-2xl lg:text-3xl font-light text-white/90 leading-tight">
                       <span className="block mb-3">
                         Voice AI assistenten voor restaurants
                       </span>
                       <span className="block">
-                        <span className="aurora-text font-medium">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 font-medium">
                           Automatiseer reserveringen en bestellingen
                         </span>
                       </span>
@@ -208,31 +201,31 @@ export function Home() {
                   </div>
                 </div>
                 
-                {/* Ultra-Modern Action Buttons */}
+                {/* Liquid Glass Action Buttons */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
                   <button 
                     onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden magnetic-element"
+                    className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Start uw SocialFlows project"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl"></div>
-                    <div className="absolute inset-0 glass-morphism group-hover:bg-white/30 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                     <span className="relative z-10 font-bold text-white drop-shadow-lg">Start Gratis Demo</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400/50 to-indigo-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
                   </button>
                   
                   <button 
                     onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden magnetic-element"
+                    className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Bekijk onze features"
                   >
-                    <div className="absolute inset-0 glass-morphism group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"></div>
                     <span className="relative z-10 font-semibold text-white drop-shadow-lg">Bekijk Features</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                   </button>
                 </div>
 
-                {/* Enhanced Stats with Bento Grid */}
+                {/* Liquid Glass Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
                   {[
                     { value: '200+', label: 'Tevreden restaurants' },
@@ -240,17 +233,17 @@ export function Home() {
                     { value: '90%', label: 'Meer reserveringen' },
                     { value: '15+', label: 'Talen ondersteund' }
                   ].map((stat, index) => (
-                    <div key={index} className="relative group magnetic-element">
-                      <div className="absolute inset-0 glass-morphism group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300"></div>
+                    <div key={index} className="relative group">
+                      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300"></div>
                       <div className="relative p-6 text-center">
-                        <div className="text-4xl lg:text-5xl font-black aurora-text mb-2 drop-shadow-lg animate-micro-bounce">
+                        <div className="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-2 drop-shadow-lg">
                           {stat.value}
                         </div>
                         <div className="text-sm text-white/80 uppercase tracking-wider font-medium">
                           {stat.label}
                         </div>
                       </div>
-                      <div className="absolute inset-0 modern-gradient rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                     </div>
                   ))}
                 </div>
@@ -259,17 +252,17 @@ export function Home() {
           </div>
         </section>
 
-        {/* Next-Level Features Section */}
-        <section id="features" ref={featuresRef} className="relative z-10 modern-section" aria-labelledby="features-heading">
+        {/* Features Section */}
+        <section id="features" ref={featuresRef} className="relative z-10 py-32" aria-labelledby="features-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-24">
               <div className="mb-8">
-                <span className="inline-flex items-center px-6 py-3 glass-morphism text-sm font-medium text-blue-300 shadow-xl magnetic-element">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Bot size={16} className="mr-2" />
                   Geavanceerde AI technologie
                 </span>
               </div>
-              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 aurora-text drop-shadow-2xl">
+              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
                 Alles wat uw restaurant nodig heeft
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
@@ -277,24 +270,21 @@ export function Home() {
               </p>
             </div>
             
-            {/* Bento Grid Layout */}
-            <div className="bento-grid">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {[
                 {
                   icon: PhoneCall,
                   title: 'Automatische Reserveringen',
                   description: 'Onze AI neemt telefonische reserveringen aan, checkt beschikbaarheid en bevestigt direct in uw systeem.',
                   features: ['24/7 beschikbaar', 'Multilingual support', 'Agenda integratie'],
-                  gradient: 'from-blue-500/15 to-indigo-500/15',
-                  large: true
+                  gradient: 'from-blue-500/15 to-indigo-500/15'
                 },
                 {
                   icon: Utensils,
                   title: 'Telefoonbestellingen',
                   description: 'Klanten kunnen hun favoriete gerechten bestellen via telefoon, compleet met personalisatie en upselling.',
                   features: ['Menu integratie', 'Upselling suggesties', 'Betaling processing'],
-                  gradient: 'from-violet-500/15 to-purple-500/15',
-                  tall: true
+                  gradient: 'from-violet-500/15 to-purple-500/15'
                 },
                 {
                   icon: HeadphonesIcon,
@@ -325,7 +315,7 @@ export function Home() {
                   gradient: 'from-gray-500/15 to-slate-500/15'
                 }
               ].map((feature, index) => (
-                <article key={index} className={`bento-card magnetic-element ${feature.large ? 'bento-card-large' : ''} ${feature.tall ? 'bento-card-tall' : ''}`}>
+                <article key={index} className="relative group max-w-md mx-auto">
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
                   <div className="relative p-8 h-full">
                     <div className={`p-4 bg-gradient-to-br ${feature.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
@@ -351,17 +341,17 @@ export function Home() {
           </div>
         </section>
 
-        {/* Enhanced Process Section */}
-        <section id="process" className="relative z-10 modern-section" aria-labelledby="process-heading">
+        {/* Process Section */}
+        <section id="process" className="relative z-10 py-32" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-24">
               <div className="mb-8">
-                <span className="inline-flex items-center px-6 py-3 glass-morphism text-sm font-medium text-indigo-300 shadow-xl magnetic-element">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
                   <Sparkles size={16} className="mr-2" />
                   Ons bewezen proces
                 </span>
               </div>
-              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 aurora-text drop-shadow-2xl">
+              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-500 drop-shadow-2xl">
                 Zo implementeren we uw AI assistent
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
@@ -371,7 +361,7 @@ export function Home() {
             
             <div className="relative">
               {/* Process line */}
-              <div className="absolute top-1/2 left-0 right-0 h-0.5 modern-gradient transform -translate-y-1/2 hidden lg:block"></div>
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-blue-500/50 transform -translate-y-1/2 hidden lg:block"></div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 {[
@@ -432,17 +422,17 @@ export function Home() {
                     iconColor: 'text-purple-400'
                   }
                 ].map((step, index) => (
-                  <div key={index} className="relative lg:px-8 flex flex-col max-w-sm mx-auto magnetic-element">
+                  <div key={index} className="relative lg:px-8 flex flex-col max-w-sm mx-auto">
                     {/* Step number circle */}
                     <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-8 lg:mb-12">
-                      <div className={`absolute inset-0 glass-morphism rounded-full border border-white/30 shadow-2xl`}></div>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-full border border-white/30 shadow-2xl`}></div>
                       <span className="relative z-10 text-2xl font-black text-white drop-shadow-lg">{step.step}</span>
                       <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-full blur-xl opacity-50`}></div>
                     </div>
                     
                     {/* Process card */}
                     <div className="relative group flex-1 flex flex-col">
-                      <div className={`absolute inset-0 glass-morphism rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
                       <div className="relative p-8 text-center flex-1 flex flex-col">
                         <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
                           <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
@@ -473,9 +463,9 @@ export function Home() {
             <div className="mt-24 text-center max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="relative group">
-                  <div className="absolute inset-0 glass-morphism group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
                   <div className="relative p-6">
-                    <div className="text-4xl font-black aurora-text mb-2">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-2">
                       1-2 weken
                     </div>
                     <div className="text-white/80 font-medium">
@@ -485,9 +475,9 @@ export function Home() {
                 </div>
                 
                 <div className="relative group">
-                  <div className="absolute inset-0 glass-morphism group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
                   <div className="relative p-6">
-                    <div className="text-4xl font-black aurora-text mb-2">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2">
                       24/7
                     </div>
                     <div className="text-white/80 font-medium">
@@ -497,9 +487,9 @@ export function Home() {
                 </div>
                 
                 <div className="relative group">
-                  <div className="absolute inset-0 glass-morphism group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 transition-all duration-300"></div>
                   <div className="relative p-6">
-                    <div className="text-4xl font-black aurora-text mb-2">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-2">
                       98%
                     </div>
                     <div className="text-white/80 font-medium">
@@ -512,17 +502,17 @@ export function Home() {
           </div>
         </section>
 
-        {/* Enhanced Pricing Section */}
-        <section id="pricing" ref={pricingRef} className="relative z-10 modern-section" aria-labelledby="pricing-heading">
+        {/* Pricing Section */}
+        <section id="pricing" ref={pricingRef} className="relative z-10 py-32" aria-labelledby="pricing-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-24">
               <div className="mb-8">
-                <span className="inline-flex items-center px-6 py-3 glass-morphism text-sm font-medium text-blue-300 shadow-xl magnetic-element">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Target size={16} className="mr-2" />
                   Transparante prijzen
                 </span>
               </div>
-              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 aurora-text drop-shadow-2xl">
+              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
                 Kies uw AI assistent plan
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
@@ -583,20 +573,20 @@ export function Home() {
                   gradient: 'from-indigo-500/20 to-purple-500/20'
                 }
               ].map((plan, index) => (
-                <div key={index} className={`relative group magnetic-element ${plan.popular ? 'scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto`}>
+                <div key={index} className={`relative group ${plan.popular ? 'scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <span className="modern-gradient text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                      <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                         Meest Populair
                       </span>
                     </div>
                   )}
-                  <div className={`absolute inset-0 glass-morphism rounded-3xl border ${plan.popular ? 'border-blue-500/50' : 'border-white/20'} group-hover:border-white/40 group-hover:shadow-2xl transition-all duration-500 shadow-2xl`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} backdrop-blur-xl rounded-3xl border ${plan.popular ? 'border-blue-500/50' : 'border-white/20'} group-hover:border-white/40 group-hover:shadow-2xl transition-all duration-500 shadow-2xl`}></div>
                   <div className="relative p-8 h-full flex flex-col">
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                       <div className="flex items-baseline justify-center mb-4">
-                        <span className="text-5xl font-black aurora-text">
+                        <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                           {plan.price}
                         </span>
                         <span className="text-white/60 ml-2">{plan.period}</span>
@@ -615,10 +605,10 @@ export function Home() {
                     
                     <button 
                       onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                      className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg magnetic-element ${
+                      className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
                         plan.popular 
                           ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-400 hover:to-indigo-500 shadow-lg hover:shadow-xl' 
-                          : 'glass-morphism text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
+                          : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
                       }`}
                     >
                       Start Gratis Demo
@@ -652,16 +642,16 @@ export function Home() {
 
         {/* Contact Section */}
         {/* Demo Meeting Section */}
-        <section id="demo" className="relative z-10 modern-section" aria-labelledby="demo-heading">
+        <section id="demo" className="relative z-10 py-32" aria-labelledby="demo-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="mb-8">
-                <span className="inline-flex items-center px-6 py-3 glass-morphism text-sm font-medium text-blue-300 shadow-xl magnetic-element">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Calendar size={16} className="mr-2" />
                   Plan uw demo meeting
                 </span>
               </div>
-              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 aurora-text drop-shadow-2xl">
+              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
                 Plan uw persoonlijke demo
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
@@ -670,9 +660,9 @@ export function Home() {
             </div>
             
             <div className="relative max-w-4xl mx-auto">
-              <div className="absolute inset-0 modern-gradient rounded-3xl blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
-                <div className="absolute inset-0 glass-morphism shadow-2xl"></div>
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
                 <div className="relative p-8 md:p-12">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -680,19 +670,19 @@ export function Home() {
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                       <div className="flex items-center justify-center space-x-3">
-                        <div className="w-10 h-10 glass-morphism rounded-xl flex items-center justify-center">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center">
                           <Mic size={18} className="text-blue-400" />
                         </div>
                         <span className="text-white/90 font-medium">Live AI Demo</span>
                       </div>
                       <div className="flex items-center justify-center space-x-3">
-                        <div className="w-10 h-10 glass-morphism rounded-xl flex items-center justify-center">
+                        <div className="w-10 h-10 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl flex items-center justify-center">
                           <BarChart3 size={18} className="text-indigo-400" />
                         </div>
                         <span className="text-white/90 font-medium">ROI Berekening</span>
                       </div>
                       <div className="flex items-center justify-center space-x-3">
-                        <div className="w-10 h-10 glass-morphism rounded-xl flex items-center justify-center">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-xl flex items-center justify-center">
                           <Target size={18} className="text-purple-400" />
                         </div>
                         <span className="text-white/90 font-medium">Custom Strategie</span>
@@ -701,7 +691,7 @@ export function Home() {
                   </div>
                   
                   {/* Cal.com iframe */}
-                  <div className="glass-morphism p-4">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
                     <iframe
                       src="https://cal.com/socialflows/demo"
                       width="100%"
@@ -724,16 +714,16 @@ export function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" ref={contactRef} className="relative z-10 modern-section" aria-labelledby="contact-heading">
+        <section id="contact" ref={contactRef} className="relative z-10 py-32" aria-labelledby="contact-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="mb-8">
-                <span className="inline-flex items-center px-6 py-3 glass-morphism text-sm font-medium text-blue-300 shadow-xl magnetic-element">
+                <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <MessageSquare size={16} className="mr-2" />
                   Neem contact op
                 </span>
               </div>
-              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 aurora-text drop-shadow-2xl">
+              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
                 Klaar om te beginnen?
               </h2>
               <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
@@ -742,12 +732,12 @@ export function Home() {
             </div>
             
             <div className="relative max-w-6xl mx-auto">
-              <div className="absolute inset-0 modern-gradient rounded-3xl blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
               <div className="relative">
-                <div className="absolute inset-0 glass-morphism shadow-2xl"></div>
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
                 <div className="relative p-12 md:p-16 overflow-hidden rounded-3xl">
-                  <div className="absolute top-0 right-0 w-96 h-96 modern-gradient rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 left-0 w-96 h-96 modern-gradient rounded-full blur-3xl"></div>
+                  <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
                   
                   <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div>
@@ -760,7 +750,7 @@ export function Home() {
                       
                       <div className="space-y-6 mb-10">
                         <div className="flex items-center">
-                          <div className="w-12 h-12 glass-morphism rounded-xl flex items-center justify-center mr-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center mr-4">
                             <Mail size={20} className="text-blue-400" />
                           </div>
                           <div>
@@ -770,7 +760,7 @@ export function Home() {
                         </div>
                         
                         <div className="flex items-center">
-                          <div className="w-12 h-12 glass-morphism rounded-xl flex items-center justify-center mr-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl flex items-center justify-center mr-4">
                             <Phone size={20} className="text-indigo-400" />
                           </div>
                           <div>
@@ -780,7 +770,7 @@ export function Home() {
                         </div>
                         
                         <div className="flex items-center">
-                          <div className="w-12 h-12 glass-morphism rounded-xl flex items-center justify-center mr-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-xl flex items-center justify-center mr-4">
                             <MapPin size={20} className="text-purple-400" />
                           </div>
                           <div>
@@ -800,7 +790,7 @@ export function Home() {
                             <input
                               type="text"
                               required
-                              className="w-full px-4 py-3 glass-morphism focus:border-blue-400 outline-none transition-all text-white rounded-xl"
+                              className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
                               placeholder="Uw naam"
                             />
                           </div>
@@ -809,7 +799,7 @@ export function Home() {
                             <input
                               type="email"
                               required
-                              className="w-full px-4 py-3 glass-morphism focus:border-blue-400 outline-none transition-all text-white rounded-xl"
+                              className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
                               placeholder="uw@email.nl"
                             />
                           </div>
@@ -819,7 +809,7 @@ export function Home() {
                           <label className="block text-sm font-medium mb-2 text-white/90">Restaurant</label>
                           <input
                             type="text"
-                            className="w-full px-4 py-3 glass-morphism focus:border-blue-400 outline-none transition-all text-white rounded-xl"
+                            className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm"
                             placeholder="Uw restaurant naam"
                           />
                         </div>
@@ -829,17 +819,17 @@ export function Home() {
                           <textarea
                             rows={4}
                             required
-                            className="w-full px-4 py-3 glass-morphism focus:border-blue-400 outline-none transition-all text-white resize-none rounded-xl"
+                            className="w-full px-4 py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white resize-none rounded-xl backdrop-blur-sm"
                             placeholder="Vertel ons over uw restaurant en hoe we kunnen helpen..."
                           ></textarea>
                         </div>
                         
                         <button
                           type="submit"
-                          className="w-full relative group text-lg px-8 py-4 overflow-hidden magnetic-element"
+                          className="w-full relative group text-lg px-8 py-4 overflow-hidden"
                         >
                           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl"></div>
-                          <div className="absolute inset-0 glass-morphism group-hover:bg-white/30 transition-all duration-300"></div>
+                          <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                           <span className="relative z-10 font-bold text-white drop-shadow-lg flex items-center justify-center">
                             <MessageSquare size={20} className="mr-3" />
                             Verstuur Bericht
