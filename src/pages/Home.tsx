@@ -346,7 +346,7 @@ export function Home() {
 
         {/* Process Section */}
         <section id="process" className="relative z-10 py-32" aria-labelledby="process-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-24 scroll-hidden" data-animation="fade-in-up">
               <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
@@ -363,7 +363,7 @@ export function Home() {
             </div>
             
             <div className="relative">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-none mx-auto">
                 {[
                   {
                     step: '01',
@@ -422,7 +422,7 @@ export function Home() {
                     iconColor: 'text-purple-400'
                   }
                 ].map((step, index) => (
-                  <div key={index} className={`relative lg:px-8 flex flex-col max-w-sm mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
+                  <div key={index} className={`relative lg:px-4 flex flex-col max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
                     {/* Step number circle */}
                     <div className="relative z-10 flex items-center justify-center w-16 h-16 mx-auto mb-8 lg:mb-12">
                       <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-full border border-white/30 shadow-2xl`}></div>
@@ -433,13 +433,13 @@ export function Home() {
                     {/* Process card */}
                     <div className="relative group flex-1 flex flex-col">
                       <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
-                      <div className="relative p-8 text-center flex-1 flex flex-col">
+                      <div className="relative p-8 lg:p-10 text-center flex-1 flex flex-col">
                         <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
                           <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
                         </div>
                         
-                        <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-lg">{step.title}</h3>
-                        <p className="text-white/80 mb-6 text-lg leading-relaxed flex-1">
+                        <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-white drop-shadow-lg">{step.title}</h3>
+                        <p className="text-white/80 mb-6 text-lg lg:text-xl leading-relaxed flex-1">
                           {step.description}
                         </p>
                         
@@ -447,7 +447,7 @@ export function Home() {
                           {step.details.map((detail, idx) => (
                             <li key={idx} className="flex items-start">
                               <CheckCircle size={16} className="text-green-400 mr-3 mt-1 flex-shrink-0 drop-shadow-lg" aria-hidden="true" />
-                              <span className="text-white/90 text-sm">{detail}</span>
+                              <span className="text-white/90 text-sm lg:text-base">{detail}</span>
                             </li>
                           ))}
                         </ul>
