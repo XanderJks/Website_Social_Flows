@@ -167,7 +167,7 @@ export function Home() {
                 <div className="mb-8">
                   <span className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl">
                     <Mic size={16} className="mr-3 text-blue-400" />
-                    De toekomst van restaurant service
+                    <span className="text-white font-bold">De toekomst van restaurant service</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/15 to-indigo-600/15 rounded-full blur-xl"></div>
                   </span>
                 </div>
@@ -176,10 +176,10 @@ export function Home() {
                 <div className="space-y-8 mb-16">
                   {/* Primary Headline with enhanced glass effect */}
                   <div className="relative">
-                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 drop-shadow-2xl">
+                    <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none text-white drop-shadow-2xl">
                       SocialFlows
                     </h1>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/25 via-indigo-600/25 to-purple-600/25 blur-3xl -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/25 via-gray-300/25 to-white/25 blur-3xl -z-10"></div>
                   </div>
                   
                   {/* Subtitle with liquid glass container */}
@@ -190,7 +190,7 @@ export function Home() {
                         Voice AI assistenten voor restaurants
                       </span>
                       <span className="block">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 font-semibold">
+                        <span className="text-white font-bold">
                           Automatiseer reserveringen en bestellingen
                         </span>
                       </span>
@@ -208,10 +208,10 @@ export function Home() {
                     className="relative group text-lg px-10 py-5 w-full sm:w-auto overflow-hidden"
                     aria-label="Start uw SocialFlows project"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-700 to-slate-800 rounded-2xl"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                     <span className="relative z-10 font-black text-white drop-shadow-lg">Start Gratis Demo</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/60 to-indigo-600/60 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-500/60 to-slate-600/60 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
                   </button>
                   
                   <button 
@@ -236,14 +236,14 @@ export function Home() {
                     <div key={index} className="relative group">
                       <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300"></div>
                       <div className="relative p-6 text-center">
-                        <div className="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-2 drop-shadow-lg">
+                        <div className="text-4xl lg:text-5xl font-black text-white mb-2 drop-shadow-lg">
                           {stat.value}
                         </div>
-                        <div className="text-sm text-white/80 uppercase tracking-wider font-semibold">
+                        <div className="text-sm text-white uppercase tracking-wider font-bold">
                           {stat.label}
                         </div>
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/25 to-indigo-600/25 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/25 to-gray-300/25 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
                     </div>
                   ))}
                 </div>
@@ -259,13 +259,13 @@ export function Home() {
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Bot size={16} className="mr-2" />
-                  Geavanceerde AI technologie
+                  <span className="text-white font-bold">Geavanceerde AI technologie</span>
                 </span>
               </div>
-              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
+              <h2 id="features-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
                 Alles wat uw restaurant nodig heeft
               </h2>
-              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 SocialFlows biedt een complete AI-assistent die uw restaurant helpt met telefonische bestellingen, reserveringen en klantenservice.
               </p>
             </div>
@@ -348,13 +348,13 @@ export function Home() {
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-indigo-300 shadow-xl">
                   <Sparkles size={16} className="mr-2" />
-                  Ons bewezen proces
+                  <span className="text-white font-bold">Ons bewezen proces</span>
                 </span>
               </div>
-              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-500 drop-shadow-2xl">
+              <h2 id="process-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
                 Zo implementeren we uw AI assistent
               </h2>
-              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 Van eerste gesprek tot volledige implementatie. Ontdek hoe we uw restaurant transformeren in slechts 4 stappen.
               </p>
             </div>
@@ -509,13 +509,13 @@ export function Home() {
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Target size={16} className="mr-2" />
-                  Transparante prijzen
+                  <span className="text-white font-bold">Transparante prijzen</span>
                 </span>
               </div>
-              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
+              <h2 id="pricing-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
                 Kies uw AI assistent plan
               </h2>
-              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 Start met onze gratis demo en upgrade naar een plan dat past bij uw restaurant. Alle plannen bevatten setup en training.
               </p>
             </div>
@@ -586,7 +586,7 @@ export function Home() {
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                       <div className="flex items-baseline justify-center mb-4">
-                        <span className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                        <span className="text-5xl font-black text-white">
                           {plan.price}
                         </span>
                         <span className="text-white/60 ml-2">{plan.period}</span>
@@ -607,7 +607,7 @@ export function Home() {
                       onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
                       className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
                         plan.popular 
-                          ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-400 hover:to-indigo-500 shadow-lg hover:shadow-xl' 
+                          ? 'bg-gradient-to-r from-gray-600 to-slate-700 text-white hover:from-gray-500 hover:to-slate-600 shadow-lg hover:shadow-xl' 
                           : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
                       }`}
                     >
@@ -648,13 +648,13 @@ export function Home() {
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <Calendar size={16} className="mr-2" />
-                  Plan uw demo meeting
+                  <span className="text-white font-bold">Plan uw demo meeting</span>
                 </span>
               </div>
-              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
+              <h2 id="demo-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
                 Plan uw persoonlijke demo
               </h2>
-              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 Boek een persoonlijke demo van 15 minuten en ontdek hoe onze Voice AI assistent uw restaurant kan transformeren.
               </p>
             </div>
@@ -720,13 +720,13 @@ export function Home() {
               <div className="mb-8">
                 <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-sm font-medium text-blue-300 shadow-xl">
                   <MessageSquare size={16} className="mr-2" />
-                  Neem contact op
+                  <span className="text-white font-bold">Neem contact op</span>
                 </span>
               </div>
-              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 drop-shadow-2xl">
+              <h2 id="contact-heading" className="text-5xl sm:text-6xl font-bold mb-8 text-white drop-shadow-2xl">
                 Klaar om te beginnen?
               </h2>
-              <p className="text-white/80 text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
+              <p className="text-white text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm">
                 Heeft u vragen of wilt u meer informatie? Neem direct contact met ons op via onderstaand formulier.
               </p>
             </div>
@@ -828,13 +828,13 @@ export function Home() {
                           type="submit"
                           className="w-full relative group text-lg px-8 py-4 overflow-hidden"
                         >
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-700 rounded-2xl"></div>
                           <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                           <span className="relative z-10 font-bold text-white drop-shadow-lg flex items-center justify-center">
                             <MessageSquare size={20} className="mr-3" />
                             Verstuur Bericht
                           </span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/50 to-indigo-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-gray-400/50 to-slate-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
                         </button>
                       </form>
                     </div>

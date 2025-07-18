@@ -25,37 +25,37 @@ function App() {
         <div className="fixed inset-0 z-0">
           {/* Main center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-indigo-600/8 rounded-full blur-[140px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gray-400/8 rounded-full blur-[140px] animate-pulse"
             style={{ animationDuration: '6s' }}
           ></div>
           
           {/* Secondary center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-purple-600/8 rounded-full blur-[130px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-slate-400/8 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '8s', animationDelay: '1s' }}
           ></div>
 
           {/* Accent glows */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 w-[30rem] h-[30rem] bg-blue-600/6 rounded-full blur-[120px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 w-[30rem] h-[30rem] bg-gray-500/6 rounded-full blur-[120px] animate-pulse"
             style={{ animationDuration: '7s', animationDelay: '0.5s' }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-violet-600/6 rounded-full blur-[130px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-slate-500/6 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '9s', animationDelay: '1.5s' }}
           ></div>
 
           {/* Additional subtle glows */}
           <div 
-            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-cyan-600/6 rounded-full blur-[100px] animate-glow-pulse"
+            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-gray-400/6 rounded-full blur-[100px] animate-glow-pulse"
             style={{ animationDuration: '10s', animationDelay: '2s' }}
           ></div>
           <div 
-            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-pink-600/6 rounded-full blur-[120px] animate-glow-pulse"
+            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-slate-400/6 rounded-full blur-[120px] animate-glow-pulse"
             style={{ animationDuration: '12s', animationDelay: '3s' }}
           ></div>
           <div 
-            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-emerald-600/5 rounded-full blur-[90px] animate-glow-pulse"
+            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-gray-500/5 rounded-full blur-[90px] animate-glow-pulse"
             style={{ animationDuration: '14s', animationDelay: '4s' }}
           ></div>
         </div>

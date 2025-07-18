@@ -76,7 +76,7 @@ export function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <a href="#" className="flex items-center group">
-                <span className={`font-bold tracking-wider gradient-text group-hover:scale-105 transition-all duration-500 ${
+                <span className={`font-bold tracking-wider text-white group-hover:scale-105 transition-all duration-500 ${
                   isScrolled ? 'text-lg' : 'text-xl'
                 }`}>
                   SocialFlows
@@ -118,10 +118,10 @@ export function Navigation() {
                   }`}
                   style={{ borderRadius: '20px' }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-700 rounded-full"></div>
                   <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-full border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                   <span className="relative z-10 font-bold text-white drop-shadow-lg">Start Nu</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/50 to-indigo-500/50 rounded-full blur-lg group-hover:blur-xl transition-all duration-300 -z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-400/50 to-slate-500/50 rounded-full blur-lg group-hover:blur-xl transition-all duration-300 -z-10"></div>
                 </button>
               </div>
             </div>
@@ -193,7 +193,7 @@ export function Navigation() {
                     onClick={() => scrollToSection('demo')}
                     className="w-full relative group text-sm px-6 py-3 overflow-hidden rounded-xl"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-700 rounded-xl"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
                     <span className="relative z-10 font-bold text-white drop-shadow-lg flex items-center justify-center">
                       Start Nu
