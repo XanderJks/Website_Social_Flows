@@ -66,8 +66,6 @@
     
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
     <vapi-widget
   public-key="13c0731f-dbde-4236-a9cd-fce5225d4b3d"
   assistant-id="87fc75bc-db4e-4ca1-97de-e3cb516232ea"
@@ -78,7 +76,7 @@
   cta-button-color="#000000"
   cta-button-text-color="#ffffff"
   border-radius="large"
-  size="full"
+  size="compact" <!-- Aangepast van "full" naar "compact" -->
   position="bottom-right"
   title="Probeer Onze AI"
   start-button-text="Start"
@@ -90,5 +88,9 @@
 ></vapi-widget>
 
 <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
   </body>
 </html>
