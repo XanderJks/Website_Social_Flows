@@ -12,57 +12,57 @@ function App() {
 
   return (
     <HelmetProvider>
-      <div className="min-h-screen bg-white text-gray-900 overflow-hidden relative">
+      <div className="min-h-screen bg-white text-gray-800 overflow-hidden relative">
         {/* Global Structured Data */}
         <JsonLd data={organizationSchema} />
         <JsonLd data={serviceSchema} />
         <JsonLd data={websiteSchema} />
         
-        {/* Centered glow effects - light mode */}
+        {/* Centered glow effects - blue accents */}
         <div className="fixed inset-0 z-0">
           {/* Main center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-200/20 rounded-full blur-[140px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-500/10 rounded-full blur-[140px] animate-pulse"
             style={{ animationDuration: '6s' }}
           ></div>
           
           {/* Secondary center glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-indigo-200/15 rounded-full blur-[130px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] bg-blue-400/8 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '8s', animationDelay: '1s' }}
           ></div>
 
           {/* Accent glows */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 w-[30rem] h-[30rem] bg-slate-200/12 rounded-full blur-[120px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 w-[30rem] h-[30rem] bg-blue-300/6 rounded-full blur-[120px] animate-pulse"
             style={{ animationDuration: '7s', animationDelay: '0.5s' }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-gray-200/12 rounded-full blur-[130px] animate-pulse"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 w-[35rem] h-[35rem] bg-blue-200/8 rounded-full blur-[130px] animate-pulse"
             style={{ animationDuration: '9s', animationDelay: '1.5s' }}
           ></div>
 
           {/* Additional subtle glows */}
           <div 
-            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-blue-200/15 rounded-full blur-[100px] animate-glow-pulse"
+            className="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] bg-blue-400/12 rounded-full blur-[100px] animate-glow-pulse"
             style={{ animationDuration: '10s', animationDelay: '2s' }}
           ></div>
           <div 
-            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-indigo-200/15 rounded-full blur-[120px] animate-glow-pulse"
+            className="absolute bottom-1/4 right-1/4 w-[25rem] h-[25rem] bg-blue-500/10 rounded-full blur-[120px] animate-glow-pulse"
             style={{ animationDuration: '12s', animationDelay: '3s' }}
           ></div>
           <div 
-            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-slate-200/12 rounded-full blur-[90px] animate-glow-pulse"
+            className="absolute top-1/3 right-1/3 w-[18rem] h-[18rem] bg-blue-300/8 rounded-full blur-[90px] animate-glow-pulse"
             style={{ animationDuration: '14s', animationDelay: '4s' }}
           ></div>
         </div>
         
-        {/* Animated background grid - light mode */}
+        {/* Animated background particles */}
         <div className="absolute inset-0 overflow-hidden opacity-25">
           {[...Array(particleCount)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-0.5 h-0.5 bg-gray-400 animate-float"
+              className="absolute w-0.5 h-0.5 bg-blue-400 animate-float"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -86,7 +86,7 @@ function App() {
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             >
-              <div className="w-1 h-1 bg-gray-500 rounded-full shadow-sm shadow-gray-500/60"></div>
+              <div className="w-1 h-1 bg-blue-400 rounded-full shadow-sm shadow-blue-400/60"></div>
             </div>
           ))}
         </div>
