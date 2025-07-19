@@ -505,31 +505,6 @@ export function Home() {
           </div>
         </section>
 
-        {/* Demo Section */}
-        <section id="demo" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Meer over onze technologie
-            </h2>
-            <p className="text-lg text-slate-300 mb-8 max-w-3xl mx-auto">
-              Diepere inzichten in hoe onze enterprise AI-oplossing uw bedrijfsprocessen transformeert
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
-                <Play className="w-4 h-4 mr-2" />
-                Technische Demo
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 bg-transparent border-2 border-slate-600 text-slate-200 font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300"
-              >
-                Persoonlijke Demo
-              </button>
-            </div>
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
