@@ -173,8 +173,8 @@ export function Home() {
                     <MessageSquare className="w-6 h-6 text-green-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Intelligente Bestellingen</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    Geavanceerde orderverwerking met gepersonaliseerde aanbevelingen en geoptimaliseerde upselling strategieën.
+                  <p className="text-slate-200 mb-6 leading-relaxed text-base">
+                    Professionele orderverwerking met gepersonaliseerde aanbevelingen en geoptimaliseerde upselling strategieën voor maximale omzetgroei.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
@@ -200,8 +200,8 @@ export function Home() {
                     <Headphones className="w-6 h-6 text-indigo-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Professionele Klantenservice</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    Consistente, professionele klanteninteractie met toegang tot complete klanthistorie en bedrijfsinformatie.
+                  <p className="text-slate-200 mb-6 leading-relaxed text-base">
+                    Consistente, professionele klanteninteractie met directe toegang tot complete klanthistorie en bedrijfsinformatie voor optimale service.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
@@ -227,8 +227,8 @@ export function Home() {
                     <BarChart3 className="w-6 h-6 text-purple-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    Uitgebreide analytics en rapportage voor datagedreven besluitvorming en continue optimalisatie.
+                  <p className="text-slate-200 mb-6 leading-relaxed text-base">
+                    Uitgebreide analytics en rapportage voor datagedreven besluitvorming en continue bedrijfsoptimalisatie met real-time inzichten.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
