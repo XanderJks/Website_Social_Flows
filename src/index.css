@@ -346,7 +346,7 @@
 /* Desktop zoom out optimizations */
 @media (min-width: 1024px) {
   body {
-    font-size: 15px;
+    font-size: 12px;
   }
   
   /* Smaller desktop headings */
