@@ -100,7 +100,7 @@ function App() {
       </div>
       
       {/* Vapi AI Widget */}
-      <div id="vapi-widget-container">
+      <div id="vapi-widget-container" style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 }}>
         <vapi-widget
           public-key="13c0731f-dbde-4236-a9cd-fce5225d4b3d"
           assistant-id="87fc75bc-db4e-4ca1-97de-e3cb516232ea"
