@@ -146,8 +146,8 @@ export function Home() {
                     <Phone className="w-6 h-6 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Geautomatiseerde Reserveringen</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    Intelligente verwerking van telefonische reserveringen met real-time beschikbaarheidscontrole en directe systeemintegratie.
+                  <p className="text-slate-200 mb-6 leading-relaxed text-base">
+                    Professionele verwerking van telefonische reserveringen met real-time beschikbaarheidscontrole en naadloze systeemintegratie voor optimale efficiency.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
