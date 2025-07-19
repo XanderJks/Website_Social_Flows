@@ -91,19 +91,19 @@ export function Navigation() {
               }`}>
                 <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Features
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/30 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 <button onClick={() => scrollToSection('pricing')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Prijzen
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/30 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 <button onClick={() => scrollToSection('demo')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Demo
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/30 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Contact
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/30 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 
                 {/* CTA Button */}
