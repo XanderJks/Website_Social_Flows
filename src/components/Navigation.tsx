@@ -125,15 +125,29 @@ export function Navigation() {
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center">
               <button 
+                onClick={() => scrollToSection('about')}
+                className="block w-full text-left px-1.5 py-0.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+              >
+                Over Ons
+              </button>
+              <button 
                 className="text-white hover:text-gray-300 transition-colors rounded-full hover:bg-white/10 text-xs py-1 px-2"
                 onClick={toggleMenu}
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? (
                   <X size={14} className="transition-all duration-500" />
+              <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
+                Over Ons
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
+              </button>
                 ) : (
                   <Menu size={14} className="transition-all duration-500" />
                 )}
+              </button>
+              <button onClick={() => scrollToSection('process')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
+                Proces
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
               </button>
             </div>
           </div>
