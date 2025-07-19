@@ -6,12 +6,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
 
 function App() {
-  // Detect if user is on mobile
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  
-  // Reduce number of particles on mobile
-  const particleCount = isMobile ? 25 : 50;
-  const starCount = isMobile ? 15 : 30;
+  // Consistent particle count for all devices
+  const particleCount = 50;
+  const starCount = 30;
 
   return (
     <HelmetProvider>

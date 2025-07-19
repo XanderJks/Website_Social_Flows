@@ -125,16 +125,14 @@ export function Navigation() {
             {/* Mobile menu button */}
             <div className="lg:hidden flex items-center">
               <button 
-                className={`text-white hover:text-gray-300 transition-colors rounded-full hover:bg-white/10 ${
-                  isScrolled ? 'text-xs py-0.5 px-1' : 'text-xs py-1 px-2'
-                }`}
+                className="text-white hover:text-gray-300 transition-colors rounded-full hover:bg-white/10 text-xs py-1 px-2"
                 onClick={toggleMenu}
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? (
-                  <X size={isScrolled ? 12 : 14} className="transition-all duration-500" />
+                  <X size={14} className="transition-all duration-500" />
                 ) : (
-                  <Menu size={isScrolled ? 12 : 14} className="transition-all duration-500" />
+                  <Menu size={14} className="transition-all duration-500" />
                 )}
               </button>
             </div>
@@ -151,31 +149,31 @@ export function Navigation() {
               <div className="space-y-1">
                 <button 
                   onClick={() => scrollToSection('features')}
-                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Features
                 </button>
                 <button 
                   onClick={() => scrollToSection('process')}
-                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Proces
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
-                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Prijzen
                 </button>
                 <button 
                   onClick={() => scrollToSection('demo')}
-                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Demo
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Contact
                 </button>
@@ -183,7 +181,7 @@ export function Navigation() {
                 <div className="pt-2 border-t border-white/10">
                   <button 
                     onClick={() => scrollToSection('demo')}
-                    className="w-full relative group text-xs px-2 py-1 overflow-hidden rounded-lg"
+                    className="w-full relative group text-xs px-1.5 py-0.5 overflow-hidden rounded-lg"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-lg border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
