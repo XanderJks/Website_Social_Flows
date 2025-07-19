@@ -316,76 +316,100 @@ export function Home() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Starter Plan */}
               <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-xl">
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-white">€99</span>
+                    <span className="text-3xl font-bold text-white">€289</span>
                     <span className="text-gray-400">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left">
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Tot 500 gesprekken/maand
+                      Tot 500 belminuten
                     </li>
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Basis reserveringen
+                      Maandelijkse verbruik overzicht
                     </li>
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Email ondersteuning
+                      Email/WA ticket support
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors duration-300">
-                    Start Gratis Trial
-                  </button>
-                </div>
-              </div>
-
-              {/* Professional Plan */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-blue-900/30 to-blue-800/20 border border-blue-500/30 backdrop-blur-xl transform scale-105">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
-                    Meest Populair
-                  </span>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">Professional</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-white">€199</span>
-                    <span className="text-gray-400">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left">
-                    <li className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Tot 2000 gesprekken/maand
-                    </li>
-                    <li className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Volledige functionaliteit
-                    </li>
-                    <li className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Prioriteit ondersteuning
-                    </li>
-                    <li className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                      Analytics dashboard
-                    </li>
-                  </ul>
-                  <button className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors duration-300">
                     Start Nu
                   </button>
                 </div>
               </div>
 
-              {/* Enterprise Plan */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/30 backdrop-blur-xl">
+              {/* Pro Plan */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-orange-900/30 to-orange-800/20 border border-orange-500/30 backdrop-blur-xl transform scale-105">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                    Meest Populair
+                  </span>
+                </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">Enterprise</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">Pro</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-white">€349</span>
+                    <span className="text-gray-400">/maand</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Tot 750 belminuten
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Maandelijkse rapportage (Verbruik, aantal calls, succes percentage, totale bestelwaarde)
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Email/WA ticket support
+                    </li>
+                  </ul>
+                  <button className="w-full py-3 px-6 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                    Start Nu
+                  </button>
+                </div>
+              </div>
+
+              {/* Elite Plan */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-yellow-900/30 to-yellow-800/20 border border-yellow-500/30 backdrop-blur-xl">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Elite</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-white">€449</span>
+                    <span className="text-gray-400">/maand</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Tot 1000 belminuten
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Maandelijkse rapportage (Compleet en gereed voor boekhouding)
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Priority support
+                    </li>
+                  </ul>
+                  <button className="w-full py-3 px-6 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                    Start Nu
+                  </button>
+                </div>
+              </div>
+
+              {/* Custom Plan */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-red-900/30 to-red-800/20 border border-red-500/30 backdrop-blur-xl">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Custom</h3>
                   <div className="mb-6">
                     <span className="text-3xl font-bold text-white">Custom</span>
                   </div>
@@ -407,10 +431,19 @@ export function Home() {
                       SLA garanties
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                  <button className="w-full py-3 px-6 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-colors duration-300">
                     Contact Ons
                   </button>
                 </div>
+              </div>
+            </div>
+            
+            {/* ADD ONS Section */}
+            <div className="mt-12 text-center">
+              <h4 className="text-xl font-bold text-white mb-6">ADD ONS:</h4>
+              <div className="space-y-3 text-gray-300">
+                <p className="text-sm">+ Complete maandelijkse omzet en bestelwaardes (ideaal voor boekhouding) €29,99</p>
+                <p className="text-sm">+ Complete AI Chatbot (met bonnenprinter sync) op website €44,99</p>
               </div>
             </div>
           </div>
