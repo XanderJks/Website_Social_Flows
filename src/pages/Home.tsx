@@ -68,7 +68,7 @@ export function Home() {
       
       <main className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32">
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
             <div className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-slate-800/80 backdrop-blur-xl border border-slate-600/30 text-slate-200 mb-8 transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
