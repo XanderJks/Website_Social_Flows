@@ -9,7 +9,7 @@
     font-family: 'Inter', sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     background: #000;
-    font-size: 1px;
+    font-size: 12px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
