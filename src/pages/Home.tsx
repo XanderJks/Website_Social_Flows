@@ -80,6 +80,51 @@ export function Home() {
                 Geen setup kosten
               </div>
             </div>
+            
+            {/* Hero Feature Blocks */}
+            <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              {/* 24/7 Beschikbaarheid */}
+              <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-500/20 backdrop-blur-xl hover:border-blue-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors duration-300">
+                    <Clock className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">24/7 Beschikbaar</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Uw AI-assistent neemt altijd op, ook buiten openingstijden
+                  </p>
+                </div>
+              </div>
+
+              {/* 99% Uptime */}
+              <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-green-900/20 to-green-800/10 border border-green-500/20 backdrop-blur-xl hover:border-green-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-colors duration-300">
+                    <Shield className="w-6 h-6 text-green-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">99.9% Uptime</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Betrouwbare service met enterprise-grade infrastructuur
+                  </p>
+                </div>
+              </div>
+
+              {/* Snelle Setup */}
+              <div className="group relative p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-500/20 backdrop-blur-xl hover:border-purple-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors duration-300">
+                    <Zap className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Binnen 24u Live</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Snelle implementatie zonder complexe installaties
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
