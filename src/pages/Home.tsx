@@ -318,14 +318,15 @@ export function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Starter Plan */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-xl">
-                <div className="text-center">
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/20 to-gray-800/10 border border-gray-500/20 backdrop-blur-xl hover:border-gray-400/40 transition-all duration-500 hover:transform hover:scale-105 flex flex-col h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
                   <div className="mb-6">
                     <span className="text-3xl font-bold text-white">€289</span>
                     <span className="text-gray-400">/maand</span>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left">
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
                       Tot 500 belminuten
@@ -338,27 +339,32 @@ export function Home() {
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
                       Email/WA ticket support
                     </li>
+                    <li className="flex items-center text-sm text-gray-300 opacity-0">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Spacer item
+                    </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors duration-300">
+                  <button className="w-full py-3 px-6 bg-gray-700/50 hover:bg-gray-600/70 text-white font-semibold rounded-xl transition-all duration-300 backdrop-blur-xl border border-gray-600/30 hover:border-gray-500/50">
                     Start Nu
                   </button>
                 </div>
               </div>
 
               {/* Pro Plan */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-orange-900/30 to-orange-800/20 border border-orange-500/30 backdrop-blur-xl transform scale-105">
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-orange-900/20 to-orange-800/10 border border-orange-500/20 backdrop-blur-xl hover:border-orange-400/40 transition-all duration-500 hover:transform hover:scale-105 flex flex-col h-full group">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
                     Meest Populair
                   </span>
                 </div>
-                <div className="text-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-white mb-2">Pro</h3>
                   <div className="mb-6">
                     <span className="text-3xl font-bold text-white">€349</span>
                     <span className="text-gray-400">/maand</span>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left">
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
                       Tot 750 belminuten
@@ -372,21 +378,22 @@ export function Home() {
                       Email/WA ticket support
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                  <button className="w-full py-3 px-6 bg-orange-600/80 hover:bg-orange-700/90 text-white font-semibold rounded-xl transition-all duration-300 backdrop-blur-xl border border-orange-500/30 hover:border-orange-400/50">
                     Start Nu
                   </button>
                 </div>
               </div>
 
               {/* Elite Plan */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-yellow-900/30 to-yellow-800/20 border border-yellow-500/30 backdrop-blur-xl">
-                <div className="text-center">
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-yellow-900/20 to-yellow-800/10 border border-yellow-500/20 backdrop-blur-xl hover:border-yellow-400/40 transition-all duration-500 hover:transform hover:scale-105 flex flex-col h-full group">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-white mb-2">Elite</h3>
                   <div className="mb-6">
                     <span className="text-3xl font-bold text-white">€449</span>
                     <span className="text-gray-400">/maand</span>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left">
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
                       Tot 1000 belminuten
@@ -399,21 +406,26 @@ export function Home() {
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
                       Priority support
                     </li>
+                    <li className="flex items-center text-sm text-gray-300 opacity-0">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Spacer item
+                    </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                  <button className="w-full py-3 px-6 bg-yellow-600/80 hover:bg-yellow-700/90 text-white font-semibold rounded-xl transition-all duration-300 backdrop-blur-xl border border-yellow-500/30 hover:border-yellow-400/50">
                     Start Nu
                   </button>
                 </div>
               </div>
 
               {/* Custom Plan */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-red-900/30 to-red-800/20 border border-red-500/30 backdrop-blur-xl">
-                <div className="text-center">
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-red-900/20 to-red-800/10 border border-red-500/20 backdrop-blur-xl hover:border-red-400/40 transition-all duration-500 hover:transform hover:scale-105 flex flex-col h-full group">
+                <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-white mb-2">Custom</h3>
                   <div className="mb-6">
                     <span className="text-3xl font-bold text-white">Custom</span>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left">
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
                       Onbeperkte gesprekken
@@ -431,7 +443,7 @@ export function Home() {
                       SLA garanties
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                  <button className="w-full py-3 px-6 bg-red-600/80 hover:bg-red-700/90 text-white font-semibold rounded-xl transition-all duration-300 backdrop-blur-xl border border-red-500/30 hover:border-red-400/50">
                     Contact Ons
                   </button>
                 </div>
@@ -439,11 +451,15 @@ export function Home() {
             </div>
             
             {/* ADD ONS Section */}
-            <div className="mt-12 text-center">
+            <div className="mt-16 text-center">
               <h4 className="text-xl font-bold text-white mb-6">ADD ONS:</h4>
-              <div className="space-y-3 text-gray-300">
-                <p className="text-sm">+ Complete maandelijkse omzet en bestelwaardes (ideaal voor boekhouding) €29,99</p>
-                <p className="text-sm">+ Complete AI Chatbot (met bonnenprinter sync) op website €44,99</p>
+              <div className="space-y-4 text-gray-300 max-w-4xl mx-auto">
+                <div className="p-4 rounded-xl bg-gradient-to-br from-blue-900/10 to-blue-800/5 border border-blue-500/20 backdrop-blur-xl">
+                  <p className="text-sm">+ Complete maandelijkse omzet en bestelwaardes (ideaal voor boekhouding) <span className="text-blue-400 font-semibold">€29,99</span></p>
+                </div>
+                <div className="p-4 rounded-xl bg-gradient-to-br from-purple-900/10 to-purple-800/5 border border-purple-500/20 backdrop-blur-xl">
+                  <p className="text-sm">+ Complete AI Chatbot (met bonnenprinter sync) op website <span className="text-purple-400 font-semibold">€44,99</span></p>
+                </div>
               </div>
             </div>
           </div>
