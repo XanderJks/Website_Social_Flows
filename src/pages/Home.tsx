@@ -77,7 +77,7 @@ export function Home() {
             </div>
             
             {/* Main Headline */}
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               Professionele AI-assistenten voor uw restaurant
             </h1>
             
@@ -86,8 +86,19 @@ export function Home() {
               Verhoog uw operationele efficiëntie met geavanceerde spraaktechnologie. Automatiseer reserveringen, bestellingen en klantenservice met bewezen AI-oplossingen.
             </p>
             
+            {/* Demo Video */}
+            <div className={`mb-10 transition-all duration-800 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="relative max-w-4xl mx-auto">
+                <div className="aspect-video bg-slate-800/30 rounded-xl border border-slate-700/50 backdrop-blur-xl flex items-center justify-center">
+                  <button className="group flex items-center justify-center w-20 h-20 bg-blue-600/20 backdrop-blur-xl rounded-full border border-blue-500/30 hover:bg-blue-600/30 transition-all duration-300">
+                    <Play className="w-8 h-8 text-blue-400 ml-1" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            
             {/* CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-800 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-800 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <button 
                 onClick={() => scrollToSection('demo')}
                 className="group relative px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 flex items-center text-sm shadow-lg"
@@ -106,7 +117,7 @@ export function Home() {
             </div>
             
             {/* Trust Indicators */}
-            <div className={`mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-slate-400 transition-all duration-800 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className={`mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-slate-400 transition-all duration-800 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
                 24/7 beschikbaar
@@ -122,7 +133,7 @@ export function Home() {
             </div>
             
             {/* Hero Feature Blocks */}
-            <div className={`mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto transition-all duration-800 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className={`mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto transition-all duration-800 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               {/* 24/7 Beschikbaarheid */}
               <div className="group relative p-8 rounded-xl bg-slate-800/40 border border-slate-700/50 backdrop-blur-xl hover:bg-slate-800/60 transition-all duration-300">
                 <div className="relative z-10 text-center">
@@ -498,31 +509,23 @@ export function Home() {
         <section id="demo" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ervaar de technologie
+              Meer over onze technologie
             </h2>
             <p className="text-lg text-slate-300 mb-8 max-w-3xl mx-auto">
-              Ontdek hoe onze enterprise AI-oplossing uw operationele efficiëntie kan verhogen
+              Diepere inzichten in hoe onze enterprise AI-oplossing uw bedrijfsprocessen transformeert
             </p>
             
-            <div className="relative">
-              <div className="aspect-video bg-slate-800/30 rounded-xl border border-slate-700/50 backdrop-blur-xl flex items-center justify-center">
-                <button className="group flex items-center justify-center w-20 h-20 bg-blue-600/20 backdrop-blur-xl rounded-full border border-blue-500/30 hover:bg-blue-600/30 transition-all duration-300">
-                  <Play className="w-8 h-8 text-blue-400 ml-1" />
-                </button>
-              </div>
-              
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
-                  <Play className="w-4 h-4 mr-2" />
-                  Live Demo
-                </button>
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="px-8 py-4 bg-transparent border-2 border-slate-600 text-slate-200 font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300"
-                >
-                  Persoonlijke Demo
-                </button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
+                <Play className="w-4 h-4 mr-2" />
+                Technische Demo
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="px-8 py-4 bg-transparent border-2 border-slate-600 text-slate-200 font-semibold rounded-lg hover:bg-slate-800/50 transition-all duration-300"
+              >
+                Persoonlijke Demo
+              </button>
             </div>
           </div>
         </section>
