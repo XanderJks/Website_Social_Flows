@@ -165,311 +165,20 @@ export function Home() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            {/* Section Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Over SocialFlows
-              </h2>
-              <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Wij zijn gespecialiseerd in geavanceerde AI-technologie voor de horeca-industrie
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Company Story */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white mb-4">Wie zijn wij?</h3>
-                <p className="text-slate-200 leading-relaxed">
-                  SocialFlows is een innovatief technologiebedrijf dat zich richt op het revolutioneren van klanteninteractie in de horeca-industrie. Met jarenlange ervaring in AI-ontwikkeling en een diep begrip van restaurantprocessen, hebben wij een oplossing gecreëerd die echt werkt.
-                </p>
-                <p className="text-slate-200 leading-relaxed">
-                  Ons team bestaat uit AI-specialisten, software-engineers en horeca-experts die samen werken aan de toekomst van restaurantautomatisering. Wij geloven dat technologie de menselijke ervaring moet verbeteren, niet vervangen.
-                </p>
-                
-                <div className="grid grid-cols-2 gap-6 mt-8">
-                  <div className="text-center p-4 rounded-xl bg-slate-800/30 border border-slate-700/50">
-                    <div className="text-2xl font-bold text-blue-400 mb-2">50+</div>
-                    <div className="text-sm text-slate-300">Tevreden klanten</div>
-                  </div>
-                  <div className="text-center p-4 rounded-xl bg-slate-800/30 border border-slate-700/50">
-                    <div className="text-2xl font-bold text-green-400 mb-2">99.9%</div>
-                    <div className="text-sm text-slate-300">Uptime garantie</div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Mission & Vision */}
-              <div className="space-y-8">
-                <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                  <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <div className="w-8 h-8 bg-blue-600/20 rounded-lg flex items-center justify-center mr-3">
-                      <Shield className="w-4 h-4 text-blue-400" />
-                    </div>
-                    Onze Missie
-                  </h4>
-                  <p className="text-slate-200 leading-relaxed">
-                    Restaurants helpen hun operationele efficiëntie te verhogen door middel van intelligente automatisering, zodat zij zich kunnen focussen op wat zij het beste doen: geweldige ervaringen creëren voor hun gasten.
-                  </p>
-                </div>
-                
-                <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                  <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <div className="w-8 h-8 bg-indigo-600/20 rounded-lg flex items-center justify-center mr-3">
-                      <Zap className="w-4 h-4 text-indigo-400" />
-                    </div>
-                    Onze Visie
-                  </h4>
-                  <p className="text-slate-200 leading-relaxed">
-                    Een toekomst waarin elke restaurantinteractie naadloos, efficiënt en persoonlijk is, ondersteund door AI-technologie die de menselijke touch versterkt in plaats van vervangt.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What is AI Assistant Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Wat is een AI-assistent?
-              </h2>
-              <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Ontdek hoe onze geavanceerde spraaktechnologie uw restaurant kan transformeren
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Explanation */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white mb-6">Intelligente telefonische assistent</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-blue-600/20 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
-                      <MessageSquare className="w-4 h-4 text-blue-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Natuurlijke gesprekken</h4>
-                      <p className="text-slate-300">Onze AI verstaat en spreekt Nederlands op native niveau, met natuurlijke intonatie en begrip van context.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-green-600/20 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
-                      <BarChart3 className="w-4 h-4 text-green-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Leert van elke interactie</h4>
-                      <p className="text-slate-300">De AI wordt slimmer naarmate deze meer gesprekken voert en past zich aan uw specifieke bedrijfsbehoeften aan.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-indigo-600/20 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
-                      <Shield className="w-4 h-4 text-indigo-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Altijd beschikbaar</h4>
-                      <p className="text-slate-300">24/7 operationeel zonder pauzes, ziekteverzuim of vakantiedagen. Uw klanten krijgen altijd professionele service.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Visual representation */}
-              <div className="relative">
-                <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                  <h4 className="text-xl font-bold text-white mb-6 text-center">Zo werkt het in de praktijk</h4>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3 p-4 rounded-lg bg-slate-700/30">
-                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">1</div>
-                      <div>
-                        <p className="text-white font-medium">Klant belt uw restaurant</p>
-                        <p className="text-slate-300 text-sm">AI neemt direct op met persoonlijke begroeting</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3 p-4 rounded-lg bg-slate-700/30">
-                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold">2</div>
-                      <div>
-                        <p className="text-white font-medium">Natuurlijk gesprek</p>
-                        <p className="text-slate-300 text-sm">AI begrijpt wensen en stelt relevante vragen</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3 p-4 rounded-lg bg-slate-700/30">
-                      <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">3</div>
-                      <div>
-                        <p className="text-white font-medium">Actie ondernemen</p>
-                        <p className="text-slate-300 text-sm">Reservering maken of bestelling doorsturen</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3 p-4 rounded-lg bg-slate-700/30">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">4</div>
-                      <div>
-                        <p className="text-white font-medium">Bevestiging & follow-up</p>
-                        <p className="text-slate-300 text-sm">Automatische bevestiging en herinneringen</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Implementation Process Section */}
-        <section id="process" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Ons implementatieproces
-              </h2>
-              <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Van eerste gesprek tot volledige operationele AI-assistent in slechts 1-2 weken
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Week 1 - Day 1-3 */}
-              <div className="relative">
-                <div className="p-6 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl h-full">
-                  <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3">Week 1: Analyse & Setup</h3>
-                  <ul className="space-y-2 text-sm text-slate-300">
-                    <li>• Intake gesprek en behoefteanalyse</li>
-                    <li>• Menu en prijzen configuratie</li>
-                    <li>• Bedrijfsspecifieke training data</li>
-                    <li>• Telefoonnummer doorschakeling</li>
-                  </ul>
-                  <div className="mt-4 text-xs text-slate-400">Dag 1-3</div>
-                </div>
-              </div>
-              
-              {/* Week 1 - Day 4-5 */}
-              <div className="relative">
-                <div className="p-6 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl h-full">
-                  <div className="w-12 h-12 bg-green-600/20 rounded-xl flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-green-400" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3">AI Training</h3>
-                  <ul className="space-y-2 text-sm text-slate-300">
-                    <li>• Stem en persoonlijkheid instellen</li>
-                    <li>• Scenario's en gesprekstraining</li>
-                    <li>• Integratie met bestaande systemen</li>
-                    <li>• Eerste testgesprekken</li>
-                  </ul>
-                  <div className="mt-4 text-xs text-slate-400">Dag 4-5</div>
-                </div>
-              </div>
-              
-              {/* Week 2 - Day 1-3 */}
-              <div className="relative">
-                <div className="p-6 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl h-full">
-                  <div className="w-12 h-12 bg-indigo-600/20 rounded-xl flex items-center justify-center mb-4">
-                    <Shield className="w-6 h-6 text-indigo-400" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3">Week 2: Testing</h3>
-                  <ul className="space-y-2 text-sm text-slate-300">
-                    <li>• Uitgebreide testfase met uw team</li>
-                    <li>• Fine-tuning van responses</li>
-                    <li>• Backup scenario's configureren</li>
-                    <li>• Staff training en instructies</li>
-                  </ul>
-                  <div className="mt-4 text-xs text-slate-400">Dag 1-3</div>
-                </div>
-              </div>
-              
-              {/* Week 2 - Day 4-5 */}
-              <div className="relative">
-                <div className="p-6 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl h-full">
-                  <div className="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3">Go Live!</h3>
-                  <ul className="space-y-2 text-sm text-slate-300">
-                    <li>• Officiële lancering</li>
-                    <li>• 24/7 monitoring eerste week</li>
-                    <li>• Direct support beschikbaar</li>
-                    <li>• Performance rapportage</li>
-                  </ul>
-                  <div className="mt-4 text-xs text-slate-400">Dag 4-5</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Process Benefits */}
-            <div className="mt-16 text-center">
-              <div className="inline-flex items-center px-6 py-3 rounded-lg bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-white font-semibold">Geen technische kennis vereist</span>
-                <span className="mx-3 text-slate-400">•</span>
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-white font-semibold">Volledige begeleiding</span>
-                <span className="mx-3 text-slate-400">•</span>
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-white font-semibold">Geen downtime</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Waarom kiezen voor SocialFlows?
+                Enterprise AI-oplossingen voor restaurants
               </h2>
               <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Ontdek de concrete voordelen die onze AI-assistenten bieden voor uw restaurant
+                Bewezen technologie die naadloos integreert met uw bestaande systemen en processen
               </p>
             </div>
             
-            {/* Key Benefits Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <div className="text-center p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="w-16 h-16 bg-green-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <BarChart3 className="w-8 h-8 text-green-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">35% meer omzet</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Gemiddelde toename in telefonische bestellingen door 24/7 beschikbaarheid en professionele upselling.
-                </p>
-              </div>
-              
-              <div className="text-center p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">15 uur per week bespaard</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Minder tijd besteed aan telefonische reserveringen en bestellingen, meer focus op gasten in het restaurant.
-                </p>
-              </div>
-              
-              <div className="text-center p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="w-16 h-16 bg-indigo-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-indigo-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">98% klanttevredenheid</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Consistente, vriendelijke service zonder wachttijden of miscommunicatie.
-                </p>
-              </div>
-            </div>
-            
-            {/* Detailed Features Grid */}
+            {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Feature 1: Automatische Reserveringen */}
               <div className="group relative p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl hover:bg-slate-800/50 transition-all duration-300">
@@ -477,22 +186,22 @@ export function Home() {
                   <div className="w-14 h-14 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
                     <Phone className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Slimme Reserveringen</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Geautomatiseerde Reserveringen</h3>
                   <p className="text-slate-200 mb-6 leading-relaxed text-base">
-                    Automatische verwerking van reserveringen met real-time beschikbaarheidscontrole. Geen gemiste oproepen meer, zelfs tijdens drukke momenten.
+                    Professionele verwerking van telefonische reserveringen met real-time beschikbaarheidscontrole en naadloze systeemintegratie voor optimale efficiency.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      24/7 reserveringen mogelijk
+                      Continue beschikbaarheid
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Automatische bevestiging per SMS/email
+                      Meertalige ondersteuning
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Integratie met reserveringssysteem
+                      Volledige systeemintegratie
                     </li>
                   </ul>
                 </div>
@@ -504,22 +213,22 @@ export function Home() {
                   <div className="w-14 h-14 bg-green-600/20 rounded-xl flex items-center justify-center mb-6">
                     <MessageSquare className="w-6 h-6 text-green-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Professionele Bestellingen</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Intelligente Bestellingen</h3>
                   <p className="text-slate-200 mb-6 leading-relaxed text-base">
-                    Neem telefonische bestellingen op met intelligente suggesties en upselling. Verhoog uw gemiddelde bestelwaarde automatisch.
+                    Professionele orderverwerking met gepersonaliseerde aanbevelingen en geoptimaliseerde upselling strategieën voor maximale omzetgroei.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Complete menu met prijzen
+                      Volledige menuintegratie
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Slimme suggesties en upselling
+                      AI-gedreven upselling
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Directe doorstuur naar keuken
+                      Veilige betalingsverwerking
                     </li>
                   </ul>
                 </div>
@@ -531,22 +240,22 @@ export function Home() {
                   <div className="w-14 h-14 bg-indigo-600/20 rounded-xl flex items-center justify-center mb-6">
                     <Headphones className="w-6 h-6 text-indigo-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Uitstekende Klantenservice</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Professionele Klantenservice</h3>
                   <p className="text-slate-200 mb-6 leading-relaxed text-base">
-                    Beantwoord vragen over openingstijden, menu's, allergenen en meer. Altijd vriendelijk, geduldig en accuraat.
+                    Consistente, professionele klanteninteractie met directe toegang tot complete klanthistorie en bedrijfsinformatie voor optimale service.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Volledige bedrijfsinformatie
+                      Uitgebreide kennisdatabase
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Doorverbinden bij complexe vragen
+                      Intelligente escalatie
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Meertalige ondersteuning
+                      Complete klanthistorie
                     </li>
                   </ul>
                 </div>
@@ -558,22 +267,22 @@ export function Home() {
                   <div className="w-14 h-14 bg-purple-600/20 rounded-xl flex items-center justify-center mb-6">
                     <BarChart3 className="w-6 h-6 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">Waardevolle Inzichten</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>
                   <p className="text-slate-200 mb-6 leading-relaxed text-base">
-                    Krijg inzicht in gesprekstrends, populaire gerechten en klantengedrag. Optimaliseer uw bedrijfsvoering met data.
+                    Uitgebreide analytics en rapportage voor datagedreven besluitvorming en continue bedrijfsoptimalisatie met real-time inzichten.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Gedetailleerde gesprekrapporten
+                      Real-time analytics
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Omzet en performance tracking
+                      Performance dashboards
                     </li>
                     <li className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                      Maandelijkse business reviews
+                      Gedetailleerde rapportage
                     </li>
                   </ul>
                 </div>
@@ -583,180 +292,46 @@ export function Home() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                De concrete voordelen voor uw restaurant
-              </h2>
-              <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-                Meer dan alleen technologie - echte business impact voor uw restaurant
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Financial Benefits */}
-              <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-green-600/20 rounded-xl flex items-center justify-center mb-6">
-                  <BarChart3 className="w-6 h-6 text-green-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Financiële voordelen</h3>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                    35% meer telefonische omzet
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                    Geen gemiste bestellingen meer
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                    Hogere gemiddelde bestelwaarde
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
-                    ROI binnen 2-3 maanden
-                  </li>
-                </ul>
-              </div>
-              
-              {/* Operational Benefits */}
-              <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
-                  <Clock className="w-6 h-6 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Operationele voordelen</h3>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                    15+ uur per week tijdsbesparing
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                    Minder stress voor personeel
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                    Consistente service kwaliteit
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                    Geen fouten in bestellingen
-                  </li>
-                </ul>
-              </div>
-              
-              {/* Customer Benefits */}
-              <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="w-14 h-14 bg-indigo-600/20 rounded-xl flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-indigo-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Klantvoordelen</h3>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-indigo-400 flex-shrink-0" />
-                    Altijd bereikbaar, ook na sluitingstijd
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-indigo-400 flex-shrink-0" />
-                    Geen wachttijden aan de telefoon
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-indigo-400 flex-shrink-0" />
-                    Vriendelijke, professionele service
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-3 text-indigo-400 flex-shrink-0" />
-                    Snelle en accurate orderverwerking
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            {/* Success Story */}
-            <div className="mt-16">
-              <div className="p-8 rounded-xl bg-slate-800/30 border border-slate-700/50 backdrop-blur-xl">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">Succesverhaal</h3>
-                  <div className="flex justify-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                </div>
-                
-                <blockquote className="text-center">
-                  <p className="text-lg text-slate-200 italic mb-6 leading-relaxed">
-                    "Sinds we SocialFlows gebruiken, missen we geen enkele bestelling meer. Onze omzet is met 40% gestegen en ons personeel kan zich volledig focussen op de gasten in het restaurant. De AI klinkt zo natuurlijk dat klanten vaak niet eens doorhebben dat het geen mens is!"
-                  </p>
-                  <footer className="text-slate-300">
-                    <strong>Marco van der Berg</strong><br />
-                    <span className="text-sm">Eigenaar, Restaurant De Gouden Lepel, Amsterdam</span>
-                  </footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comparison Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Voor en na SocialFlows
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Waarom professionals kiezen voor SocialFlows
               </h2>
-              <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Zie het verschil dat onze AI-assistent maakt voor uw dagelijkse operaties
+              <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+                Bewezen resultaten en enterprise-grade oplossingen voor de moderne horeca
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Before */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-red-400 mb-6 text-center">❌ Zonder AI-assistent</h3>
-                <div className="space-y-4">
-                  <div className="p-4 rounded-lg bg-red-900/20 border border-red-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Gemiste oproepen</p>
-                    <p className="text-slate-300 text-sm">Tijdens drukke momenten gaat de telefoon over zonder dat iemand opneemt</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-red-900/20 border border-red-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Stress voor personeel</p>
-                    <p className="text-slate-300 text-sm">Medewerkers moeten constant tussen keuken en telefoon schakelen</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-red-900/20 border border-red-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Inconsistente service</p>
-                    <p className="text-slate-300 text-sm">Verschillende medewerkers geven verschillende informatie</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-red-900/20 border border-red-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Beperkte openingstijden</p>
-                    <p className="text-slate-300 text-sm">Klanten kunnen alleen bellen tijdens openingstijden</p>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-blue-400" />
                 </div>
+                <h3 className="text-xl font-bold text-white mb-4">Bewezen ROI</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  Gemiddeld 35% toename in telefonische bestellingen binnen de eerste maand van implementatie.
+                </p>
               </div>
               
-              {/* After */}
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-green-400 mb-6 text-center">✅ Met SocialFlows</h3>
-                <div className="space-y-4">
-                  <div className="p-4 rounded-lg bg-green-900/20 border border-green-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Elke oproep beantwoord</p>
-                    <p className="text-slate-300 text-sm">AI neemt binnen 2 seconden op, 24/7 beschikbaar</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-green-900/20 border border-green-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Ontspannen personeel</p>
-                    <p className="text-slate-300 text-sm">Team kan zich volledig focussen op gasten in het restaurant</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-green-900/20 border border-green-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Professionele service</p>
-                    <p className="text-slate-300 text-sm">Altijd dezelfde vriendelijke, accurate informatie</p>
-                  </div>
-                  <div className="p-4 rounded-lg bg-green-900/20 border border-green-500/30">
-                    <p className="text-slate-200 font-medium mb-2">Altijd bereikbaar</p>
-                    <p className="text-slate-300 text-sm">Klanten kunnen 24/7 reserveren en bestellen</p>
-                  </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-green-400" />
                 </div>
+                <h3 className="text-xl font-bold text-white mb-4">Enterprise Beveiliging</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  GDPR-compliant met end-to-end encryptie en 99.9% uptime SLA voor kritieke bedrijfsprocessen.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-indigo-600/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-indigo-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Dedicated Support</h3>
+                <p className="text-slate-300 leading-relaxed">
+                  Persoonlijke accountmanager en 24/7 enterprise support voor continue bedrijfscontinuïteit.
+                </p>
               </div>
             </div>
           </div>
