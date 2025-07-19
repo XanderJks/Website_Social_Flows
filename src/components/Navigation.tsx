@@ -77,7 +77,7 @@ export function Navigation() {
             <div className="flex items-center">
               <a href="#" className="flex items-center group">
                 <span className={`font-bold tracking-wider text-white group-hover:scale-105 transition-all duration-500 ${
-                  isScrolled ? 'text-base' : 'text-lg'
+                  isScrolled ? 'text-sm' : 'text-base'
                 }`}>
                   SocialFlows
                 </span>
@@ -87,21 +87,21 @@ export function Navigation() {
             {/* Desktop Menu */}
             <div className="hidden lg:block">
               <div className={`flex items-center tracking-wider font-medium transition-all duration-500 ${
-                isScrolled ? 'space-x-3 text-xs' : 'space-x-4 text-sm'
+                isScrolled ? 'space-x-2 text-xs' : 'space-x-3 text-xs'
               }`}>
-                <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-2 py-1 rounded-full hover:bg-white/10">
+                <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Features
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
                 </button>
-                <button onClick={() => scrollToSection('pricing')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-2 py-1 rounded-full hover:bg-white/10">
+                <button onClick={() => scrollToSection('pricing')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Prijzen
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
                 </button>
-                <button onClick={() => scrollToSection('demo')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-2 py-1 rounded-full hover:bg-white/10">
+                <button onClick={() => scrollToSection('demo')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Demo
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
                 </button>
-                <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-2 py-1 rounded-full hover:bg-white/10">
+                <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-white/10">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-300"></span>
                 </button>
@@ -110,7 +110,7 @@ export function Navigation() {
                 <button 
                   onClick={() => scrollToSection('demo')} 
                   className={`relative group transition-all duration-500 overflow-hidden ${
-                    isScrolled ? 'text-xs py-1.5 px-3' : 'text-sm py-2 px-4'
+                    isScrolled ? 'text-xs py-1 px-2' : 'text-xs py-1.5 px-3'
                   }`}
                   style={{ borderRadius: '20px' }}
                 >
@@ -126,15 +126,15 @@ export function Navigation() {
             <div className="lg:hidden flex items-center">
               <button 
                 className={`text-white hover:text-gray-300 transition-colors rounded-full hover:bg-white/10 ${
-                  isScrolled ? 'text-xs py-1 px-2' : 'text-sm py-1.5 px-3'
+                  isScrolled ? 'text-xs py-0.5 px-1' : 'text-xs py-1 px-2'
                 }`}
                 onClick={toggleMenu}
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? (
-                  <X size={isScrolled ? 14 : 16} className="transition-all duration-500" />
+                  <X size={isScrolled ? 12 : 14} className="transition-all duration-500" />
                 ) : (
-                  <Menu size={isScrolled ? 14 : 16} className="transition-all duration-500" />
+                  <Menu size={isScrolled ? 12 : 14} className="transition-all duration-500" />
                 )}
               </button>
             </div>
@@ -147,35 +147,35 @@ export function Navigation() {
         <div className="fixed inset-0 z-40 lg:hidden">
           <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" onClick={toggleMenu}></div>
           <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-64 max-w-sm">
-            <div className="bg-black/90 backdrop-blur-3xl rounded-2xl border border-white/20 shadow-2xl p-3">
-              <div className="space-y-2">
+            <div className="bg-black/90 backdrop-blur-3xl rounded-2xl border border-white/20 shadow-2xl p-2">
+              <div className="space-y-1">
                 <button 
                   onClick={() => scrollToSection('features')}
-                  className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Features
                 </button>
                 <button 
                   onClick={() => scrollToSection('process')}
-                  className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Proces
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
-                  className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Prijzen
                 </button>
                 <button 
                   onClick={() => scrollToSection('demo')}
-                  className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Demo
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="block w-full text-left px-3 py-1.5 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
+                  className="block w-full text-left px-2 py-1 text-xs text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
                 >
                   Contact
                 </button>
@@ -183,7 +183,7 @@ export function Navigation() {
                 <div className="pt-2 border-t border-white/10">
                   <button 
                     onClick={() => scrollToSection('demo')}
-                    className="w-full relative group text-xs px-3 py-1.5 overflow-hidden rounded-lg"
+                    className="w-full relative group text-xs px-2 py-1 overflow-hidden rounded-lg"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg"></div>
                     <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-lg border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
