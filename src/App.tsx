@@ -98,33 +98,6 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
-      
-      {/* Vapi AI Widget */}
-      <div id="vapi-widget-container" style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 9999 }}>
-        <vapi-widget
-          public-key="13c0731f-dbde-4236-a9cd-fce5225d4b3d"
-          assistant-id="87fc75bc-db4e-4ca1-97de-e3cb516232ea"
-          mode="voice"
-          theme="dark"
-          base-bg-color="#000000"
-          accent-color="#14B8A6"
-          cta-button-color="#000000"
-          cta-button-text-color="#ffffff"
-          border-radius="large"
-          size="full"
-          position="bottom-right"
-          title="TALK WITH AI"
-          start-button-text="Start"
-          end-button-text="End Call"
-          chat-first-message="Hey, How can I help you today?"
-          chat-placeholder="Type your message..."
-          voice-show-transcript="true"
-          consent-required="true"
-          consent-title="Terms and conditions"
-          consent-content="By clicking 'Agree,' and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
-          consent-storage-key="vapi_widget_consent"
-        ></vapi-widget>
-      </div>
     </HelmetProvider>
   );
 }
