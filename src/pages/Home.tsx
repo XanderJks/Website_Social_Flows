@@ -1,870 +1,599 @@
-import React, { useEffect, useRef } from 'react';
-import { 
-  Phone, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  MessageSquare, 
-  Shield, 
-  Calendar, 
-  Sparkles, 
-  Zap, 
-  Target, 
-  Waves, 
-  Droplets,
-  BarChart3,
-  TrendingUp,
-  Instagram,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Youtube,
-  Mail,
-  MapPin,
-  Star,
-  Mic,
-  Bot,
-  HeadphonesIcon,
-  PhoneCall,
-  ChefHat,
-  Utensils,
-  Coffee,
-  Crown
-} from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
 export function Home() {
-  const featuresRef = useRef<HTMLDivElement>(null);
-  const benefitsRef = useRef<HTMLDivElement>(null);
-  const pricingRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-  
-  // Detect mobile for performance optimizations
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const particleCount = isMobile ? 10 : 20;
-  const starCount = isMobile ? 20 : 40;
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Get animation type from data attribute
-            const animationType = entry.target.getAttribute('data-animation') || 'fade-in';
-            entry.target.classList.add(animationType);
-            entry.target.classList.add('scroll-visible');
-            entry.target.classList.remove('scroll-hidden');
-          }
-        });
-      },
-      { 
-        threshold: 0.1, 
-        rootMargin: '50px 0px -50px 0px'
-      }
-    );
-
-    // Get all elements with scroll animation classes
-    const elements = document.querySelectorAll('.scroll-hidden, [data-animation]');
-
-    elements.forEach((element) => {
-      if (element) {
-        element.classList.add('scroll-hidden');
-        observer.observe(element);
-      }
-    });
-
-    return () => observer.disconnect();
+    setIsVisible(true);
   }, []);
 
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <>
-      <SEOHead
+      <SEOHead 
         title="SocialFlows - Voice AI Assistenten voor Restaurants"
-        description="Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie. Verhoog uw omzet en verbeter de klantervaring."
-        keywords="voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, horeca automatisering, restaurant AI, Nederland"
+        description="Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie."
+        keywords="voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, Nederland, horeca"
         url="https://socialflows.nl"
-        image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop"
       />
       
-      <main className="relative min-h-screen overflow-hidden">
-        {/* Liquid Glass Background Effects */}
-        <div className="fixed inset-0 z-0">
-          {/* Primary liquid glass orbs */}
-          <div 
-              className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-blue-500/25 via-indigo-600/20 to-purple-600/25 rounded-full blur-3xl animate-pulse"
-            style={{ 
-              animationDuration: '8s',
-              filter: 'blur(80px)',
-              background: 'radial-gradient(circle, rgba(37,99,235,0.25) 0%, rgba(79,70,229,0.2) 50%, rgba(124,58,237,0.25) 100%)'
-            }}
-          ></div>
-          
-          <div 
-            className="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-600/25 via-indigo-600/20 to-blue-500/25 rounded-full blur-3xl animate-pulse"
-            style={{ 
-              animationDuration: '12s', 
-              animationDelay: '2s',
-              filter: 'blur(70px)',
-              background: 'radial-gradient(circle, rgba(124,58,237,0.25) 0%, rgba(79,70,229,0.2) 50%, rgba(37,99,235,0.25) 100%)'
-            }}
-          ></div>
-          
-          <div 
-            className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-tr from-indigo-500/22 via-blue-600/16 to-purple-600/22 rounded-full blur-3xl animate-pulse"
-            style={{ 
-              animationDuration: '10s', 
-              animationDelay: '4s',
-              filter: 'blur(60px)',
-              background: 'radial-gradient(circle, rgba(79,70,229,0.22) 0%, rgba(37,99,235,0.16) 50%, rgba(124,58,237,0.22) 100%)'
-            }}
-          ></div>
-
-          {/* Floating liquid particles */}
-          <div className="absolute inset-0 overflow-hidden opacity-40">
-            {[...Array(particleCount)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-gradient-to-r from-blue-400/40 to-indigo-500/40 rounded-full animate-float"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 8}s`,
-                  animationDuration: `${8 + Math.random() * 12}s`,
-                  filter: 'blur(1px)'
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Extra subtle star field */}
-          <div className="absolute inset-0 overflow-hidden opacity-20">
-            {[...Array(starCount)].map((_, i) => (
-              <div
-                key={`home-star-${i}`}
-                className="absolute w-0.5 h-0.5 bg-white rounded-full animate-twinkle"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 6}s`,
-                  animationDuration: `${3 + Math.random() * 4}s`,
-                  boxShadow: '0 0 4px rgba(255,255,255,0.5)'
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
+      <main className="relative z-10">
         {/* Hero Section */}
-        <section id="home" className="relative z-20 pt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 relative z-20">
-            <div className="text-center">
-              {/* Liquid Glass Hero Content */}
-              <div className="max-w-6xl mx-auto">
-                {/* Overline with liquid glass effect */}
-                <div className="mb-6 sm:mb-8">
-                  <span className="inline-flex items-center px-4 py-2 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 tracking-wide uppercase shadow-2xl">
-                    <Mic size={16} className="mr-3 text-blue-400" />
-                    <span className="text-white font-bold">De toekomst van restaurant service</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/15 to-indigo-600/15 rounded-full blur-xl"></div>
-                  </span>
-                </div>
-                
-                {/* Main Typography with liquid glass styling */}
-                <div className="space-y-4 sm:space-y-8 mb-8 sm:mb-16">
-                  {/* Primary Headline with enhanced glass effect */}
-                  <div className="relative">
-                    <h1 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none bg-gradient-to-br from-white via-gray-100 to-blue-100 bg-clip-text text-transparent drop-shadow-2xl">
-                      SocialFlows
-                    </h1>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/25 via-gray-300/25 to-white/25 blur-3xl -z-10"></div>
-                  </div>
-                  
-                  {/* Subtitle with liquid glass container */}
-                  <div className="relative max-w-5xl mx-auto">
-                    <div className="absolute inset-0 bg-white/8 backdrop-blur-xl rounded-3xl border border-white/15 shadow-2xl"></div>
-                    <div className="relative p-4 sm:p-8 text-lg sm:text-xl lg:text-3xl font-light text-white/90 leading-tight">
-                      <span className="block mb-3">
-                        <span className="text-blue-200">Voice AI assistenten</span> voor restaurants
-                      </span>
-                      <span className="block">
-                        <span className="text-white font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                          Automatiseer reserveringen en bestellingen
-                        </span>
-                      </span>
-                      <span className="block mt-3 text-base sm:text-lg lg:text-xl text-white/70">
-                        zodat u zich kunt focussen op <span className="text-blue-200 font-medium">geweldige gerechten</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Liquid Glass Action Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-20">
-                  <button 
-                    onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative group text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto overflow-hidden"
-                    aria-label="Start uw SocialFlows project"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-600 to-gray-700 rounded-2xl"></div>
-                    <div className="absolute inset-0 bg-white/15 backdrop-blur-xl rounded-2xl border border-slate-400/40 group-hover:bg-white/25 group-hover:border-slate-300/60 transition-all duration-300"></div>
-                    <span className="relative z-10 font-black text-white drop-shadow-lg">Start Gratis Demo</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-500/60 to-gray-600/60 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
-                  </button>
-                  
-                  <button 
-                    onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="relative group text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 w-full sm:w-auto overflow-hidden"
-                    aria-label="Bekijk onze features"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600/30 to-slate-600/30 backdrop-blur-2xl rounded-2xl border border-gray-400/40 group-hover:bg-gradient-to-r group-hover:from-gray-600/40 group-hover:to-slate-600/40 group-hover:border-gray-300/60 transition-all duration-300"></div>
-                    <span className="relative z-10 font-bold text-white drop-shadow-lg">Bekijk Features</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-500/40 to-slate-500/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
-                  </button>
-                </div>
-
-                {/* Liquid Glass Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mb-12 sm:mb-20">
-                  {[
-                    { value: '200+', label: 'Tevreden restaurants' },
-                    { value: '24/7', label: 'AI beschikbaar' },
-                    { value: '90%', label: 'Meer reserveringen' },
-                    { value: '15+', label: 'Talen ondersteund' }
-                  ].map((stat, index) => (
-                    <div key={index} className="relative group">
-                      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300"></div>
-                      <div className="relative p-3 sm:p-6 text-center">
-                        <div className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2 drop-shadow-lg">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs sm:text-sm text-white uppercase tracking-wider font-bold">
-                          {stat.label}
-                        </div>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/25 to-gray-300/25 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
-                    </div>
-                  ))}
-                </div>
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/10 backdrop-blur-xl border border-white/20 text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <Shield className="w-3 h-3 mr-2" />
+              Geavanceerde AI technologie
+            </div>
+            
+            {/* Main Headline */}
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              Alles wat uw restaurant nodig heeft
+            </h1>
+            
+            {/* Subheadline */}
+            <p className={`text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              SocialFlows biedt een complete AI-assistent die uw restaurant helpt met telefonische bestellingen, reserveringen en klantenservice.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <button 
+                onClick={() => scrollToSection('demo')}
+                className="group relative px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 flex items-center text-sm"
+              >
+                <Play className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                Bekijk Demo
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
+              
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="group relative px-8 py-3 bg-transparent border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 flex items-center text-sm backdrop-blur-xl"
+              >
+                <MessageSquare className="w-4 h-4 mr-2" />
+                Gratis Consultatie
+              </button>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className={`mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                24/7 beschikbaar
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                Meertalig
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                Geen setup kosten
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section id="features" className="relative z-10 py-16 sm:py-32" aria-labelledby="features-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-24 scroll-hidden" data-animation="fade-in-up">
-              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
-                  <Bot size={16} className="mr-2" />
-                  <span className="text-white font-bold">Geavanceerde AI technologie</span>
-                </span>
-              </div>
-              <h2 id="features-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
-                Alles wat uw restaurant nodig heeft
+        <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Krachtige AI-functies voor uw restaurant
               </h2>
-              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
-                SocialFlows biedt een complete AI-assistent die uw restaurant helpt met telefonische bestellingen, reserveringen en klantenservice.
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Onze geavanceerde AI-assistent integreert naadloos met uw bestaande systemen
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto" ref={featuresRef}>
-              {[
-                {
-                  icon: PhoneCall,
-                  title: 'Automatische Reserveringen',
-                  description: 'Onze AI neemt telefonische reserveringen aan, checkt beschikbaarheid en bevestigt direct in uw systeem.',
-                  features: ['24/7 beschikbaar', 'Multilingual support', 'Agenda integratie'],
-                  gradient: 'from-blue-500/15 to-indigo-500/15'
-                },
-                {
-                  icon: Utensils,
-                  title: 'Telefoonbestellingen',
-                  description: 'Klanten kunnen hun favoriete gerechten bestellen via telefoon, compleet met personalisatie en upselling.',
-                  features: ['Menu integratie', 'Upselling suggesties', 'Betaling processing'],
-                  gradient: 'from-violet-500/15 to-purple-500/15'
-                },
-                {
-                  icon: HeadphonesIcon,
-                  title: 'Klantenservice',
-                  description: 'Beantwoord veelgestelde vragen, geef informatie over openingstijden en help klanten met hun behoeften.',
-                  features: ['FAQ database', 'Doorschakeling naar personeel', 'Klantgeschiedenis'],
-                  gradient: 'from-teal-500/15 to-cyan-500/15'
-                },
-                {
-                  icon: BarChart3,
-                  title: 'Geavanceerde Analytics',
-                  description: 'Krijg inzicht in gesprekken, popular gerechten en klantgedrag om uw service te optimaliseren.',
-                  features: ['Gespreksanalyse', 'Populariteit tracking', 'Performance metrics'],
-                  gradient: 'from-indigo-500/15 to-blue-500/15'
-                },
-                {
-                  icon: Crown,
-                  title: 'Merkpersonalisatie',
-                  description: 'Onze AI past zich aan uw restaurant aan met gepersonaliseerde begroetingen en merkspecifieke taal.',
-                  features: ['Custom greeting', 'Brand voice', 'Menu kennis'],
-                  gradient: 'from-purple-500/15 to-indigo-500/15'
-                },
-                {
-                  icon: Shield,
-                  title: 'Betrouwbaar & Veilig',
-                  description: 'GDPR-compliant met enterprise-grade beveiliging en 99.9% uptime garantie.',
-                  features: ['GDPR compliant', 'Data encryptie', '99.9% uptime'],
-                  gradient: 'from-gray-500/15 to-slate-500/15'
-                }
-              ].slice(0, 4).map((feature, index) => (
-                <article key={index} className={`relative group mx-auto scroll-hidden scroll-stagger-${index + 1} ${index >= 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`} data-animation="fade-in-up">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl rounded-3xl border border-white/20 group-hover:border-white/30 transition-all duration-500 shadow-2xl`}></div>
-                  <div className="relative p-6 sm:p-8 h-full">
-                    <div className={`p-4 bg-gradient-to-br ${feature.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-300 shadow-xl`}>
-                      <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />
-                    </div>
-                    <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white drop-shadow-lg">{feature.title}</h3>
-                    <p className="text-white/80 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
-                      {feature.description}
-                    </p>
-                    <ul className="space-y-3">
-                      {feature.features.map((item, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle size={18} className="text-green-400 mr-3 drop-shadow-lg" aria-hidden="true" />
-                          <span className="text-white/90 text-sm sm:text-base">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Feature 1: Automatische Reserveringen */}
+              <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-500/20 backdrop-blur-xl hover:border-blue-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/30 transition-colors duration-300">
+                    <Phone className="w-6 h-6 text-blue-400" />
                   </div>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition-all duration-500 -z-10`}></div>
-                </article>
-              ))}
+                  <h3 className="text-xl font-bold text-white mb-4">Automatische Reserveringen</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Onze AI neemt telefonische reserveringen aan, checkt beschikbaarheid en bevestigt direct in uw systeem.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      24/7 beschikbaar
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Meertalige ondersteuning
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Agenda integratie
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Feature 2: Telefoonbestellingen */}
+              <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-purple-900/20 to-purple-800/10 border border-purple-500/20 backdrop-blur-xl hover:border-purple-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500/30 transition-colors duration-300">
+                    <MessageSquare className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Telefoonbestellingen</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Klanten kunnen hun favoriete gerechten bestellen via telefoon, compleet met personalisatie en upselling.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Menu integratie
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Upselling suggesties
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Betaling processing
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Feature 3: Klantenservice */}
+              <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-teal-900/20 to-teal-800/10 border border-teal-500/20 backdrop-blur-xl hover:border-teal-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-500/30 transition-colors duration-300">
+                    <Headphones className="w-6 h-6 text-teal-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Klantenservice</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Beantwoord veelgestelde vragen, geef informatie over openingstijden en help klanten met hun behoeften.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      FAQ database
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Doorschakeling naar personeel
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Klantgeschiedenis
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Feature 4: Geavanceerde Analytics */}
+              <div className="group relative p-8 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-indigo-800/10 border border-indigo-500/20 backdrop-blur-xl hover:border-indigo-400/40 transition-all duration-500 hover:transform hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30 transition-colors duration-300">
+                    <BarChart3 className="w-6 h-6 text-indigo-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Geavanceerde Analytics</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Krijg inzicht in gesprekken, populaire gerechten en klantgedrag om uw service te optimaliseren.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Gespreksanalyse
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Populariteit tracking
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Performance metrics
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Process Section */}
-        <section id="process" className="relative z-10 py-16 sm:py-32" aria-labelledby="process-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-24 scroll-hidden" data-animation="fade-in-up">
-              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-indigo-300 shadow-xl">
-                  <Sparkles size={16} className="mr-2" />
-                  <span className="text-white font-bold">Ons bewezen proces</span>
-                </span>
-              </div>
-              <h2 id="process-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
-                Zo implementeren we uw AI assistent
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Waarom kiezen voor SocialFlows?
               </h2>
-              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
-                Van eerste gesprek tot volledige implementatie. Ontdek hoe we uw restaurant transformeren in slechts 4 stappen.
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Ontdek de voordelen van onze geavanceerde AI-technologie
               </p>
             </div>
             
-            {/* Modern Timeline Layout */}
-            <div className="relative max-w-6xl mx-auto">
-              {/* Connection Lines - Desktop Only */}
-              <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              <div className="hidden lg:block absolute top-16 left-1/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
-              <div className="hidden lg:block absolute top-16 left-2/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
-              <div className="hidden lg:block absolute top-16 left-3/4 w-0.5 h-8 bg-gradient-to-b from-white/20 to-transparent"></div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6">
-                {[
-                  {
-                    step: '01',
-                    title: 'Onboarding & Intake',
-                    description: 'We beginnen met een uitgebreid gesprek om uw restaurant, menu en klantenwensen te begrijpen.',
-                    icon: Users,
-                    details: [
-                      'Restaurant strategie sessie',
-                      'Menu en service analyse',
-                      'Klantprofiel opstellen',
-                      'Doelstellingen vaststellen'
-                    ],
-                    gradient: 'from-blue-500/10 to-indigo-500/10',
-                    iconColor: 'text-blue-400',
-                    stepColor: 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                  },
-                  {
-                    step: '02',
-                    title: 'Discovery & Analyse',
-                    description: 'Diepgaande analyse van uw huidige processen en identificatie van optimalisatie kansen.',
-                    icon: BarChart3,
-                    details: [
-                      'Procesanalyse reserveringen',
-                      'Menu digitalisatie',
-                      'Klantjourney mapping',
-                      'AI strategie ontwikkeling'
-                    ],
-                    gradient: 'from-indigo-500/10 to-purple-500/10',
-                    iconColor: 'text-indigo-400',
-                    stepColor: 'bg-gradient-to-r from-indigo-500 to-purple-500'
-                  },
-                  {
-                    step: '03',
-                    title: 'Ontwikkeling & Training',
-                    description: 'We bouwen en trainen uw gepersonaliseerde AI assistent met uw menu en restaurant informatie.',
-                    icon: Bot,
-                    details: [
-                      'AI assistent configuratie',
-                      'Menu training',
-                      'Stem en persoonlijkheid',
-                      'Uitgebreide test fase'
-                    ],
-                    gradient: 'from-purple-500/10 to-pink-500/10',
-                    iconColor: 'text-purple-400',
-                    stepColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
-                  },
-                  {
-                    step: '04',
-                    title: 'Launch & Onderhoud',
-                    description: 'Lancering met telefoonnummer overdracht en continue monitoring voor optimale prestaties.',
-                    icon: PhoneCall,
-                    details: [
-                      'Telefoonnummer setup',
-                      'Soft launch periode',
-                      'Performance monitoring',
-                      'Continue optimalisatie'
-                    ],
-                    gradient: 'from-pink-500/10 to-rose-500/10',
-                    iconColor: 'text-pink-400',
-                    stepColor: 'bg-gradient-to-r from-pink-500 to-rose-500'
-                  }
-                ].map((step, index) => (
-                  <div key={index} className={`relative flex flex-col scroll-hidden scroll-stagger-${index + 1}`} data-animation="fade-in-up">
-                    {/* Modern Step Indicator */}
-                    <div className="relative z-10 flex items-center justify-center mx-auto mb-8">
-                      <div className={`w-12 h-12 rounded-2xl ${step.stepColor} flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300`}>
-                        <span className="text-white font-bold text-lg">{step.step}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Sleek Process Card */}
-                    <div className="relative group flex-1 flex flex-col h-full">
-                      {/* Card Background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-white/[0.08] backdrop-blur-xl rounded-3xl border border-white/10 group-hover:border-white/20 transition-all duration-500 shadow-xl group-hover:shadow-2xl"></div>
-                      
-                      {/* Card Content */}
-                      <div className="relative p-6 sm:p-8 lg:p-10 text-center flex-1 flex flex-col">
-                        {/* Icon */}
-                        <div className={`p-4 bg-gradient-to-br ${step.gradient} rounded-2xl w-14 h-14 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg border border-white/10`}>
-                          <step.icon className={`w-8 h-8 ${step.iconColor}`} aria-hidden="true" />
-                        </div>
-                        
-                        {/* Title */}
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-white leading-tight">{step.title}</h3>
-                        
-                        {/* Description */}
-                        <p className="text-white/70 mb-6 text-base sm:text-lg leading-relaxed flex-1">
-                          {step.description}
-                        </p>
-                        
-                        {/* Features List */}
-                        <ul className="space-y-3 text-left mt-auto">
-                          {step.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start">
-                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-white/60 to-white/30 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-white/80 text-sm sm:text-base">{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Hover Glow */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-all duration-500 -z-10`}></div>
-                    </div>
-                  </div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Snelle Implementatie</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Binnen 24 uur operationeel. Geen complexe installaties of lange wachttijden.
+                </p>
               </div>
-            </div>
-            
-            {/* Modern Stats Section */}
-            <div className="mt-20 text-center">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
-                  <div className="relative p-6 sm:p-8">
-                    <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-3">
-                      1-2 weken
-                    </div>
-                    <div className="text-white/70 font-medium text-xs sm:text-sm">
-                      Gemiddelde implementatietijd
-                    </div>
-                  </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-8 h-8 text-green-400" />
                 </div>
-                
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
-                  <div className="relative p-6 sm:p-8">
-                    <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-3">
-                      24/7
-                    </div>
-                    <div className="text-white/70 font-medium text-xs sm:text-sm">
-                      AI beschikbaarheid
-                    </div>
-                  </div>
+                <h3 className="text-xl font-bold text-white mb-4">Betrouwbaar & Veilig</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Enterprise-grade beveiliging met 99.9% uptime garantie voor uw restaurant.
+                </p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-purple-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-purple-400" />
                 </div>
-                
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 shadow-lg"></div>
-                  <div className="relative p-6 sm:p-8">
-                    <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-3">
-                      98%
-                    </div>
-                    <div className="text-white/70 font-medium text-xs sm:text-sm">
-                      Klantentevredenheid
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Persoonlijke Support</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Dedicated accountmanager en 24/7 technische ondersteuning voor uw succes.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative z-10 py-16 sm:py-32" aria-labelledby="pricing-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-24 scroll-hidden" data-animation="fade-in-up">
-              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
-                  <Target size={16} className="mr-2" />
-                  <span className="text-white font-bold">Transparante prijzen</span>
-                </span>
-              </div>
-              <h2 id="pricing-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
-                Kies uw AI assistent plan
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Transparante Prijzen
               </h2>
-              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
-                Start met onze gratis demo en upgrade naar een plan dat past bij uw restaurant. Alle plannen bevatten setup en training.
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Kies het plan dat perfect past bij uw restaurant
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto" ref={pricingRef}>
-              {[
-                {
-                  name: 'Basic',
-                  price: '€149',
-                  period: '/maand',
-                  description: 'Perfect voor kleine restaurants met beperkte telefonische service',
-                  features: [
-                    'Tot 200 gesprekken/maand',
-                    'Basis reserveringen',
-                    'Nederlandse taal',
-                    'Email support',
-                    'Basis analytics'
-                  ],
-                  popular: false,
-                  gradient: 'from-gray-500/20 to-gray-600/20'
-                },
-                {
-                  name: 'Professional',
-                  price: '€299',
-                  period: '/maand',
-                  description: 'Ideaal voor middelgrote restaurants met actieve telefonische service',
-                  features: [
-                    'Tot 1000 gesprekken/maand',
-                    'Reserveringen + bestellingen',
-                    'Meertalig (NL/EN/DE)',
-                    'Priority support',
-                    'Geavanceerde analytics',
-                    'Menu integratie',
-                    'Upselling features'
-                  ],
-                  popular: true,
-                  gradient: 'from-blue-500/20 to-indigo-500/20'
-                },
-                {
-                  name: 'Enterprise',
-                  price: '€599',
-                  period: '/maand',
-                  description: 'Voor grote restaurants en ketens met hoge call volumes',
-                  features: [
-                    'Onbeperkte gesprekken',
-                    'Volledig AI platform',
-                    'Alle talen',
-                    'Dedicated support',
-                    'Custom integraties',
-                    'Wit-label oplossing',
-                    'API toegang',
-                    'SLA garantie'
-                  ],
-                  popular: false,
-                  gradient: 'from-indigo-500/20 to-purple-500/20'
-                }
-              ].map((plan, index) => (
-                <div key={index} className={`relative group ${plan.popular ? 'sm:scale-105' : ''} transition-all duration-500 hover:scale-110 hover:-translate-y-4 max-w-md mx-auto scroll-hidden scroll-stagger-${index + 1} ${plan.popular ? 'sm:col-span-2 lg:col-span-1' : ''}`} data-animation="fade-in-up">
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                        Meest Populair
-                      </span>
-                    </div>
-                  )}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} backdrop-blur-xl rounded-3xl border ${plan.popular ? 'border-blue-500/50' : 'border-white/20'} group-hover:border-white/40 group-hover:shadow-2xl transition-all duration-500 shadow-2xl`}></div>
-                  <div className="relative p-6 sm:p-8 h-full flex flex-col">
-                    <div className="text-center mb-8">
-                      <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                      <div className="flex items-baseline justify-center mb-4">
-                        <span className="text-4xl sm:text-5xl font-black text-white">
-                          {plan.price}
-                        </span>
-                        <span className="text-white/60 ml-2">{plan.period}</span>
-                      </div>
-                      <p className="text-white/70 text-sm sm:text-base">{plan.description}</p>
-                    </div>
-                    
-                    <ul className="space-y-4 mb-8 flex-1">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle size={18} className="text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-white/90 text-sm sm:text-base">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <button 
-                      onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
-                      className={`w-full py-3 sm:py-4 px-6 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base ${
-                        plan.popular 
-                          ? 'bg-gradient-to-r from-gray-600 to-slate-700 text-white hover:from-gray-500 hover:to-slate-600 shadow-lg hover:shadow-xl' 
-                          : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-white/30'
-                      }`}
-                    >
-                      Start Gratis Demo
-                    </button>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Starter Plan */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-xl">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-white">€99</span>
+                    <span className="text-gray-400">/maand</span>
                   </div>
-                  {/* Hover glow effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition-all duration-500 -z-10`}></div>
+                  <ul className="space-y-3 mb-8 text-left">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Tot 500 gesprekken/maand
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Basis reserveringen
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Email ondersteuning
+                    </li>
+                  </ul>
+                  <button className="w-full py-3 px-6 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors duration-300">
+                    Start Gratis Trial
+                  </button>
                 </div>
-              ))}
-            </div>
-            
-            <div className="text-center mt-16">
-              <p className="text-white/60 mb-4 text-sm sm:text-base">Alle plannen bevatten volledige setup en training. Geen verborgen kosten.</p>
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-white/40">
-                <div className="flex items-center">
-                  <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span className="text-sm sm:text-base">Geen contractverplichting</span>
+              </div>
+
+              {/* Professional Plan */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-blue-900/30 to-blue-800/20 border border-blue-500/30 backdrop-blur-xl transform scale-105">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                    Meest Populair
+                  </span>
                 </div>
-                <div className="flex items-center">
-                  <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span className="text-sm sm:text-base">24/7 AI beschikbaar</span>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Professional</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-white">€199</span>
+                    <span className="text-gray-400">/maand</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Tot 2000 gesprekken/maand
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Volledige functionaliteit
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Prioriteit ondersteuning
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Analytics dashboard
+                    </li>
+                  </ul>
+                  <button className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                    Start Nu
+                  </button>
                 </div>
-                <div className="flex items-center">
-                  <CheckCircle size={16} className="mr-2 text-green-400" />
-                  <span className="text-sm sm:text-base">GDPR compliant</span>
+              </div>
+
+              {/* Enterprise Plan */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/30 backdrop-blur-xl">
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Enterprise</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-white">Custom</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left">
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Onbeperkte gesprekken
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Custom integraties
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      Dedicated support
+                    </li>
+                    <li className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-400 flex-shrink-0" />
+                      SLA garanties
+                    </li>
+                  </ul>
+                  <button className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors duration-300">
+                    Contact Ons
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        {/* Demo Meeting Section */}
-        <section id="demo" className="relative z-10 py-16 sm:py-32" aria-labelledby="demo-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16 scroll-hidden" data-animation="fade-in-up">
-              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
-                  <Calendar size={16} className="mr-2" />
-                  <span className="text-white font-bold">Plan uw demo meeting</span>
-                </span>
-              </div>
-              <h2 id="demo-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
-                Plan uw persoonlijke demo
-              </h2>
-              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
-                Boek een persoonlijke demo van 15 minuten en ontdek hoe onze Voice AI assistent uw restaurant kan transformeren.
-              </p>
-            </div>
+        {/* Demo Section */}
+        <section id="demo" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Zie SocialFlows in actie
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Ervaar zelf hoe onze AI-assistent uw restaurant kan transformeren
+            </p>
             
-            <div className="relative max-w-4xl mx-auto scroll-hidden scroll-stagger-4" data-animation="fade-in-up">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
-                <div className="relative p-6 sm:p-8 md:p-12">
-                  <div className="text-center mb-8">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                      Wat u kunt verwachten in onze demo:
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
-                      <div className="flex items-center justify-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center">
-                          <Mic size={18} className="text-blue-400" />
-                        </div>
-                        <span className="text-white/90 font-medium text-sm sm:text-base">Live AI Demo</span>
-                      </div>
-                      <div className="flex items-center justify-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl flex items-center justify-center">
-                          <BarChart3 size={18} className="text-indigo-400" />
-                        </div>
-                        <span className="text-white/90 font-medium text-sm sm:text-base">ROI Berekening</span>
-                      </div>
-                      <div className="flex items-center justify-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-xl flex items-center justify-center">
-                          <Target size={18} className="text-purple-400" />
-                        </div>
-                        <span className="text-white/90 font-medium text-sm sm:text-base">Custom Strategie</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Cal.com iframe */}
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
-                    <iframe
-                      src="https://cal.com/socialflows/demo"
-                      width="100%"
-                      height="500"
-                      className="rounded-xl"
-                      style={{ border: 'none' }}
-                      title="Plan uw SocialFlows demo"
-                    ></iframe>
-                  </div>
-                  
-                  <div className="text-center mt-8">
-                    <p className="text-white/60 text-xs sm:text-sm">
-                      Geen verplichtingen • Gratis 15 minuten demo • Direct inzicht in mogelijkheden
-                    </p>
-                  </div>
-                </div>
+            <div className="relative">
+              <div className="aspect-video bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-2xl border border-gray-700/50 backdrop-blur-xl flex items-center justify-center">
+                <button className="group flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <Play className="w-8 h-8 text-white ml-1 group-hover:scale-110 transition-transform" />
+                </button>
+              </div>
+              
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center">
+                  <Play className="w-4 h-4 mr-2" />
+                  Bekijk Demo
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="px-6 py-3 bg-transparent border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 backdrop-blur-xl"
+                >
+                  Plan een Live Demo
+                </button>
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative z-10 py-16 sm:py-32" aria-labelledby="contact-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16 scroll-hidden" data-animation="fade-in-up">
-              <div className="mb-8 scroll-hidden scroll-stagger-1" data-animation="fade-in-up">
-                <span className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-full text-xs sm:text-sm font-medium text-blue-300 shadow-xl">
-                  <MessageSquare size={16} className="mr-2" />
-                  <span className="text-white font-bold">Neem contact op</span>
-                </span>
-              </div>
-              <h2 id="contact-heading" className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-white drop-shadow-2xl scroll-hidden scroll-stagger-2" data-animation="fade-in-up">
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 Klaar om te beginnen?
               </h2>
-              <p className="text-white text-lg sm:text-xl max-w-4xl mx-auto leading-relaxed drop-shadow-sm scroll-hidden scroll-stagger-3" data-animation="fade-in-up">
-                Heeft u vragen of wilt u meer informatie? Neem direct contact met ons op via onderstaand formulier.
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Neem contact op voor een gratis consultatie en ontdek hoe SocialFlows uw restaurant kan helpen
               </p>
             </div>
             
-            <div className="relative max-w-6xl mx-auto scroll-hidden scroll-stagger-4" data-animation="fade-in-up" ref={contactRef}>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-purple-600/30 rounded-3xl blur-2xl"></div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl border border-white/20 shadow-2xl"></div>
-                <div className="relative p-6 sm:p-12 md:p-16 overflow-hidden rounded-3xl">
-                  <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
-                  
-                  <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-                    <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
-                        Contactgegevens
-                      </h3>
-                      <p className="text-white/80 text-base sm:text-lg mb-8 leading-relaxed">
-                        Ons team staat klaar om al uw vragen te beantwoorden en u te helpen met de implementatie van uw Voice AI assistent.
-                      </p>
-                      
-                      <div className="space-y-4 sm:space-y-6 mb-10">
-                        <div className="flex items-center">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500/30 to-indigo-500/30 rounded-xl flex items-center justify-center mr-4">
-                            <Mail size={20} className="text-blue-400" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white text-sm sm:text-base">Email</p>
-                            <p className="text-white/70 text-sm sm:text-base">info@socialflows.nl</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center">
-                          <div className="w-12 h-12 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-xl flex items-center justify-center mr-4">
-                            <Phone size={20} className="text-indigo-400" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white text-sm sm:text-base">Telefoon</p>
-                            <p className="text-white/70 text-sm sm:text-base">+31 (0)20 123 4567</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center">
-                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500/30 to-blue-500/30 rounded-xl flex items-center justify-center mr-4">
-                            <MapPin size={20} className="text-purple-400" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white text-sm sm:text-base">Adres</p>
-                            <p className="text-white/70 text-sm sm:text-base">Amsterdam, Nederland</p>
-                          </div>
-                        </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Info */}
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-6">Neem direct contact op</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                        <Phone className="w-5 h-5 text-blue-400" />
                       </div>
-                      
+                      <div>
+                        <p className="text-white font-medium">Telefoon</p>
+                        <p className="text-gray-300">+31 20 123 4567</p>
+                      </div>
                     </div>
                     
-                    <div>
-                      <form onSubmit={handleContactSubmit} className="space-y-4 sm:space-y-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                          <div>
-                            <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Naam</label>
-                            <input
-                              type="text"
-                              required
-                              className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm text-sm sm:text-base"
-                              placeholder="Uw naam"
-                            />
-                          </div>
-                          <div>
-                            <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Email</label>
-                            <input
-                              type="email"
-                              required
-                              className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm text-sm sm:text-base"
-                              placeholder="uw@email.nl"
-                            />
-                          </div>
-                        </div>
-                        
-                        <div>
-                          <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Restaurant</label>
-                          <input
-                            type="text"
-                            className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white rounded-xl backdrop-blur-sm text-sm sm:text-base"
-                            placeholder="Uw restaurant naam"
-                          />
-                        </div>
-                        
-                        <div>
-                          <label className="block text-xs sm:text-sm font-medium mb-2 text-white/90">Bericht</label>
-                          <textarea
-                            rows={4}
-                            required
-                            className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-black/30 border border-white/20 focus:border-blue-400 outline-none transition-all text-white resize-none rounded-xl backdrop-blur-sm text-sm sm:text-base"
-                            placeholder="Vertel ons over uw restaurant en hoe we kunnen helpen..."
-                          ></textarea>
-                        </div>
-                        
-                        <button
-                          type="submit"
-                          className="w-full relative group text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 overflow-hidden"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-slate-700 rounded-2xl"></div>
-                          <div className="absolute inset-0 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 group-hover:bg-white/30 transition-all duration-300"></div>
-                          <span className="relative z-10 font-bold text-white drop-shadow-lg flex items-center justify-center">
-                            <MessageSquare size={20} className="mr-3 animate-ai-pulse" />
-                            Verstuur Bericht
-                          </span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-gray-400/50 to-slate-500/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 -z-10"></div>
-                        </button>
-                      </form>
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+                        <MessageSquare className="w-5 h-5 text-green-400" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Email</p>
+                        <p className="text-gray-300">info@socialflows.nl</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
+                        <Clock className="w-5 h-5 text-purple-400" />
+                      </div>
+                      <div>
+                        <p className="text-white font-medium">Beschikbaarheid</p>
+                        <p className="text-gray-300">Ma-Vr 9:00-18:00</p>
+                      </div>
                     </div>
                   </div>
                 </div>
+                
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-blue-800/10 border border-blue-500/20 backdrop-blur-xl">
+                  <h4 className="text-lg font-bold text-white mb-3">Gratis Consultatie</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    Ontdek in een persoonlijk gesprek hoe SocialFlows uw restaurant kan helpen groeien. 
+                    Geen verplichtingen, alleen waardevolle inzichten.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Contact Form */}
+              <div className="relative">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+                        Voornaam
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white/10 transition-all duration-300 backdrop-blur-xl"
+                        placeholder="Uw voornaam"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+                        Achternaam
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white/10 transition-all duration-300 backdrop-blur-xl"
+                        placeholder="Uw achternaam"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white/10 transition-all duration-300 backdrop-blur-xl"
+                      placeholder="uw@email.nl"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="restaurant" className="block text-sm font-medium text-white mb-2">
+                      Restaurant Naam
+                    </label>
+                    <input
+                      type="text"
+                      id="restaurant"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white/10 transition-all duration-300 backdrop-blur-xl"
+                      placeholder="Naam van uw restaurant"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                      Bericht
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:bg-white/10 transition-all duration-300 backdrop-blur-xl resize-none"
+                      placeholder="Vertel ons over uw restaurant en hoe we kunnen helpen..."
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 flex items-center justify-center group"
+                  >
+                    Verstuur Bericht
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </form>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Footer */}
+        <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="col-span-1 md:col-span-2">
+                <h3 className="text-xl font-bold text-white mb-4">SocialFlows</h3>
+                <p className="text-gray-300 mb-4 max-w-md">
+                  Revolutioneer uw restaurant met geavanceerde Voice AI technologie. 
+                  Automatiseer reserveringen, bestellingen en klantenservice.
+                </p>
+                <div className="flex space-x-4">
+                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+                    <span className="text-white text-xs font-bold">f</span>
+                  </div>
+                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+                    <span className="text-white text-xs font-bold">t</span>
+                  </div>
+                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer">
+                    <span className="text-white text-xs font-bold">in</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="text-white font-semibold mb-4">Product</h4>
+                <ul className="space-y-2">
+                  <li><a href="#features" className="text-gray-300 hover:text-white transition-colors text-sm">Features</a></li>
+                  <li><a href="#pricing" className="text-gray-300 hover:text-white transition-colors text-sm">Prijzen</a></li>
+                  <li><a href="#demo" className="text-gray-300 hover:text-white transition-colors text-sm">Demo</a></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-white font-semibold mb-4">Support</h4>
+                <ul className="space-y-2">
+                  <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</a></li>
+                  <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Documentatie</a></li>
+                  <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Status</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center">
+              <p className="text-gray-400 text-sm">
+                © 2024 SocialFlows. Alle rechten voorbehouden.
+              </p>
+              <div className="flex space-x-6 mt-4 sm:mt-0">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Voorwaarden</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );
