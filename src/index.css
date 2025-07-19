@@ -246,7 +246,7 @@
 /* Mobile optimizations */
 @media (max-width: 768px) {
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
   
   /* Reduce animations on mobile */
