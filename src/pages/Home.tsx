@@ -116,7 +116,7 @@ export function Home() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">Snelle Implementatie</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    Operationeel binnen 24 uur zonder complexe installaties
+                    Operationeel binnen 1-2 weken met volledige ondersteuning
                   </p>
                 </div>
               </div>
