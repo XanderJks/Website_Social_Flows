@@ -4,6 +4,8 @@ import { SEOHead } from '../components/SEOHead';
 
 export function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     setIsVisible(true);
@@ -13,6 +15,45 @@ export function Home() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      restaurant: formData.get('restaurant'),
+      message: formData.get('message'),
+      timestamp: new Date().toISOString(),
+      source: 'SocialFlows Website'
+    };
+
+    try {
+      const response = await fetch('https://hook.eu2.make.com/goka38wdmp545joe0kjjn49i551w5kf7', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -547,7 +588,25 @@ export function Home() {
               
               {/* Contact Form */}
               <div className="relative">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  {/* Success Message */}
+                  {submitStatus === 'success' && (
+                    <div className="p-4 rounded-lg bg-green-600/20 border border-green-500/30 backdrop-blur-xl">
+                      <p className="text-green-400 text-sm font-semibold">
+                        ✅ Bedankt! Uw bericht is verzonden. We nemen binnen 24 uur contact met u op.
+                      </p>
+                    </div>
+                  )}
+                  
+                  {/* Error Message */}
+                  {submitStatus === 'error' && (
+                    <div className="p-4 rounded-lg bg-red-600/20 border border-red-500/30 backdrop-blur-xl">
+                      <p className="text-red-400 text-sm font-semibold">
+                        ❌ Er is een fout opgetreden. Probeer het opnieuw of neem direct contact op.
+                      </p>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-semibold text-white mb-2">
@@ -556,8 +615,10 @@ export function Home() {
                       <input
                         type="text"
                         id="firstName"
+                        name="firstName"
                         className="w-full px-4 py-3 bg-slate-800/30 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:bg-slate-800/50 transition-all duration-300 backdrop-blur-xl"
                         placeholder="Uw voornaam"
+                        required
                       />
                     </div>
                     <div>
@@ -567,8 +628,10 @@ export function Home() {
                       <input
                         type="text"
                         id="lastName"
+                        name="lastName"
                         className="w-full px-4 py-3 bg-slate-800/30 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:bg-slate-800/50 transition-all duration-300 backdrop-blur-xl"
                         placeholder="Uw achternaam"
+                        required
                       />
                     </div>
                   </div>
@@ -580,8 +643,10 @@ export function Home() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className="w-full px-4 py-3 bg-slate-800/30 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:bg-slate-800/50 transition-all duration-300 backdrop-blur-xl"
                       placeholder="naam@bedrijf.nl"
+                      required
                     />
                   </div>
                   
@@ -592,8 +657,10 @@ export function Home() {
                     <input
                       type="text"
                       id="restaurant"
+                      name="restaurant"
                       className="w-full px-4 py-3 bg-slate-800/30 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:bg-slate-800/50 transition-all duration-300 backdrop-blur-xl"
                       placeholder="Naam van uw bedrijf"
+                      required
                     />
                   </div>
                   
@@ -604,17 +671,29 @@ export function Home() {
                     <textarea
                       id="message"
                       rows={4}
+                      name="message"
                       className="w-full px-4 py-3 bg-slate-800/30 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:bg-slate-800/50 transition-all duration-300 backdrop-blur-xl resize-none"
                       placeholder="Beschrijf uw huidige uitdagingen en doelstellingen..."
+                      required
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full py-4 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center group"
                   >
-                    Plan Consultatie
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                        Verzenden...
+                      </>
+                    ) : (
+                      <>
+                        Plan Consultatie
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
