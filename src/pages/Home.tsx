@@ -745,7 +745,7 @@ export function Home() {
             
             <div className="mt-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm">
-                © 2024 SocialFlows. Alle rechten voorbehouden.
+                © 2025 SocialFlows. Alle rechten voorbehouden.
               </p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
