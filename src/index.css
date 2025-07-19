@@ -9,13 +9,14 @@
     font-family: 'Inter', sans-serif;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     background: #000;
+    font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   /* Improved text readability */
   p {
-    @apply leading-relaxed;
+    line-height: 1.5;
   }
 
   /* Performance optimizations */
@@ -362,6 +363,10 @@
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  
   /* Reduce animations on mobile */
   .animate-float {
     animation-duration: 12s;
@@ -404,99 +409,170 @@
   
   /* Mobile-specific zoom out styles */
   .text-hero {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
   
   .text-display {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.125rem, 3vw, 1.75rem);
   }
   
   /* Smaller spacing on mobile */
   .mobile-compact {
-    padding: 2rem 1rem;
+    padding: 1rem 0.75rem;
   }
   
   /* Smaller buttons on mobile */
   .btn-mobile-small {
-    padding: 0.375rem 0.75rem;
-    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.625rem;
   }
   
   /* Compact feature cards on mobile */
   .feature-card {
-    padding: 1rem;
+    padding: 0.75rem;
   }
   
   /* Smaller navigation on mobile */
   .nav-mobile-compact {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.625rem;
   }
   
   /* Reduce form spacing on mobile */
   .form-mobile-compact {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
   
   .form-mobile-compact input,
   .form-mobile-compact textarea {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.75rem;
   }
   
   /* Smaller icons on mobile */
   .icon-mobile-small {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
   }
   
   /* Compact grid on mobile */
   .grid-mobile-compact {
-    gap: 1rem;
+    gap: 0.75rem;
   }
   
   /* Smaller headings on mobile */
   h1 {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
   }
   
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
   }
   
   /* Smaller text sizes on mobile */
   .text-lg {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   
   .text-xl {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   
   .text-2xl {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   
   .text-3xl {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   
   .text-4xl {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
   
   .text-5xl {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
   
   .text-6xl {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+}
+
+/* Desktop zoom out optimizations */
+@media (min-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+  
+  /* Smaller desktop headings */
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  /* Compact spacing for desktop */
+  .desktop-compact {
+    padding: 3rem 1.5rem;
+  }
+  
+  /* Smaller desktop buttons */
+  .btn-desktop-compact {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Compact desktop cards */
+  .card-desktop-compact {
+    padding: 1.5rem;
+  }
+  
+  /* Desktop text scaling */
+  .text-lg {
+    font-size: 1.0625rem;
+  }
+  
+  .text-xl {
+    font-size: 1.1875rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.4375rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-4xl {
+    font-size: 2.125rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.75rem;
+  }
+  
+  .text-6xl {
+    font-size: 3.5rem;
   }
 }
 
