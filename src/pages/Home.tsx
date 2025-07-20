@@ -492,14 +492,88 @@ export function Home() {
             
             {/* ADD ONS Section */}
             <div className="mt-16 text-center">
-              <h4 className="text-xl font-bold text-gray-800 mb-6">Uitbreidingen</h4>
-              <div className="space-y-4 text-gray-700 max-w-4xl mx-auto">
-                <div className="p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
-                  <p className="text-sm">Complete financiële rapportage en bestelanalyse (ideaal voor boekhouding) <span className="text-green-600 font-semibold">€29,99/maand</span></p>
+              <h4 className="text-2xl font-bold text-gray-800 mb-8">Krachtige Uitbreidingen</h4>
+              <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
+                Breid uw AI-systeem uit met geavanceerde modules voor complete bedrijfsoptimalisatie
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Financial Analytics Add-on */}
+                <div className="group relative p-8 rounded-xl bg-white/95 border border-green-200/40 backdrop-blur-xl hover:bg-white hover:border-green-300/60 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
+                      <BarChart3 className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="flex-1 text-left">
+                      <h5 className="text-lg font-bold text-gray-800 mb-2">Financial Analytics Pro</h5>
+                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                        Complete financiële rapportage en bestelanalyse met real-time dashboards. 
+                        Ideaal voor boekhouding en business intelligence.
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <span className="text-2xl font-bold text-green-600">€29,99</span>
+                          <span className="text-gray-500 text-sm">/maand</span>
+                        </div>
+                        <button 
+                          onClick={() => scrollToSection('contact')}
+                          className="px-4 py-2 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300 text-sm"
+                        >
+                          Toevoegen
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
-                  <p className="text-sm">Geïntegreerde AI Chatbot voor website (inclusief bonnenprinter synchronisatie) <span className="text-green-600 font-semibold">€44,99/maand</span></p>
+                
+                {/* AI Chatbot Add-on */}
+                <div className="group relative p-8 rounded-xl bg-white/95 border border-green-200/40 backdrop-blur-xl hover:bg-white hover:border-green-300/60 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
+                      <MessageSquare className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="flex-1 text-left">
+                      <h5 className="text-lg font-bold text-gray-800 mb-2">AI Website Chatbot</h5>
+                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                        Geïntegreerde AI chatbot voor uw website met bonnenprinter synchronisatie. 
+                        24/7 online klantenservice en automatische orderverwerking.
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <span className="text-2xl font-bold text-green-600">€44,99</span>
+                          <span className="text-gray-500 text-sm">/maand</span>
+                        </div>
+                        <button 
+                          onClick={() => scrollToSection('contact')}
+                          className="px-4 py-2 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300 text-sm"
+                        >
+                          Toevoegen
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              
+              {/* Bundle Offer */}
+              <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-green-50 to-green-100/50 border border-green-200/50 backdrop-blur-xl max-w-3xl mx-auto">
+                <div className="flex items-center justify-center space-x-3 mb-3">
+                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-green-600" />
+                  </div>
+                  <h5 className="text-lg font-bold text-gray-800">Complete Bundle</h5>
+                </div>
+                <p className="text-gray-600 text-sm mb-4">
+                  Beide uitbreidingen samen voor slechts <span className="font-bold text-green-600">€64,99/maand</span> 
+                  <span className="text-gray-500 line-through ml-2">€74,98</span>
+                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded-lg text-xs font-semibold ml-2">Bespaar €10</span>
+                </p>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 text-sm"
+                >
+                  Bundle Aanvragen
+                </button>
               </div>
             </div>
           </div>
