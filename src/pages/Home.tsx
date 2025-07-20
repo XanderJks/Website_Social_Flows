@@ -71,13 +71,13 @@ export function Home() {
         <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32">
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
-            <div className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-blue-50/80 backdrop-blur-xl border border-blue-200/50 text-blue-700 mb-8 transition-all duration-800 shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <Shield className="w-4 h-4 mr-2 text-blue-500" />
+            <div className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-green-50/80 backdrop-blur-xl border border-green-200/50 text-green-700 mb-8 transition-all duration-800 shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <Shield className="w-4 h-4 mr-2 text-green-600" />
               Enterprise AI Oplossingen
             </div>
             
             {/* Main Headline */}
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-600 via-green-700 to-green-800 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               Professionele AI-assistenten voor uw restaurant
             </h1>
             
@@ -89,9 +89,9 @@ export function Home() {
             {/* Demo Video */}
             <div className={`mb-10 transition-all duration-800 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="relative max-w-4xl mx-auto">
-                <div className="aspect-video bg-white/90 rounded-xl border border-blue-200/50 backdrop-blur-xl flex items-center justify-center shadow-lg">
-                  <button className="group flex items-center justify-center w-20 h-20 bg-blue-500/20 backdrop-blur-xl rounded-full border border-blue-400/40 hover:bg-blue-500/30 transition-all duration-300 shadow-md">
-                    <Play className="w-8 h-8 text-blue-600 ml-1" />
+                <div className="aspect-video bg-white/90 rounded-xl border border-green-200/50 backdrop-blur-xl flex items-center justify-center shadow-lg">
+                  <button className="group flex items-center justify-center w-20 h-20 bg-green-500/20 backdrop-blur-xl rounded-full border border-green-400/40 hover:bg-green-500/30 transition-all duration-300 shadow-md">
+                    <Play className="w-8 h-8 text-green-600 ml-1" />
                   </button>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export function Home() {
             <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-800 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <button 
                 onClick={() => scrollToSection('demo')}
-                className="group relative px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 flex items-center text-sm shadow-lg"
+                className="group relative px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 flex items-center text-sm shadow-lg"
               >
                 <Play className="w-4 h-4 mr-2" />
                 Live Demo Bekijken
@@ -119,15 +119,15 @@ export function Home() {
             {/* Trust Indicators */}
             <div className={`mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-600 transition-all duration-800 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
+                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
                 24/7 beschikbaar
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
+                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
                 Enterprise beveiliging
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-blue-500" />
+                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
                 Snelle implementatie
               </div>
             </div>
@@ -135,10 +135,10 @@ export function Home() {
             {/* Hero Feature Blocks */}
             <div className={`mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto transition-all duration-800 delay-1100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               {/* 24/7 Beschikbaarheid */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10 text-center">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Clock className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Clock className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3">24/7 Beschikbaarheid</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
@@ -148,10 +148,10 @@ export function Home() {
               </div>
 
               {/* 99% Uptime */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10 text-center">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Shield className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Shield className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise Betrouwbaarheid</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
@@ -161,10 +161,10 @@ export function Home() {
               </div>
 
               {/* Snelle Setup */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10 text-center">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Zap className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Zap className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Snelle Implementatie</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
@@ -192,10 +192,10 @@ export function Home() {
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Feature 1: Automatische Reserveringen */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <Phone className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Geautomatiseerde Reserveringen</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
@@ -203,15 +203,15 @@ export function Home() {
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Continue beschikbaarheid
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Meertalige ondersteuning
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Volledige systeemintegratie
                     </li>
                   </ul>
@@ -219,10 +219,10 @@ export function Home() {
               </div>
 
               {/* Feature 2: Telefoonbestellingen */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <MessageSquare className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <MessageSquare className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Intelligente Bestellingen</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
@@ -230,15 +230,15 @@ export function Home() {
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Volledige menuintegratie
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       AI-gedreven upselling
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Veilige betalingsverwerking
                     </li>
                   </ul>
@@ -246,10 +246,10 @@ export function Home() {
               </div>
 
               {/* Feature 3: Klantenservice */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <Headphones className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <Headphones className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Professionele Klantenservice</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
@@ -257,15 +257,15 @@ export function Home() {
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Uitgebreide kennisdatabase
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Intelligente escalatie
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Complete klanthistorie
                     </li>
                   </ul>
@@ -273,10 +273,10 @@ export function Home() {
               </div>
 
               {/* Feature 4: Geavanceerde Analytics */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 shadow-lg">
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <BarChart3 className="w-6 h-6 text-blue-600" />
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <BarChart3 className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Business Intelligence</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
@@ -284,15 +284,15 @@ export function Home() {
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Real-time analytics
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Performance dashboards
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Gedetailleerde rapportage
                     </li>
                   </ul>
@@ -316,8 +316,8 @@ export function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Bewezen ROI</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -326,8 +326,8 @@ export function Home() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Enterprise Beveiliging</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -336,8 +336,8 @@ export function Home() {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Dedicated Support</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -362,7 +362,7 @@ export function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Starter Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
                 <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Starter</h3>
                   <div className="mb-6">
@@ -371,32 +371,32 @@ export function Home() {
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Tot 500 belminuten
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Maandelijkse verbruik overzicht
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Email/WA ticket support
                     </li>
                     <li className="flex items-center text-sm text-gray-700 opacity-0">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Spacer item
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold rounded-lg transition-all duration-300 border border-blue-200 hover:border-blue-300">
+                  <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
                     Start Nu
                   </button>
                 </div>
               </div>
 
               {/* Pro Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-blue-500/50 backdrop-blur-xl hover:bg-white hover:border-blue-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-500/50 backdrop-blur-xl hover:bg-white hover:border-green-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
+                  <span className="bg-green-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
                     Aanbevolen
                   </span>
                 </div>
@@ -408,26 +408,26 @@ export function Home() {
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Tot 750 belminuten
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Maandelijkse rapportage (Verbruik, aantal calls, succes percentage, totale bestelwaarde)
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Email/WA ticket support
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300">
+                  <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
                     Start Nu
                   </button>
                 </div>
               </div>
 
               {/* Elite Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
                 <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Elite</h3>
                   <div className="mb-6">
@@ -436,30 +436,30 @@ export function Home() {
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Tot 1000 belminuten
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Maandelijkse rapportage (Compleet en gereed voor boekhouding)
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Priority support
                     </li>
                     <li className="flex items-center text-sm text-gray-700 opacity-0">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Spacer item
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold rounded-lg transition-all duration-300 border border-blue-200 hover:border-blue-300">
+                  <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
                     Start Nu
                   </button>
                 </div>
               </div>
 
               {/* Custom Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl hover:bg-white hover:border-blue-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
                 <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise</h3>
                   <div className="mb-6">
@@ -467,23 +467,23 @@ export function Home() {
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Onbeperkte gesprekken
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Custom integraties
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Dedicated support
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       SLA garanties
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300">
+                  <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
                     Contact Ons
                   </button>
                 </div>
@@ -494,11 +494,11 @@ export function Home() {
             <div className="mt-16 text-center">
               <h4 className="text-xl font-bold text-gray-800 mb-6">Uitbreidingen</h4>
               <div className="space-y-4 text-gray-700 max-w-4xl mx-auto">
-                <div className="p-6 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl shadow-lg">
-                  <p className="text-sm">Complete financiële rapportage en bestelanalyse (ideaal voor boekhouding) <span className="text-blue-600 font-semibold">€29,99/maand</span></p>
+                <div className="p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
+                  <p className="text-sm">Complete financiële rapportage en bestelanalyse (ideaal voor boekhouding) <span className="text-green-600 font-semibold">€29,99/maand</span></p>
                 </div>
-                <div className="p-6 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl shadow-lg">
-                  <p className="text-sm">Geïntegreerde AI Chatbot voor website (inclusief bonnenprinter synchronisatie) <span className="text-blue-600 font-semibold">€44,99/maand</span></p>
+                <div className="p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
+                  <p className="text-sm">Geïntegreerde AI Chatbot voor website (inclusief bonnenprinter synchronisatie) <span className="text-green-600 font-semibold">€44,99/maand</span></p>
                 </div>
               </div>
             </div>
@@ -524,8 +524,8 @@ export function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-6">Direct contact</h3>
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                        <Phone className="w-5 h-5 text-blue-600" />
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+                        <Phone className="w-5 h-5 text-green-600" />
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold">Business Line</p>
@@ -534,8 +534,8 @@ export function Home() {
                     </div>
                     
                     <div className="flex items-center">
-                      <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                        <MessageSquare className="w-5 h-5 text-blue-600" />
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+                        <MessageSquare className="w-5 h-5 text-green-600" />
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold">Enterprise Sales</p>
@@ -544,8 +544,8 @@ export function Home() {
                     </div>
                     
                     <div className="flex items-center">
-                      <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                        <Clock className="w-5 h-5 text-blue-600" />
+                      <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+                        <Clock className="w-5 h-5 text-green-600" />
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold">Business Hours</p>
@@ -555,7 +555,7 @@ export function Home() {
                   </div>
                 </div>
                 
-                <div className="p-6 rounded-xl bg-white/90 border border-blue-200/30 backdrop-blur-xl shadow-lg">
+                <div className="p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
                   <h4 className="text-lg font-bold text-gray-800 mb-3">Enterprise Consultatie</h4>
                   <p className="text-gray-700 text-sm leading-relaxed">
                     Persoonlijke analyse van uw bedrijfsprocessen en een op maat gemaakte implementatiestrategie. 
@@ -594,7 +594,7 @@ export function Home() {
                         type="text"
                         id="firstName"
                         name="firstName"
-                        className="w-full px-4 py-3 bg-white/90 border border-blue-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
+                        className="w-full px-4 py-3 bg-white/90 border border-green-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
                         placeholder="Uw voornaam"
                         required
                       />
@@ -607,7 +607,7 @@ export function Home() {
                         type="text"
                         id="lastName"
                         name="lastName"
-                        className="w-full px-4 py-3 bg-white/90 border border-blue-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
+                        className="w-full px-4 py-3 bg-white/90 border border-green-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
                         placeholder="Uw achternaam"
                         required
                       />
@@ -622,7 +622,7 @@ export function Home() {
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-4 py-3 bg-white/90 border border-blue-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
+                      className="w-full px-4 py-3 bg-white/90 border border-green-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
                       placeholder="naam@bedrijf.nl"
                       required
                     />
@@ -636,7 +636,7 @@ export function Home() {
                       type="text"
                       id="restaurant"
                       name="restaurant"
-                      className="w-full px-4 py-3 bg-white/90 border border-blue-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
+                      className="w-full px-4 py-3 bg-white/90 border border-green-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
                       placeholder="Naam van uw bedrijf"
                       required
                     />
@@ -650,7 +650,7 @@ export function Home() {
                       id="message"
                       rows={4}
                       name="message"
-                      className="w-full px-4 py-3 bg-white/90 border border-blue-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-white transition-all duration-300 backdrop-blur-xl resize-none shadow-sm"
+                      className="w-full px-4 py-3 bg-white/90 border border-green-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all duration-300 backdrop-blur-xl resize-none shadow-sm"
                       placeholder="Beschrijf uw huidige uitdagingen en doelstellingen..."
                       required
                     ></textarea>
@@ -659,7 +659,7 @@ export function Home() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center group"
+                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center group"
                   >
                     {isSubmitting ? (
                       <>
@@ -690,14 +690,14 @@ export function Home() {
                   Bewezen technologie voor operationele excellentie.
                 </p>
                 <div className="flex space-x-4">
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors cursor-pointer">
-                    <span className="text-blue-700 text-xs font-bold">f</span>
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors cursor-pointer">
+                    <span className="text-green-700 text-xs font-bold">f</span>
                   </div>
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors cursor-pointer">
-                    <span className="text-blue-700 text-xs font-bold">t</span>
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors cursor-pointer">
+                    <span className="text-green-700 text-xs font-bold">t</span>
                   </div>
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors cursor-pointer">
-                    <span className="text-blue-700 text-xs font-bold">in</span>
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors cursor-pointer">
+                    <span className="text-green-700 text-xs font-bold">in</span>
                   </div>
                 </div>
               </div>
@@ -705,30 +705,30 @@ export function Home() {
               <div>
                 <h4 className="text-gray-800 font-semibold mb-4">Oplossingen</h4>
                 <ul className="space-y-2">
-                  <li><a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors text-sm">Enterprise AI</a></li>
-                  <li><a href="#pricing" className="text-gray-700 hover:text-blue-600 transition-colors text-sm">Prijsmodellen</a></li>
-                  <li><a href="#demo" className="text-gray-700 hover:text-blue-600 transition-colors text-sm">Live Demo</a></li>
+                  <li><a href="#features" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Enterprise AI</a></li>
+                  <li><a href="#pricing" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Prijsmodellen</a></li>
+                  <li><a href="#demo" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Live Demo</a></li>
                 </ul>
               </div>
               
               <div>
                 <h4 className="text-gray-800 font-semibold mb-4">Enterprise</h4>
                 <ul className="space-y-2">
-                  <li><a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors text-sm">Contact Sales</a></li>
-                  <li><a href="#" className="text-gray-700 hover:text-blue-600 transition-colors text-sm">Documentatie</a></li>
-                  <li><a href="#" className="text-gray-700 hover:text-blue-600 transition-colors text-sm">System Status</a></li>
+                  <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Sales</a></li>
+                  <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Documentatie</a></li>
+                  <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
                 </ul>
               </div>
             </div>
             
-            <div className="mt-8 pt-8 border-t border-blue-200/30 flex flex-col sm:flex-row justify-between items-center">
+            <div className="mt-8 pt-8 border-t border-green-200/30 flex flex-col sm:flex-row justify-between items-center">
               <p className="text-gray-600 text-sm">
                 © 2025 SocialFlows. Alle rechten voorbehouden.
               </p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">Privacy Policy</a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">Terms of Service</a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">Security</a>
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</a>
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Security</a>
               </div>
             </div>
           </div>
