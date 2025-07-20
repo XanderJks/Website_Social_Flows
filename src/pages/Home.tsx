@@ -89,10 +89,15 @@ export function Home() {
             {/* Demo Video */}
             <div className={`mb-10 transition-all duration-800 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="relative max-w-4xl mx-auto">
-                <div className="aspect-video bg-white/90 rounded-xl border border-green-200/50 backdrop-blur-xl flex items-center justify-center shadow-lg">
-                  <button className="group flex items-center justify-center w-20 h-20 bg-green-500/20 backdrop-blur-xl rounded-full border border-green-400/40 hover:bg-green-500/30 transition-all duration-300 shadow-md">
-                    <Play className="w-8 h-8 text-green-600 ml-1" />
-                  </button>
+                <div className="aspect-video bg-white/90 rounded-xl border border-green-200/50 backdrop-blur-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                    title="SocialFlows Demo Video"
+                    className="w-full h-full rounded-xl"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -553,27 +558,6 @@ export function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Bundle Offer */}
-              <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-green-50 to-green-100/50 border border-green-200/50 backdrop-blur-xl max-w-3xl mx-auto">
-                <div className="flex items-center justify-center space-x-3 mb-3">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-green-600" />
-                  </div>
-                  <h5 className="text-lg font-bold text-gray-800">Complete Bundle</h5>
-                </div>
-                <p className="text-gray-600 text-sm mb-4">
-                  Beide uitbreidingen samen voor slechts <span className="font-bold text-green-600">€64,99/maand</span> 
-                  <span className="text-gray-500 line-through ml-2">€74,98</span>
-                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded-lg text-xs font-semibold ml-2">Bespaar €10</span>
-                </p>
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 text-sm"
-                >
-                  Bundle Aanvragen
-                </button>
               </div>
             </div>
           </div>
