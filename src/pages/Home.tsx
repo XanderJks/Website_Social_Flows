@@ -388,7 +388,7 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    Start Nu
+                    <span onClick={() => scrollToSection('contact')}>Start Nu</span>
                   </button>
                 </div>
               </div>
@@ -421,7 +421,7 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    Start Nu
+                    <span onClick={() => scrollToSection('contact')}>Start Nu</span>
                   </button>
                 </div>
               </div>
@@ -453,7 +453,7 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    Start Nu
+                    <span onClick={() => scrollToSection('contact')}>Start Nu</span>
                   </button>
                 </div>
               </div>
@@ -484,7 +484,7 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    Contact Ons
+                    <span onClick={() => scrollToSection('contact')}>Contact Ons</span>
                   </button>
                 </div>
               </div>
