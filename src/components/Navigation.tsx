@@ -80,7 +80,7 @@ export function Navigation() {
                   src="/Naamloos.jpg" 
                   alt="SocialFlows" 
                   className={`mr-3 transition-all duration-500 group-hover:scale-105 ${
-                    isScrolled ? 'h-8 w-8' : 'h-10 w-10'
+                    isScrolled ? 'h-14 w-14' : 'h-20 w-20'
                   }`}
                   style={{ objectFit: 'contain' }}
                 />
