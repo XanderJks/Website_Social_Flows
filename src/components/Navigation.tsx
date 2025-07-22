@@ -76,6 +76,14 @@ export function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <a href="#" className="flex items-center group">
+                <img 
+                  src="/Naamloos.jpg" 
+                  alt="SocialFlows Logo" 
+                  className={`mr-3 transition-all duration-500 group-hover:scale-105 ${
+                    isScrolled ? 'h-6 w-6' : 'h-8 w-8'
+                  }`}
+                  style={{ objectFit: 'contain' }}
+                />
                 <span className={`font-bold tracking-wider text-gray-800 group-hover:scale-105 transition-all duration-500 ${
                   isScrolled ? 'text-sm' : 'text-base'
                 }`}>
