@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users } from 'lucide-react';
+import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
 export function Home() {
@@ -57,6 +57,21 @@ export function Home() {
     }
   };
 
+  const startVapiDemo = () => {
+    // Check if Vapi is loaded
+    if (typeof window !== 'undefined' && (window as any).vapiInstance) {
+      try {
+        // Start the voice call
+        (window as any).vapiInstance.start();
+      } catch (error) {
+        console.error('Error starting Vapi demo:', error);
+        alert('Demo is momenteel niet beschikbaar. Probeer het later opnieuw.');
+      }
+    } else {
+      alert('Voice AI wordt geladen... Probeer het over een paar seconden opnieuw.');
+    }
+  };
+
   return (
     <>
       <SEOHead 
@@ -105,8 +120,16 @@ export function Home() {
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-800 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <button 
-                onClick={() => scrollToSection('demo')}
+                onClick={startVapiDemo}
                 className="group relative px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 flex items-center text-sm shadow-lg"
+              >
+                <Mic className="w-4 h-4 mr-2" />
+                Test de Demo
+              </button>
+              
+              <button 
+                onClick={() => scrollToSection('demo')}
+                className="group relative px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center text-sm shadow-lg"
               >
                 <Play className="w-4 h-4 mr-2" />
                 Live Demo Bekijken
