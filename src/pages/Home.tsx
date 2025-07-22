@@ -120,14 +120,6 @@ export function Home() {
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-800 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <button 
-                onClick={startVapiDemo}
-                className="group relative px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-300 flex items-center text-sm shadow-lg"
-              >
-                <Mic className="w-4 h-4 mr-2" />
-                Test de Demo
-              </button>
-              
-              <button 
                 onClick={() => scrollToSection('demo')}
                 className="group relative px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center text-sm shadow-lg"
               >
