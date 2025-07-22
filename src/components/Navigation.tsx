@@ -50,8 +50,8 @@ export function Navigation() {
       >
         <div className={`relative transition-all duration-700 ease-in-out ${
           isScrolled || isHovered
-            ? 'w-auto px-8 py-4' 
-            : 'w-auto px-12 py-5'
+            ? 'w-auto px-6 py-3' 
+            : 'w-auto px-8 py-4'
         }`}>
           {/* Dynamic Island Background */}
           <div className={`absolute inset-0 transition-all duration-700 ease-in-out ${
@@ -80,7 +80,7 @@ export function Navigation() {
                   src="/Naamloos.jpg" 
                   alt="SocialFlows" 
                   className={`mr-3 transition-all duration-500 group-hover:scale-105 ${
-                    isScrolled ? 'h-14 w-14' : 'h-20 w-20'
+                    isScrolled ? 'h-16 w-16' : 'h-24 w-24'
                   }`}
                   style={{ objectFit: 'contain' }}
                 />
@@ -90,7 +90,7 @@ export function Navigation() {
             {/* Desktop Menu */}
             <div className="hidden lg:block">
               <div className={`flex items-center tracking-wider font-medium transition-all duration-500 ${
-                isScrolled ? 'space-x-2 text-xs' : 'space-x-3 text-xs'
+                isScrolled ? 'space-x-2 text-xs ml-4' : 'space-x-3 text-xs ml-6'
               }`}>
                 <button onClick={() => scrollToSection('features')} className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
                   Features
