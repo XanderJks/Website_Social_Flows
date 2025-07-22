@@ -181,6 +181,60 @@ export function Home() {
           </div>
         </section>
 
+        {/* Demo Video Section */}
+        <section id="demo" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                Zie SocialFlows in actie
+              </h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Ontdek hoe onze AI-assistenten uw restaurant kunnen transformeren met deze live demonstratie
+              </p>
+            </div>
+            
+            <div className="relative max-w-4xl mx-auto">
+              <div className="aspect-video bg-white/90 rounded-xl border border-green-200/50 backdrop-blur-xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                  title="SocialFlows Demo Video"
+                  className="w-full h-full rounded-xl"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              
+              {/* Video highlights */}
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Live Reserveringen</h4>
+                  <p className="text-sm text-gray-600">Zie hoe natuurlijk onze AI reserveringen afhandelt</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <MessageSquare className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Intelligente Bestellingen</h4>
+                  <p className="text-sm text-gray-600">Ervaar de kracht van AI-gedreven upselling</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Real-time Analytics</h4>
+                  <p className="text-sm text-gray-600">Bekijk hoe data direct wordt geanalyseerd</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
