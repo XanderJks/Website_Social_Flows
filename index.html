@@ -66,30 +66,13 @@
     </script>
     
     <!-- Vapi Voice AI Integration -->
-    <script>
-      var vapiInstance = null;
-      const assistant = "af876ebf-33e4-4ccd-8973-084bed824162"; // Substitute with your assistant ID
-      const apiKey = "13c0731f-dbde-4236-a9cd-fce5225d4b3d"; // Substitute with your Public key from Vapi Dashboard.
-      const buttonConfig = {}; // Modify this as required
+ <vapi-widget assistant-id="af876ebf-33e4-4ccd-8973-084bed824162" public-key="13c0731f-dbde-4236-a9cd-fce5225d4b3d"></vapi-widget>
 
-      (function (d, t) {
-        var g = document.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src =
-          "https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-
-        g.onload = function () {
-          vapiInstance = window.vapiSDK.run({
-            apiKey: apiKey, // mandatory
-            assistant: assistant, // mandatory
-            config: buttonConfig, // optional
-          });
-        };
-      })(document, "script");
-    </script>
+<script
+  src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
+  async
+  type="text/javascript"
+></script>
     
   </head>
   <body>
