@@ -745,11 +745,10 @@ export function Home() {
                 <div className="flex items-center mb-4">
                   <img 
                     src="/Naamloos.jpg" 
-                    alt="SocialFlows Logo" 
-                    className="h-8 w-8 mr-3"
+                    alt="SocialFlows" 
+                    className="h-10 w-10"
                     style={{ objectFit: 'contain' }}
                   />
-                  <h3 className="text-xl font-bold text-gray-800">SocialFlows</h3>
                 </div>
                 <p className="text-gray-700 mb-4 max-w-md">
                   Enterprise AI-oplossingen voor de moderne horeca. 
