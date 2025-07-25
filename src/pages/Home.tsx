@@ -602,7 +602,7 @@ export function Home() {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold">WhatsApp Business</p>
-                        <p className="text-gray-700">+31 20 123 4567</p>
+                        <p className="text-gray-700">+31 6 38104765</p>
                       </div>
                     </div>
                     
@@ -612,7 +612,7 @@ export function Home() {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold">Telefoon</p>
-                        <p className="text-gray-700">+31 20 123 4567</p>
+                        <p className="text-gray-700">+31 6 38104765</p>
                       </div>
                     </div>
                     

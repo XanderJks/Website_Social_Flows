@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
 export function WhatsAppButton() {
-  const phoneNumber = "31612345678"; // Nederlands telefoonnummer zonder + en spaties
+  const phoneNumber = "31638104765"; // Nederlands telefoonnummer zonder + en spaties
   const message = "Hallo! Ik ben geïnteresseerd in SocialFlows Voice AI assistenten voor mijn restaurant. Kunnen jullie mij meer informatie geven over de mogelijkheden en prijzen?";
   
   const handleWhatsAppClick = () => {
@@ -14,7 +14,7 @@ export function WhatsAppButton() {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-6 left-6 z-50 group"
       aria-label="Contact via WhatsApp"
     >
       {/* Main button */}
@@ -32,10 +32,10 @@ export function WhatsAppButton() {
       </div>
       
       {/* Tooltip */}
-      <div className="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none transform group-hover:translate-y-1">
+      <div className="absolute bottom-full left-0 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none transform group-hover:translate-y-1">
         <div className="bg-gray-900/95 backdrop-blur-xl text-white text-sm px-4 py-2 rounded-xl whitespace-nowrap shadow-2xl border border-gray-700/50">
           💬 Chat via WhatsApp
-          <div className="absolute top-full right-6 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/95"></div>
+          <div className="absolute top-full left-6 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/95"></div>
         </div>
       </div>
     </button>
