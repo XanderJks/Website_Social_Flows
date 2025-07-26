@@ -19,7 +19,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   title = "SocialFlows - Voice AI Assistenten voor Restaurants",
   description = "Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie.",
   keywords = "voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, Nederland, horeca",
-  image = "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
+  image = "https://raw.githubusercontent.com/XanderJks/0011/refs/heads/main/public/Naamloos.jpg?w=1200&h=630&fit=crop",
   url = "https://socialflows.nl",
   type = "website",
   author = "SocialFlows",
