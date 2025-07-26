@@ -102,10 +102,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
               "@id": url
             }
           } : {
-            name: "JonkersAI",
+            name: "SocialFlows",
             description: description,
             url: "https://jonkersai.nl",
-            logo: "https://jonkersai.nl/terminal.svg",
+            logo: "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+31-6-12345678",
