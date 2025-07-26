@@ -16,19 +16,19 @@ interface SEOHeadProps {
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "JonkersAI - AI Telefoonsystemen voor Bedrijven",
-  description = "Transformeer uw telefonische klantenservice met AI.Callers. 24/7 beschikbare AI telefoonsystemen die natuurlijke gesprekken voeren en uw bedrijfsprocessen optimaliseren.",
-  keywords = "AI telefoon, AI callers, kunstmatige intelligentie, telefoonsysteem, klantenservice, automatisering, Nederland, bedrijfsoplossingen",
+  title = "SocialFlows - Voice AI Assistenten voor Restaurants",
+  description = "Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie.",
+  keywords = "voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, Nederland, horeca",
   image = "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
-  url = "https://jonkersai.nl",
+  url = "https://socialflows.nl",
   type = "website",
-  author = "JonkersAI",
+  author = "SocialFlows",
   publishedTime,
   modifiedTime,
   section,
   tags = []
 }) => {
-  const fullTitle = title.includes('JonkersAI') ? title : `${title} | JonkersAI`;
+  const fullTitle = title.includes('SocialFlows') ? title : `${title} | SocialFlows`;
   
   return (
     <Helmet>
@@ -50,7 +50,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="JonkersAI" />
+      <meta property="og:site_name" content="SocialFlows" />
       <meta property="og:locale" content="nl_NL" />
       
       {/* Twitter Card Meta Tags */}
@@ -58,8 +58,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@JonkersAI" />
-      <meta name="twitter:creator" content="@JonkersAI" />
+      <meta name="twitter:site" content="@SocialFlows" />
+      <meta name="twitter:creator" content="@SocialFlows" />
       
       {/* Article specific meta tags */}
       {type === 'article' && (
@@ -89,10 +89,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             },
             publisher: {
               "@type": "Organization",
-              name: "JonkersAI",
+              name: "SocialFlows",
               logo: {
                 "@type": "ImageObject",
-                url: "https://jonkersai.nl/terminal.svg"
+                url: "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true"
               }
             },
             datePublished: publishedTime,
@@ -104,17 +104,17 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
           } : {
             name: "SocialFlows",
             description: description,
-            url: "https://jonkersai.nl",
+            url: "https://socialflows.nl",
             logo: "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+31-6-12345678",
+              telephone: "+31-6-38104765",
               contactType: "customer service",
               availableLanguage: "Dutch"
             },
             sameAs: [
-              "https://linkedin.com/company/jonkersai",
-              "https://twitter.com/jonkersai"
+              "https://linkedin.com/company/socialflows",
+              "https://twitter.com/socialflows"
             ],
             address: {
               "@type": "PostalAddress",

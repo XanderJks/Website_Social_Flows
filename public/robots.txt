@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://jonkersai.nl/sitemap.xml
+Sitemap: https://socialflows.nl/sitemap.xml
 
 # Disallow admin pages
 Disallow: /admin/
