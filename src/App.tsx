@@ -3,10 +3,18 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Home } from './pages/Home';
+import { Login } from './pages/Login';
+import { Signup } from './pages/Signup';
+import { Dashboard } from './pages/Dashboard';
+import { Success } from './pages/Success';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
+import { useAuth } from './hooks/useAuth';
 
 function App() {
+  const { user } = useAuth();
+  
   // Consistent particle count for all devices
   const particleCount = 50;
   const starCount = 30;
@@ -92,14 +100,25 @@ function App() {
           ))}
         </div>
 
-        <Navigation />
+        {!user && <Navigation />}
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/success" element={<Success />} />
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         
-        <WhatsAppButton />
+        {!user && <WhatsAppButton />}
       </div>
     </HelmetProvider>
   );

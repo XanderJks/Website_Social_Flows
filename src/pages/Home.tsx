@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
+import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic, User } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
 export function Home() {
@@ -128,11 +128,11 @@ export function Home() {
               </button>
               
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.location.href = '/login'}
                 className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 text-gray-700 font-semibold rounded-lg hover:bg-gray-100/50 transition-all duration-300 flex items-center text-sm"
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                Vrijblijvende Consultatie
+                <User className="w-4 h-4 mr-2" />
+                Inloggen / Registreren
               </button>
             </div>
             
