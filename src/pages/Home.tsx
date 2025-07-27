@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
@@ -825,16 +824,16 @@ export function Home() {
                 <ul className="space-y-2">
                   <li><a href="#features" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Enterprise AI</a></li>
                   <li><a href="#pricing" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Prijsmodellen</a></li>
-                  <li><a href="#" onClick={() => scrollToSection('demo')} className="text-gray-700 hover:text-green-600 transition-colors text-sm">Live Demo</a></li>
+                  <li><a href="#demo" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Live Demo</a></li>
                 </ul>
               </div>
               
               <div>
                 <h4 className="text-gray-800 font-semibold mb-4">Enterprise</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Sales</a></li>
-                  <li><Link to="/documentation" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Documentatie</Link></li>
-                  <li><Link to="/system-status" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</Link></li>
+                  <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Sales</a></li>
+                  <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Documentatie</a></li>
+                  <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
                 </ul>
               </div>
             </div>
@@ -844,9 +843,9 @@ export function Home() {
                 © 2025 SocialFlows. Alle rechten voorbehouden.
               </p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
-                <Link to="/privacy-policy" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</Link>
-                <Link to="/terms-of-service" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</Link>
-                <Link to="/system-status" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Security</Link>
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</a>
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Security</a>
               </div>
             </div>
           </div>
