@@ -408,7 +408,9 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <span onClick={() => scrollToSection('contact')}>Start Nu</span>
+                    <a href="https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03" target="_blank" rel="noopener noreferrer" className="block">
+                      Start Nu
+                    </a>
                   </button>
                 </div>
               </div>
@@ -441,7 +443,9 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    <span onClick={() => scrollToSection('contact')}>Start Nu</span>
+                    <a href="https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04" target="_blank" rel="noopener noreferrer" className="block text-white">
+                      Start Nu
+                    </a>
                   </button>
                 </div>
               </div>
@@ -473,7 +477,9 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <span onClick={() => scrollToSection('contact')}>Start Nu</span>
+                    <a href="https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05" target="_blank" rel="noopener noreferrer" className="block">
+                      Start Nu
+                    </a>
                   </button>
                 </div>
               </div>
@@ -535,12 +541,6 @@ export function Home() {
                           <span className="text-2xl font-bold text-green-600">€29,99</span>
                           <span className="text-gray-500 text-sm">/maand</span>
                         </div>
-                        <button 
-                          onClick={() => scrollToSection('contact')}
-                          className="px-4 py-2 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300 text-sm"
-                        >
-                          Toevoegen
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -563,13 +563,40 @@ export function Home() {
                           <span className="text-2xl font-bold text-green-600">€44,99</span>
                           <span className="text-gray-500 text-sm">/maand</span>
                         </div>
-                        <button 
-                          onClick={() => scrollToSection('contact')}
-                          className="px-4 py-2 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300 text-sm"
-                        >
-                          Toevoegen
-                        </button>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                Wat onze klanten zeggen
+              </h2>
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 border border-green-200/30 shadow-xl">
+                <div className="text-center">
+                  <div className="text-6xl text-green-500/20 mb-4">"</div>
+                  <blockquote className="text-lg text-gray-700 leading-relaxed mb-8 italic">
+                    Sinds we de AI Assistent gebruiken, missen we geen enkel telefoontje meer. Bestellingen komen foutloos binnen en de keuken krijgt meteen een bon — zelfs tijdens piekuren. Ik kan baliepersoneel eindelijk ook op andere vlaktes inzetten. Minder stress op de werkvloer en méér focus. Dit is echt de beste investering geweest voor onze zaak.
+                  </blockquote>
+                  <div className="flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="font-bold text-gray-800 text-lg">Zakariya Aachboune</div>
+                      <div className="text-gray-600">Eigenaar van Sensei Sushi Culemborg</div>
                     </div>
                   </div>
                 </div>
@@ -622,7 +649,7 @@ export function Home() {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold">Enterprise Sales</p>
-                        <p className="text-gray-700">enterprise@socialflows.nl</p>
+                        <p className="text-gray-700">contact@socialflows.nl</p>
                       </div>
                     </div>
                     
