@@ -3,6 +3,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Home } from './pages/Home';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
+import { Documentation } from './pages/Documentation';
+import { SystemStatus } from './pages/SystemStatus';
 import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
 
@@ -96,6 +100,10 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/documentation" element={<Documentation />} />
+          <Route path="/system-status" element={<SystemStatus />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         
