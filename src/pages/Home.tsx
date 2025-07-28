@@ -107,7 +107,7 @@ export function Home() {
                 <div className="aspect-video bg-white/90 rounded-xl border border-green-200/50 backdrop-blur-xl overflow-hidden shadow-lg">
                   <div style={{padding:"54.72% 0 0 0", position:"relative"}}>
                     <iframe 
-                      src="https://player.vimeo.com/video/1105043209?badge=0&autopause=0&player_id=0&app_id=58479" 
+                      src="https://player.vimeo.com/video/1105099613?badge=0&autopause=0&player_id=0&app_id=58479" 
                       frameBorder="0" 
                       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                       referrerPolicy="strict-origin-when-cross-origin" 
