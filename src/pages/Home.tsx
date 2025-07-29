@@ -836,7 +836,7 @@ export function Home() {
                 <ul className="space-y-2">
                   <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Sales</a></li>
                   <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Documentatie</a></li>
-                  <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
+                  <li><a href="/system-status" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
                 </ul>
               </div>
             </div>
@@ -848,7 +848,7 @@ export function Home() {
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>
                 <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</a>
-                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Security</a>
+                <a href="/system-status" className="text-gray-600 hover:text-green-600 transition-colors text-sm">System Status</a>
               </div>
             </div>
           </div>
