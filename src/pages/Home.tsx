@@ -101,7 +101,7 @@ export function Home() {
             {/* Badge */}
             <div className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-green-50/80 backdrop-blur-xl border border-green-200/50 text-green-700 mb-8 transition-all duration-800 shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Shield className="w-4 h-4 mr-2 text-green-600" />
-              Enterprise AI Oplossingen
+              Professionele AI Oplossingen
             </div>
             
             {/* Main Headline */}
@@ -218,10 +218,10 @@ export function Home() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
-                Enterprise AI-oplossingen voor restaurants
+                Professionele AI-oplossingen voor restaurants
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Bewezen technologie die naadloos integreert met uw bestaande systemen en processen
+                Betrouwbare technologie die naadloos integreert met uw bestaande systemen en processen
               </p>
             </div>
             
@@ -365,9 +365,9 @@ export function Home() {
                 <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Enterprise Beveiliging</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Professionele Beveiliging</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  GDPR-compliant met end-to-end encryptie en 99.9% uptime SLA voor kritieke bedrijfsprocessen.
+                  GDPR-compliant met end-to-end encryptie en 99.9% uptime garantie voor betrouwbare service.
                 </p>
               </div>
               
@@ -377,7 +377,7 @@ export function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Dedicated Support</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Persoonlijke accountmanager en 24/7 enterprise support voor continue bedrijfscontinuïteit.
+                  Persoonlijke accountmanager en 24/7 professionele support voor continue bedrijfscontinuïteit.
                 </p>
               </div>
             </div>
@@ -389,7 +389,7 @@ export function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Enterprise Prijsmodellen
+                Flexibele Prijsmodellen
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Flexibele oplossingen die meegroeien met uw bedrijf. Alle plannen inclusief volledige ondersteuning.
@@ -503,7 +503,7 @@ export function Home() {
               {/* Custom Plan */}
               <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
                 <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Op Maat</h3>
                   <div className="mb-6">
                     <span className="text-2xl font-bold text-gray-800">Op maat</span>
                   </div>
@@ -518,11 +518,11 @@ export function Home() {
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Dedicated support
+                      Persoonlijke support
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      SLA garanties
+                      Service garanties
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
@@ -664,7 +664,7 @@ export function Home() {
                         <MessageSquare className="w-5 h-5 text-green-600" />
                       </div>
                       <div>
-                        <p className="text-gray-800 font-semibold">Enterprise Sales</p>
+                        <p className="text-gray-800 font-semibold">Zakelijke Verkoop</p>
                         <p className="text-gray-700">contact@socialflows.nl</p>
                       </div>
                     </div>
