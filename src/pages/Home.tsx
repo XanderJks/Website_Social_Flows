@@ -18,6 +18,19 @@ export function Home() {
     }
   };
 
+  const playDemoVideo = () => {
+    const iframe = document.querySelector('iframe[src*="vimeo.com"]') as HTMLIFrameElement;
+    if (iframe && iframe.contentWindow) {
+      // Send play command to Vimeo player
+      iframe.contentWindow.postMessage('{"method":"play"}', '*');
+      // Scroll to video
+      scrollToSection('demo');
+    } else {
+      // Fallback: just scroll to demo section
+      scrollToSection('demo');
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -102,7 +115,7 @@ export function Home() {
             </p>
             
             {/* Demo Video */}
-            <div className={`mb-10 transition-all duration-800 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div id="demo" className={`mb-10 transition-all duration-800 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="relative max-w-4xl mx-auto">
                 <div className="aspect-video bg-white/90 rounded-xl border border-green-200/50 backdrop-blur-xl overflow-hidden shadow-lg">
                   <div style={{padding:"54.72% 0 0 0", position:"relative"}}>
@@ -123,7 +136,7 @@ export function Home() {
             {/* CTA Buttons */}
             <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-800 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <button 
-                onClick={() => scrollToSection('demo')}
+                onClick={playDemoVideo}
                 className="group relative px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center text-sm shadow-lg"
               >
                 <Play className="w-4 h-4 mr-2" />
@@ -135,7 +148,7 @@ export function Home() {
                 className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 text-gray-700 font-semibold rounded-lg hover:bg-gray-100/50 transition-all duration-300 flex items-center text-sm"
               >
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Vrijblijvende Consultatie
+                Vrijblijvend Gesprek
               </button>
             </div>
             
@@ -616,7 +629,7 @@ export function Home() {
                 Start uw digitale transformatie
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Neem contact op voor een vrijblijvende consultatie en ontdek hoe SocialFlows uw bedrijfsprocessen kan optimaliseren
+                Neem contact op voor een vrijblijvend gesprek en ontdek hoe SocialFlows uw bedrijfsprocessen kan optimaliseren
               </p>
             </div>
             
@@ -669,7 +682,7 @@ export function Home() {
                 </div>
                 
                 <div className="p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
-                  <h4 className="text-lg font-bold text-gray-800 mb-3">Enterprise Consultatie</h4>
+                  <h4 className="text-lg font-bold text-gray-800 mb-3">Persoonlijk Gesprek</h4>
                   <p className="text-gray-700 text-sm leading-relaxed">
                     Persoonlijke analyse van uw bedrijfsprocessen en een op maat gemaakte implementatiestrategie. 
                     Volledig vrijblijvend en gebaseerd op bewezen methodieken.
@@ -781,7 +794,7 @@ export function Home() {
                       </>
                     ) : (
                       <>
-                        Plan Consultatie
+                        Plan Gesprek
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </>
                     )}
@@ -809,17 +822,6 @@ export function Home() {
                   Enterprise AI-oplossingen voor de moderne horeca. 
                   Bewezen technologie voor operationele excellentie.
                 </p>
-                <div className="flex space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors cursor-pointer">
-                    <span className="text-green-700 text-xs font-bold">f</span>
-                  </div>
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors cursor-pointer">
-                    <span className="text-green-700 text-xs font-bold">t</span>
-                  </div>
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-200 transition-colors cursor-pointer">
-                    <span className="text-green-700 text-xs font-bold">in</span>
-                  </div>
-                </div>
               </div>
               
               <div>
@@ -835,7 +837,6 @@ export function Home() {
                 <h4 className="text-gray-800 font-semibold mb-4">Enterprise</h4>
                 <ul className="space-y-2">
                   <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Sales</a></li>
-                  <li><a href="#" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Documentatie</a></li>
                   <li><a href="/system-status" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
                 </ul>
               </div>
