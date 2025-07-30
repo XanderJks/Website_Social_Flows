@@ -191,8 +191,8 @@ export function SystemStatus() {
                         <span className={`ml-2 font-semibold ${getStatusColor(service.status)}`}>
                           {getStatusText(service.status)}
                         </span>
-                      </div>
-                    </div>
+                    {overallStatus === 'operational' ? 'Alle services operationeel' : 
+                     overallStatus === 'degraded' ? 'Verminderde prestaties' : 'Service storing'}
                   </div>
                 </div>
               ))}

@@ -809,24 +809,24 @@ export function Home() {
                   />
                 </div>
                 <p className="text-gray-700 mb-4 max-w-md">
-                  Professionele AI-oplossingen voor de moderne horeca. 
-                  Betrouwbare technologie voor operationele excellentie.
+                  Enterprise AI-oplossingen voor de moderne horeca. 
+                  Bewezen technologie voor operationele excellentie.
                 </p>
               </div>
               
               <div>
                 <h4 className="text-gray-800 font-semibold mb-4">Oplossingen</h4>
                 <ul className="space-y-2">
-                  <li><a href="#features" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Enterprise AI</a></li>
+                  <li><a href="#features" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Professionele AI</a></li>
                   <li><a href="#pricing" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Prijsmodellen</a></li>
                   <li><a href="#demo" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Live Demo</a></li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="text-gray-800 font-semibold mb-4">Enterprise</h4>
+                <h4 className="text-gray-800 font-semibold mb-4">Zakelijk</h4>
                 <ul className="space-y-2">
-                  <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Sales</a></li>
+                  <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Verkoop</a></li>
                   <li><a href="/system-status" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
                 </ul>
               </div>
