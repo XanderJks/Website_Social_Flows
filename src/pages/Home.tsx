@@ -809,8 +809,8 @@ export function Home() {
                   />
                 </div>
                 <p className="text-gray-700 mb-4 max-w-md">
-                  Enterprise AI-oplossingen voor de moderne horeca. 
-                  Bewezen technologie voor operationele excellentie.
+                  Professionele AI-oplossingen voor de moderne horeca. 
+                  Betrouwbare technologie voor operationele excellentie.
                 </p>
               </div>
               
