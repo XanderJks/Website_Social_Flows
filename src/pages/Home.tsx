@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
+import { CheckoutModal } from '../components/CheckoutModal';
 
 export function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [checkoutModal, setCheckoutModal] = useState<{
+    isOpen: boolean;
+    url: string;
+    planName: string;
+  }>({
+    isOpen: false,
+    url: '',
+    planName: ''
+  });
 
   useEffect(() => {
     setIsVisible(true);
@@ -83,6 +93,22 @@ export function Home() {
     } else {
       alert('Voice AI wordt geladen... Probeer het over een paar seconden opnieuw.');
     }
+  };
+
+  const openCheckout = (url: string, planName: string) => {
+    setCheckoutModal({
+      isOpen: true,
+      url,
+      planName
+    });
+  };
+
+  const closeCheckout = () => {
+    setCheckoutModal({
+      isOpen: false,
+      url: '',
+      planName: ''
+    });
   };
 
   return (
@@ -424,9 +450,12 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <a href="https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03" target="_blank" rel="noopener noreferrer" className="block">
+                    <span 
+                      onClick={() => openCheckout('https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03', 'Starter')}
+                      className="block cursor-pointer"
+                    >
                       Start Nu
-                    </a>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -459,9 +488,12 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    <a href="https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04" target="_blank" rel="noopener noreferrer" className="block text-white">
+                    <span 
+                      onClick={() => openCheckout('https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04', 'Pro')}
+                      className="block cursor-pointer text-white"
+                    >
                       Start Nu
-                    </a>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -493,9 +525,12 @@ export function Home() {
                     </li>
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <a href="https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05" target="_blank" rel="noopener noreferrer" className="block">
+                    <span 
+                      onClick={() => openCheckout('https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05', 'Elite')}
+                      className="block cursor-pointer"
+                    >
                       Start Nu
-                    </a>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -845,6 +880,14 @@ export function Home() {
           </div>
         </footer>
       </main>
+      
+      {/* Checkout Modal */}
+      <CheckoutModal
+        isOpen={checkoutModal.isOpen}
+        onClose={closeCheckout}
+        checkoutUrl={checkoutModal.url}
+        planName={checkoutModal.planName}
+      />
     </>
   );
 }
