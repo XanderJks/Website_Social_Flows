@@ -14,6 +14,24 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   checkoutUrl,
   planName
 }) => {
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      setIsLoading(true);
+      // Hide loading overlay after iframe loads
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 3000); // 3 seconds fallback
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, checkoutUrl]);
+
+  const handleIframeLoad = () => {
+    setIsLoading(false);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -51,17 +69,22 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             src={checkoutUrl}
             className="w-full h-full border-0"
             title={`${planName} Checkout`}
-            allow="payment"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"
+            allow="payment; fullscreen"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+            loading="eager"
+            referrerPolicy="strict-origin-when-cross-origin"
+            onLoad={handleIframeLoad}
           />
           
           {/* Loading overlay */}
-          <div className="absolute inset-0 bg-white flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-8 h-8 border-2 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-gray-600">Checkout wordt geladen...</p>
+          {isLoading && (
+            <div className="absolute inset-0 bg-white flex items-center justify-center pointer-events-none">
+              <div className="text-center">
+                <div className="w-8 h-8 border-2 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-gray-600">Checkout wordt geladen...</p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
