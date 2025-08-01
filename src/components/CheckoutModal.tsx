@@ -15,10 +15,23 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   planName
 }) => {
   const handleCheckout = () => {
-    // Open Stripe checkout in new tab
-    window.open(checkoutUrl, '_blank', 'noopener,noreferrer');
-    // Close modal after opening checkout
-    onClose();
+    try {
+      // Open Stripe checkout in new tab
+      const newWindow = window.open(checkoutUrl, '_blank', 'noopener,noreferrer');
+      
+      // Check if popup was blocked
+      if (newWindow) {
+        // Close modal after successful opening
+        onClose();
+      } else {
+        // Fallback: try direct navigation
+        window.location.href = checkoutUrl;
+      }
+    } catch (error) {
+      console.error('Error opening checkout:', error);
+      // Fallback: direct navigation
+      window.location.href = checkoutUrl;
+    }
   };
 
   if (!isOpen) return null;
@@ -67,25 +80,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
           </div>
           
           {/* Security Features */}
-          <div className="space-y-3 mb-6">
-            <div className="flex items-center text-sm text-gray-700">
-              <Shield className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-              256-bit SSL encryptie
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Shield className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-              PCI DSS compliant
-            </div>
-            <div className="flex items-center text-sm text-gray-700">
-              <Shield className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-              Direct annuleren mogelijk
-            </div>
-          </div>
-          
           {/* Action Buttons */}
           <div className="space-y-3">
             <button
               onClick={handleCheckout}
+              onMouseDown={(e) => e.preventDefault()}
               className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 flex items-center justify-center group"
             >
               <span>Ga naar betaling</span>
