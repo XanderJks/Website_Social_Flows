@@ -17,20 +17,20 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   const handleCheckout = () => {
     try {
       // Open Stripe checkout in new tab
-      const newWindow = window.open(checkoutUrl, '_blank', 'noopener,noreferrer');
+      window.open(checkoutUrl, '_blank', 'noopener,noreferrer');
       
-      // Check if popup was blocked
-      if (newWindow) {
-        // Close modal after successful opening
-        onClose();
-      } else {
-        // Fallback: try direct navigation
-        window.location.href = checkoutUrl;
-      }
+      // Close modal after opening new tab
+      onClose();
     } catch (error) {
       console.error('Error opening checkout:', error);
-      // Fallback: direct navigation
-      window.location.href = checkoutUrl;
+      // Fallback: try again with window.open
+      try {
+        window.open(checkoutUrl, '_blank');
+        onClose();
+      } catch (fallbackError) {
+        console.error('Fallback also failed:', fallbackError);
+        alert('Kon checkout niet openen. Probeer het handmatig: ' + checkoutUrl);
+      }
     }
   };
 
