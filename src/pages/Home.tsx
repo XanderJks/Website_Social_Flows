@@ -863,6 +863,7 @@ export function Home() {
                 <ul className="space-y-2">
                   <li><a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Contact Verkoop</a></li>
                   <li><a href="/system-status" className="text-gray-700 hover:text-green-600 transition-colors text-sm">System Status</a></li>
+                  <li><a href="/privacy" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Privacy Policy</a></li>
                 </ul>
               </div>
             </div>
@@ -872,7 +873,7 @@ export function Home() {
                 © 2025 SocialFlows. Alle rechten voorbehouden.
               </p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
-                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>
+                <a href="/privacy" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>
                 <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</a>
                 <a href="/system-status" className="text-gray-600 hover:text-green-600 transition-colors text-sm">System Status</a>
               </div>
