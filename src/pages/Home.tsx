@@ -451,8 +451,15 @@ export function Home() {
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
                     <span 
-                      onClick={() => openCheckout('https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03', 'Starter')}
-                      className="block cursor-pointer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openCheckout('https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03', 'Starter');
+                      }}
+                      onMouseDown={(e) => e.preventDefault()}
+                      className="block cursor-pointer select-none"
+                      role="button"
+                      tabIndex={0}
                     >
                       Start Nu
                     </span>
@@ -489,8 +496,15 @@ export function Home() {
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
                     <span 
-                      onClick={() => openCheckout('https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04', 'Pro')}
-                      className="block cursor-pointer text-white"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openCheckout('https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04', 'Pro');
+                      }}
+                      onMouseDown={(e) => e.preventDefault()}
+                      className="block cursor-pointer text-white select-none"
+                      role="button"
+                      tabIndex={0}
                     >
                       Start Nu
                     </span>
@@ -526,8 +540,15 @@ export function Home() {
                   </ul>
                   <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
                     <span 
-                      onClick={() => openCheckout('https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05', 'Elite')}
-                      className="block cursor-pointer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openCheckout('https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05', 'Elite');
+                      }}
+                      onMouseDown={(e) => e.preventDefault()}
+                      className="block cursor-pointer select-none"
+                      role="button"
+                      tabIndex={0}
                     >
                       Start Nu
                     </span>
