@@ -92,7 +92,7 @@ export function TermsOfService() {
                 </h2>
                 <div className="bg-blue-50/50 rounded-xl p-6 mb-4">
                   <ul className="text-gray-700 space-y-2">
-                    <li>• Alle prijzen zijn exclusief BTW (indien van toepassing)</li>
+                    <li>• Alle prijzen zijn inclusief BTW (indien van toepassing)</li>
                     <li>• Betalingen worden maandelijks vooraf gefactureerd</li>
                     <li>• Bij niet-betaling kunnen diensten worden opgeschort</li>
                     <li>• Prijswijzigingen worden 30 dagen van tevoren aangekondigd</li>
@@ -118,7 +118,7 @@ export function TermsOfService() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maximaal 4 uur responstijd voor kritieke issues
+                      Maximaal 12 uur responstijd voor kritieke issues
                     </li>
                   </ul>
                 </div>
