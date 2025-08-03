@@ -75,7 +75,7 @@ export function Navigation() {
           <div className="relative flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <a href="#" className="flex items-center group">
+              <a href="/" className="flex items-center group">
                 <img 
                   src="https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true" 
                   alt="SocialFlows" 
