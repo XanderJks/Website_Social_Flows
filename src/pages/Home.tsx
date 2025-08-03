@@ -895,7 +895,7 @@ export function Home() {
               </p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 <a href="/privacy" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>
-                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</a>
+                <a href="/terms" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Terms of Service</a>
                 <a href="/system-status" className="text-gray-600 hover:text-green-600 transition-colors text-sm">System Status</a>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { WhatsAppButton } from './components/WhatsAppButton';
 import { Home } from './pages/Home';
 import SystemStatus from './pages/SystemStatus';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
 
@@ -100,6 +101,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/system-status" element={<SystemStatus />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         
