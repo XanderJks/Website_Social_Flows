@@ -19,7 +19,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   title = "SocialFlows - Voice AI Assistenten voor Restaurants",
   description = "Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie.",
   keywords = "voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, Nederland, horeca",
-  image = "https://dashboard.socialflows.nl/lovable-uploads/0b3276b3-1533-4e43-80b8-cd3d59b588f6.png",
+  image = "https://raw.githubusercontent.com/XanderJks/0011/refs/heads/main/public/Naamloos.jpg?w=1200&h=630&fit=crop",
   url = "https://socialflows.nl",
   type = "website",
   author = "SocialFlows",
@@ -92,7 +92,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
               name: "SocialFlows",
               logo: {
                 "@type": "ImageObject",
-                url: "https://dashboard.socialflows.nl/lovable-uploads/0b3276b3-1533-4e43-80b8-cd3d59b588f6.png"
+                url: "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true"
               }
             },
             datePublished: publishedTime,
@@ -105,7 +105,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             name: "SocialFlows",
             description: description,
             url: "https://socialflows.nl",
-            logo: "https://dashboard.socialflows.nl/lovable-uploads/0b3276b3-1533-4e43-80b8-cd3d59b588f6.png",
+            logo: "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+31-6-38104765",
