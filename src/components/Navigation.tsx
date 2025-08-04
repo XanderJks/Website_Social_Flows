@@ -77,7 +77,7 @@ export function Navigation() {
             <div className="flex items-center">
               <a href="/" className="flex items-center group">
                 <img 
-                  src="https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true" 
+                  src="https://dashboard.socialflows.nl/lovable-uploads/0b3276b3-1533-4e43-80b8-cd3d59b588f6.png" 
                   alt="SocialFlows" 
                   className={`mr-3 transition-all duration-500 group-hover:scale-105 ${
                     isScrolled ? 'h-12 w-12' : 'h-16 w-16'

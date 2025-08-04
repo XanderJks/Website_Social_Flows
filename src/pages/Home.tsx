@@ -858,7 +858,7 @@ export function Home() {
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center mb-4">
                   <img 
-                    src="https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true" 
+                    src="https://dashboard.socialflows.nl/lovable-uploads/0b3276b3-1533-4e43-80b8-cd3d59b588f6.png" 
                     alt="SocialFlows" 
                     className="h-10 w-10"
                     style={{ objectFit: 'contain' }}

@@ -20,7 +20,7 @@ export const organizationSchema = {
   "name": "SocialFlows",
   "description": "Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie.",
   "url": "https://socialflows.nl",
-  "logo": "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true",
+  "logo": "https://dashboard.socialflows.nl/lovable-uploads/0b3276b3-1533-4e43-80b8-cd3d59b588f6.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+31-20-123-4567",
