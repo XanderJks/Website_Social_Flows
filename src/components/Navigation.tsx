@@ -105,6 +105,20 @@ export function Navigation() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 
+                {/* Dashboard Login Button */}
+                <a 
+                  href="https://dashboard.socialflows.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50 flex items-center"
+                >
+                  Dashboard
+                  <svg className="w-3 h-3 ml-1 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                
                 {/* CTA Button */}
                 <button 
                   onClick={() => scrollToSection('demo')} 
@@ -170,6 +184,19 @@ export function Navigation() {
                 >
                   Contact
                 </button>
+                
+                {/* Dashboard Login Button - Mobile */}
+                <a 
+                  href="https://dashboard.socialflows.nl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium flex items-center"
+                >
+                  Dashboard
+                  <svg className="w-3 h-3 ml-1 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
                 
                 <div className="pt-2 border-t border-green-200/30">
                   <button 
