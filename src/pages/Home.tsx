@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { CheckoutModal } from '../components/CheckoutModal';
+import { Language, getTranslation } from '../lib/translations';
 
-export function Home() {
+interface HomeProps {
+  language: Language;
+}
+
+export function Home({ language }: HomeProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -127,17 +132,17 @@ export function Home() {
             {/* Badge */}
             <div className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-green-50/80 backdrop-blur-xl border border-green-200/50 text-green-700 mb-8 transition-all duration-800 shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Shield className="w-4 h-4 mr-2 text-green-600" />
-              Professionele AI Oplossingen
+              {language === 'nl' ? 'Professionele AI Oplossingen' : 'Professional AI Solutions'}
             </div>
             
             {/* Main Headline */}
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-600 via-green-700 to-green-800 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              Professionele AI-assistenten voor uw restaurant
+              {getTranslation(language, 'heroTitle')}
             </h1>
             
             {/* Subheadline */}
             <p className={`text-lg sm:text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed transition-all duration-800 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              Verhoog uw operationele efficiëntie met geavanceerde spraaktechnologie. Automatiseer reserveringen, bestellingen en klantenservice met bewezen AI-oplossingen.
+              {getTranslation(language, 'heroSubtitle')}
             </p>
             
             {/* Demo Video */}
@@ -166,7 +171,7 @@ export function Home() {
                 className="group relative px-8 py-4 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center text-sm shadow-lg"
               >
                 <Play className="w-4 h-4 mr-2" />
-                Live Demo Bekijken
+                {getTranslation(language, 'watchDemo')}
               </button>
               
               <button 
@@ -174,7 +179,7 @@ export function Home() {
                 className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 text-gray-700 font-semibold rounded-lg hover:bg-gray-100/50 transition-all duration-300 flex items-center text-sm"
               >
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Vrijblijvend Gesprek
+                {getTranslation(language, 'freeConsultation')}
               </button>
             </div>
             
@@ -182,15 +187,15 @@ export function Home() {
             <div className={`mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-600 transition-all duration-800 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                24/7 beschikbaar
+                {getTranslation(language, 'available247')}
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                Enterprise beveiliging
+                {getTranslation(language, 'enterpriseSecurity')}
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                Snelle implementatie
+                {getTranslation(language, 'fastImplementation')}
               </div>
             </div>
             
@@ -202,9 +207,9 @@ export function Home() {
                   <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <Clock className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">24/7 Beschikbaarheid</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{getTranslation(language, 'availability247')}</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Continue service zonder onderbrekingen, zelfs buiten openingstijden
+                    {getTranslation(language, 'availabilityDesc')}
                   </p>
                 </div>
               </div>
@@ -215,9 +220,9 @@ export function Home() {
                   <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <Shield className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise Betrouwbaarheid</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{getTranslation(language, 'enterpriseReliability')}</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    99.9% uptime garantie met enterprise-grade infrastructuur
+                    {getTranslation(language, 'enterpriseReliabilityDesc')}
                   </p>
                 </div>
               </div>
@@ -228,9 +233,9 @@ export function Home() {
                   <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <Zap className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Snelle Implementatie</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{getTranslation(language, 'fastSetup')}</h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Operationeel binnen 1-2 weken met volledige ondersteuning
+                    {getTranslation(language, 'fastSetupDesc')}
                   </p>
                 </div>
               </div>
@@ -244,10 +249,10 @@ export function Home() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
-                Professionele AI-oplossingen voor restaurants
+                {getTranslation(language, 'featuresTitle')}
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Betrouwbare technologie die naadloos integreert met uw bestaande systemen en processen
+                {getTranslation(language, 'featuresSubtitle')}
               </p>
             </div>
             
