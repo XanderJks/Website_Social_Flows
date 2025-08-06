@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { LanguageSwitcher } from './LanguageSwitcher';
-import { Language, getTranslation } from '../lib/translations';
 
-interface NavigationProps {
-  language: Language;
-  onLanguageChange: (language: Language) => void;
-}
-
-export function Navigation({ language, onLanguageChange }: NavigationProps) {
+export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -94,29 +87,21 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
               </a>
             </div>
             
-            {/* Language Switcher - Desktop */}
-            <div className="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2" style={{ right: '-120px' }}>
-              <LanguageSwitcher 
-                currentLanguage={language}
-                onLanguageChange={onLanguageChange}
-              />
-            </div>
-            
             {/* Desktop Menu */}
             <div className="hidden lg:block">
               <div className={`flex items-center tracking-wider font-medium transition-all duration-500 ${
                 isScrolled ? 'space-x-2 text-xs ml-4' : 'space-x-3 text-xs ml-6'
               }`}>
                 <button onClick={() => scrollToSection('features')} className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
-                  {getTranslation(language, 'features')}
+                  Features
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
-                  {getTranslation(language, 'pricing')}
+                  Prijzen
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
-                  {getTranslation(language, 'contact')}
+                  Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
                 
@@ -127,7 +112,7 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                   rel="noopener noreferrer"
                   className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50 flex items-center"
                 >
-                  {getTranslation(language, 'dashboard')}
+                  Dashboard
                   <svg className="w-3 h-3 ml-1 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -144,20 +129,14 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-full"></div>
                   <div className="absolute inset-0 bg-green-600/95 backdrop-blur-xl rounded-full border border-green-500/50 group-hover:bg-green-600/90 transition-all duration-300"></div>
-                  <span className="relative z-10 font-bold text-white drop-shadow-lg">{getTranslation(language, 'startNow')}</span>
+                  <span className="relative z-10 font-bold text-white drop-shadow-lg">Start Nu</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500/40 to-green-600/40 rounded-full blur-lg group-hover:blur-xl transition-all duration-300 -z-10"></div>
                 </button>
               </div>
             </div>
             
             {/* Mobile menu button */}
-            <div className="lg:hidden flex items-center gap-3">
-              {/* Language Switcher - Mobile */}
-              <LanguageSwitcher 
-                currentLanguage={language}
-                onLanguageChange={onLanguageChange}
-              />
-              
+            <div className="lg:hidden flex items-center">
               <button 
                 className="text-gray-800 hover:text-green-600 transition-colors rounded-full hover:bg-green-50/50 text-xs py-1 px-2"
                 onClick={toggleMenu}
@@ -185,25 +164,25 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                   onClick={() => scrollToSection('features')}
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
                 >
-                  {getTranslation(language, 'features')}
+                  Features
                 </button>
                 <button 
                   onClick={() => scrollToSection('process')}
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
                 >
-                  Process
+                  Proces
                 </button>
                 <button 
                   onClick={() => scrollToSection('pricing')}
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
                 >
-                  {getTranslation(language, 'pricing')}
+                  Prijzen
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
                 >
-                  {getTranslation(language, 'contact')}
+                  Contact
                 </button>
                 
                 {/* Dashboard Login Button - Mobile */}
@@ -213,7 +192,7 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                   rel="noopener noreferrer"
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium flex items-center"
                 >
-                  {getTranslation(language, 'dashboard')}
+                  Dashboard
                   <svg className="w-3 h-3 ml-1 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -227,7 +206,7 @@ export function Navigation({ language, onLanguageChange }: NavigationProps) {
                     <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-lg"></div>
                     <div className="absolute inset-0 bg-green-600/95 backdrop-blur-xl rounded-lg border border-green-500/50 group-hover:bg-green-600/90 transition-all duration-300"></div>
                     <span className="relative z-10 font-bold text-white drop-shadow-lg flex items-center justify-center">
-                      {getTranslation(language, 'startNow')}
+                      Start Nu
                     </span>
                   </button>
                 </div>

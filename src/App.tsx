@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { WhatsAppButton } from './components/WhatsAppButton';
@@ -8,11 +8,8 @@ import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
-import { Language } from './lib/translations';
 
 function App() {
-  const [language, setLanguage] = useState<Language>('nl');
-  
   // Consistent particle count for all devices
   const particleCount = 50;
   const starCount = 30;
@@ -98,10 +95,10 @@ function App() {
           ))}
         </div>
 
-        <Navigation language={language} onLanguageChange={setLanguage} />
+        <Navigation />
         
         <Routes>
-          <Route path="/" element={<Home language={language} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/system-status" element={<SystemStatus />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
