@@ -95,12 +95,12 @@ export function PrivacyPolicy() {
                 
                 <div className="bg-blue-50/50 rounded-xl p-6">
                   <p className="text-gray-700 mb-4">
-                    <strong>Let op:</strong> Voor EU-Klanten hebben we een officiële EU-vertegenwoordiger aangesteld. Contactgegevens daarvan vind je hieronder:
+                    <strong>Let op:</strong> Voor EU-Klanten hebben we een EU-vertegenwoordiger aangesteld. Contactgegevens daarvan vind je hieronder:
                   </p>
                   <div className="text-gray-600">
                     <p><strong>EU-vertegenwoordiger:</strong></p>
-                    <p>[Naam Vertegenwoordiger]</p>
-                    <p>[Adres EU-vertegenwoordiger]</p>
+
+                    <p>Lange Dreef 3b</p>
                     <p>+31638104765</p>
                     <p>contact@socialflows.nl</p>
                   </div>
