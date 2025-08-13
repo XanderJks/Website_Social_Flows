@@ -559,7 +559,7 @@ export function Home() {
               {/* Custom Plan */}
               <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
                 <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Op Maat</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise</h3>
                   <div className="mb-6">
                     <span className="text-2xl font-bold text-gray-800">Op maat</span>
                   </div>
