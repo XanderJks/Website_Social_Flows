@@ -92,7 +92,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
               name: "SocialFlows",
               logo: {
                 "@type": "ImageObject",
-                url: "https://github.com/XanderJks/0011/blob/main/public/Naamloos.jpg?raw=true"
+                url: "https://github.com/XanderJks/0011/blob/main/public/Naamloos-Picsart-AiImageEnhancer.png?raw=true"
               }
             },
             datePublished: publishedTime,
