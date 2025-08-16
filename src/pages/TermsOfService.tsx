@@ -96,17 +96,18 @@ export function TermsOfService() {
                     <li>• Betalingen worden maandelijks vooraf gefactureerd</li>
                     <li>• Bij niet-betaling kunnen diensten worden opgeschort</li>
                     <li>• Prijswijzigingen worden 30 dagen van tevoren aangekondigd</li>
-                    <li>• Ongebruikte belminuten vervallen aan het einde van elke maand</li>
+                    <li>• Ongebruikte credits vervallen aan het einde van elke maand</li>
                     <li>• Credits worden niet overgedragen naar de volgende maand</li>
+                    <li>• 1 credit = 1 minuut gesprekstijd</li>
                   </ul>
                 </div>
                 
                 <div className="bg-yellow-50/50 rounded-xl p-6 mb-4">
                   <h4 className="font-semibold text-gray-800 mb-3">Overschrijdingskosten bij extra gebruik:</h4>
                   <ul className="text-gray-700 space-y-2">
-                    <li>• <strong>Starter plan:</strong> €0,57 per extra minuut</li>
-                    <li>• <strong>Pro plan:</strong> €0,46 per extra minuut</li>
-                    <li>• <strong>Elite plan:</strong> €0,44 per extra minuut</li>
+                    <li>• <strong>Starter plan:</strong> €0,57 per extra credit</li>
+                    <li>• <strong>Pro plan:</strong> €0,46 per extra credit</li>
+                    <li>• <strong>Elite plan:</strong> €0,44 per extra credit</li>
                     <li>• Extra kosten worden automatisch gefactureerd in de volgende maand</li>
                   </ul>
                 </div>
