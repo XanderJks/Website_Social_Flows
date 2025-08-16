@@ -108,7 +108,6 @@ export function TermsOfService() {
                     <li>• <strong>Starter plan:</strong> €0,57 per extra credit</li>
                     <li>• <strong>Pro plan:</strong> €0,46 per extra credit</li>
                     <li>• <strong>Elite plan:</strong> €0,44 per extra credit</li>
-                    <li>• Extra kosten worden automatisch gefactureerd in de volgende maand</li>
                   </ul>
                 </div>
               </section>
