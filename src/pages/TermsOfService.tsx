@@ -92,10 +92,22 @@ export function TermsOfService() {
                 </h2>
                 <div className="bg-blue-50/50 rounded-xl p-6 mb-4">
                   <ul className="text-gray-700 space-y-2">
-                    <li>• Alle prijzen zijn inclusief BTW (indien van toepassing)</li>
+                    <li>• Alle prijzen zijn inclusief 0% BTW</li>
                     <li>• Betalingen worden maandelijks vooraf gefactureerd</li>
                     <li>• Bij niet-betaling kunnen diensten worden opgeschort</li>
                     <li>• Prijswijzigingen worden 30 dagen van tevoren aangekondigd</li>
+                    <li>• Ongebruikte belminuten vervallen aan het einde van elke maand</li>
+                    <li>• Credits worden niet overgedragen naar de volgende maand</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-yellow-50/50 rounded-xl p-6 mb-4">
+                  <h4 className="font-semibold text-gray-800 mb-3">Overschrijdingskosten bij extra gebruik:</h4>
+                  <ul className="text-gray-700 space-y-2">
+                    <li>• <strong>Starter plan:</strong> €0,57 per extra minuut</li>
+                    <li>• <strong>Pro plan:</strong> €0,46 per extra minuut</li>
+                    <li>• <strong>Elite plan:</strong> €0,44 per extra minuut</li>
+                    <li>• Extra kosten worden automatisch gefactureerd in de volgende maand</li>
                   </ul>
                 </div>
               </section>
@@ -158,6 +170,9 @@ export function TermsOfService() {
                         <li>• Onze aansprakelijkheid is beperkt tot het maandelijkse abonnementsbedrag</li>
                         <li>• Wij zijn niet aansprakelijk voor indirecte schade</li>
                         <li>• Gebruiker is verantwoordelijk voor backup van eigen gegevens</li>
+                        <li>• Wij zijn niet aansprakelijk voor schade veroorzaakt door AI-gegenereerde content of beslissingen</li>
+                        <li>• Gebruiker blijft eindverantwoordelijk voor alle AI-interacties met klanten</li>
+                        <li>• SocialFlows is niet aansprakelijk voor verkeerde informatie verstrekt door de AI</li>
                       </ul>
                     </div>
                   </div>
