@@ -104,6 +104,10 @@ export function Navigation() {
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
+                <a href="/blog" className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
+                  Blog
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
                 
                 {/* Dashboard Login Button */}
                 <a 
@@ -184,6 +188,12 @@ export function Navigation() {
                 >
                   Contact
                 </button>
+                <a 
+                  href="/blog"
+                  className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
+                >
+                  Blog
+                </a>
                 
                 {/* Dashboard Login Button - Mobile */}
                 <a 
