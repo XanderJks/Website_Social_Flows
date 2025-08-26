@@ -6,7 +6,6 @@ import { Home } from './pages/Home';
 import SystemStatus from './pages/SystemStatus';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
-import { Blog } from './pages/Blog';
 import { HelmetProvider } from 'react-helmet-async';
 import { JsonLd, organizationSchema, serviceSchema, websiteSchema } from './components/JsonLd';
 
@@ -100,7 +99,6 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/system-status" element={<SystemStatus />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
