@@ -662,4 +662,185 @@ export function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
                 Veelgestelde Vragen
               </h2>
-              <p className="text-lg text-gray-700 max-w-3
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Antwoorden op de meest gestelde vragen over onze AI-oplossingen
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              {/* FAQ Items */}
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl p-6 border border-green-200/30 shadow-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Hoe snel kan de AI-assistent geïmplementeerd worden?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  De implementatie duurt gemiddeld 1-2 weken. Dit omvat het configureren van de AI voor uw specifieke menu, het instellen van integraties met uw bestaande systemen, en het trainen van uw team.
+                </p>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl p-6 border border-green-200/30 shadow-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Welke talen ondersteunt de AI-assistent?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Onze AI-assistent ondersteunt Nederlands, Engels, Duits, Frans en Spaans. De AI kan automatisch de taal detecteren en overschakelen tijdens het gesprek.
+                </p>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl p-6 border border-green-200/30 shadow-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Hoe veilig zijn mijn klantgegevens?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Alle gegevens worden versleuteld opgeslagen en verwerkt volgens GDPR-richtlijnen. We gebruiken enterprise-grade beveiliging met 99.9% uptime garantie.
+                </p>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl p-6 border border-green-200/30 shadow-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Kan de AI integreren met mijn bestaande kassasysteem?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Ja, onze AI kan integreren met de meeste populaire kassasystemen en reserveringssoftware. We bieden maatwerk integraties voor uw specifieke setup.
+                </p>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl p-6 border border-green-200/30 shadow-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Wat gebeurt er als de AI een vraag niet kan beantwoorden?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  De AI is geprogrammeerd om complexe vragen door te verbinden naar uw personeel. Dit gebeurt naadloos zonder dat de klant merkt dat er wordt overgeschakeld.
+                </p>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl p-6 border border-green-200/30 shadow-lg">
+                <h3 className="text-lg font-bold text-gray-800 mb-3">Zijn er setup kosten of verborgen kosten?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Nee, er zijn geen setup kosten. De maandelijkse prijs is transparant en inclusief alle functies, ondersteuning en updates. Alleen extra belminuten boven uw pakket worden apart gefactureerd.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                Klaar om te beginnen?
+              </h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Neem contact op voor een vrijblijvend gesprek over hoe SocialFlows uw restaurant kan helpen
+              </p>
+            </div>
+            
+            <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 border border-green-200/30 shadow-xl">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Voornaam *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Uw voornaam"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Achternaam *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                      placeholder="Uw achternaam"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    E-mailadres *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                    placeholder="uw@email.nl"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="restaurant" className="block text-sm font-medium text-gray-700 mb-2">
+                    Restaurant naam *
+                  </label>
+                  <input
+                    type="text"
+                    id="restaurant"
+                    name="restaurant"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Naam van uw restaurant"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Bericht (optioneel)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none"
+                    placeholder="Vertel ons over uw restaurant en specifieke behoeften..."
+                  />
+                </div>
+                
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        Verzenden...
+                      </>
+                    ) : (
+                      <>
+                        <MessageSquare className="w-4 h-4 mr-2" />
+                        Verstuur Bericht
+                      </>
+                    )}
+                  </button>
+                  
+                  {submitStatus === 'success' && (
+                    <p className="mt-4 text-green-600 font-medium">
+                      Bedankt! We nemen binnen 24 uur contact met u op.
+                    </p>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <p className="mt-4 text-red-600 font-medium">
+                      Er is een fout opgetreden. Probeer het opnieuw of neem direct contact op.
+                    </p>
+                  )}
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <CheckoutModal 
+        isOpen={checkoutModal.isOpen}
+        onClose={closeCheckout}
+        checkoutUrl={checkoutModal.url}
+        planName={checkoutModal.planName}
+      />
+    </>
+  );
+}
