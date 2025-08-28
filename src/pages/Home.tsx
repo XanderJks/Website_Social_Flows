@@ -95,22 +95,6 @@ export function Home() {
     }
   };
 
-  const openCheckout = (url: string, planName: string) => {
-    setCheckoutModal({
-      isOpen: true,
-      url,
-      planName
-    });
-  };
-
-  const closeCheckout = () => {
-    setCheckoutModal({
-      isOpen: false,
-      url: '',
-      planName: ''
-    });
-  };
-
   return (
     <>
       <SEOHead 
@@ -422,151 +406,213 @@ export function Home() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Starter Plan */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {/* Afhaal Service */}
               <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
                 <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Starter</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Afhaal Service</h3>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€289</span>
+                    <span className="text-3xl font-bold text-gray-800">€200</span>
                     <span className="text-gray-600">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Tot 500 belminuten
+                      AI Afhaal bestellingen
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maandelijkse verbruik overzicht
+                      Automatische orderverwerking
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA ticket support
+                      24/7 beschikbaarheid
                     </li>
                     <li className="flex items-center text-sm text-gray-700 opacity-0">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Spacer item
+                      Email/WA support
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <span 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        openCheckout('https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03', 'Starter');
-                      }}
-                      onMouseDown={(e) => e.preventDefault()}
-                      className="block cursor-pointer select-none"
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Start Nu
-                    </span>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300"
+                  >
+                    Contact Ons
                   </button>
                 </div>
               </div>
 
-              {/* Pro Plan */}
+              {/* Bezorg Service */}
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Bezorg Service</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-gray-800">€200</span>
+                    <span className="text-gray-600">/maand</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      AI Bezorg bestellingen
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Adres verificatie
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Bezorgtijd berekening
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Email/WA support
+                    </li>
+                  </ul>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300"
+                  >
+                    Contact Ons
+                  </button>
+                </div>
+              </div>
+
+              {/* Reserveringen */}
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Reserveringen</h3>
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-gray-800">€200</span>
+                    <span className="text-gray-600">/maand</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      AI Reserveringen
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Beschikbaarheidscontrole
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Automatische bevestiging
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Email/WA support
+                    </li>
+                  </ul>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300"
+                  >
+                    Contact Ons
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            {/* Combinatie Pakketten */}
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Combinatie Pakketten - Bespaar Geld!</h3>
+              <p className="text-gray-600 mb-8">Combineer services en profiteer van aantrekkelijke kortingen</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Afhaal + Bezorg Pakket */}
               <div className="relative p-8 rounded-xl bg-white/90 border border-green-500/50 backdrop-blur-xl hover:bg-white hover:border-green-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-green-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
-                    Aanbevolen
+                    €150 Voordeel
                   </span>
                 </div>
                 <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Pro</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Afhaal + Bezorg</h3>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€349</span>
+                    <div className="text-lg text-gray-500 line-through">€400</div>
+                    <span className="text-3xl font-bold text-gray-800">€250</span>
                     <span className="text-gray-600">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Tot 750 belminuten
+                      Alle afhaal functies
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maandelijkse rapportage (Verbruik, aantal calls, succes percentage, totale bestelwaarde)
+                      Alle bezorg functies
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA ticket support
-                    </li>
-                  </ul>
-                  <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    <span 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        openCheckout('https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04', 'Pro');
-                      }}
-                      onMouseDown={(e) => e.preventDefault()}
-                      className="block cursor-pointer text-white select-none"
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Start Nu
-                    </span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Elite Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Elite</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€449</span>
-                    <span className="text-gray-600">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Tot 1000 belminuten
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maandelijkse rapportage (Compleet en gereed voor boekhouding)
+                      Geïntegreerde orderverwerking
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Priority support
                     </li>
-                    <li className="flex items-center text-sm text-gray-700 opacity-0">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Spacer item
-                    </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <span 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        openCheckout('https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05', 'Elite');
-                      }}
-                      onMouseDown={(e) => e.preventDefault()}
-                      className="block cursor-pointer select-none"
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Start Nu
-                    </span>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
+                  >
+                    Contact Ons
                   </button>
                 </div>
               </div>
 
-              {/* Custom Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+              {/* Reserveringen + Afhaal/Bezorg */}
+              <div className="relative p-8 rounded-xl bg-white/90 border border-blue-500/50 backdrop-blur-xl hover:bg-white hover:border-blue-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
+                    €100 Voordeel
+                  </span>
+                </div>
                 <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Reserveringen + Bestellingen</h3>
                   <div className="mb-6">
-                    <span className="text-2xl font-bold text-gray-800">Op maat</span>
+                    <div className="text-lg text-gray-500 line-through">€400</div>
+                    <span className="text-3xl font-bold text-gray-800">€300</span>
+                    <span className="text-gray-600">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Onbeperkte gesprekken
+                      Alle reservering functies
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Afhaal OF bezorg service
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Volledige integratie
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Priority support
+                    </li>
+                  </ul>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
+                  >
+                    Contact Ons
+                  </button>
+                </div>
+              </div>
+
+              {/* Op Maat Plan */}
+              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
+                <div className="relative z-10 text-center flex flex-col h-full">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Op Maat</h3>
+                  <div className="mb-6">
+                    <span className="text-2xl font-bold text-gray-800">Maatwerk</span>
+                  </div>
+                  <ul className="space-y-3 mb-8 text-left flex-grow">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Alle services gecombineerd
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
@@ -574,15 +620,18 @@ export function Home() {
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Persoonlijke support
+                      Dedicated support
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
                       Service garanties
                     </li>
                   </ul>
-                  <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    <span onClick={() => scrollToSection('contact')}>Contact Ons</span>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
+                  >
+                    Contact Ons
                   </button>
                 </div>
               </div>
@@ -902,14 +951,6 @@ export function Home() {
           </div>
         </footer>
       </main>
-      
-      {/* Checkout Modal */}
-      <CheckoutModal
-        isOpen={checkoutModal.isOpen}
-        onClose={closeCheckout}
-        checkoutUrl={checkoutModal.url}
-        planName={checkoutModal.planName}
-      />
     </>
   );
 }
