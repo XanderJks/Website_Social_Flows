@@ -578,34 +578,6 @@ export function Home() {
                 </div>
               </div>
             </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* AI Chatbot Add-on */}
-                <div className="group relative p-8 rounded-xl bg-white/95 border border-green-200/40 backdrop-blur-xl hover:bg-white hover:border-green-300/60 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
-                      <MessageSquare className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h5 className="text-lg font-bold text-gray-800 mb-2">AI Website Chatbot</h5>
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                        Geïntegreerde AI chatbot voor uw website met bonnenprinter synchronisatie. 
-                        24/7 online klantenservice en automatische orderverwerking.
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl font-bold text-green-600">€44,99</span>
-                          <span className="text-gray-500 text-sm">/maand</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
