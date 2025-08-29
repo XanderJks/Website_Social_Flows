@@ -406,262 +406,178 @@ export function Home() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {/* Afhaal Service */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Afhaal Service</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€200</span>
-                    <span className="text-gray-600">/maand</span>
+            {/* Simple 3-card layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              
+              {/* Basis Pakket */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border border-blue-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <ShoppingBag className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Basis</h3>
+                    <p className="text-gray-600">Kies één service</p>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      AI Afhaal bestellingen
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Automatische orderverwerking
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      24/7 beschikbaarheid
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700 opacity-0">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA support
-                    </li>
-                  </ul>
-                  <button 
-                    onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300"
-                  >
-                    Contact Ons
-                  </button>
-                </div>
-              </div>
-
-              {/* Bezorg Service */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Bezorg Service</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€200</span>
-                    <span className="text-gray-600">/maand</span>
+                  
+                  <div className="text-center mb-8">
+                    <div className="text-4xl font-bold text-blue-600 mb-2">€200</div>
+                    <div className="text-gray-500">per maand</div>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      AI Bezorg bestellingen
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Adres verificatie
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Bezorgtijd berekening
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA support
-                    </li>
-                  </ul>
-                  <button 
-                    onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300"
-                  >
-                    Contact Ons
-                  </button>
-                </div>
-              </div>
-
-              {/* Reserveringen */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Reserveringen</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€200</span>
-                    <span className="text-gray-600">/maand</span>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="bg-blue-50/50 rounded-lg p-4">
+                      <h4 className="font-semibold text-gray-800 mb-2">Keuze uit:</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center">
+                          <ShoppingBag className="w-4 h-4 text-blue-500 mr-2" />
+                          <span>Afhaal Service</span>
+                        </li>
+                        <li className="flex items-center">
+                          <Truck className="w-4 h-4 text-purple-500 mr-2" />
+                          <span>Bezorg Service</span>
+                        </li>
+                        <li className="flex items-center">
+                          <Calendar className="w-4 h-4 text-orange-500 mr-2" />
+                          <span>Reserveringen</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">AI telefoonassistent</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">24/7 beschikbaarheid</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">Meertalige ondersteuning</span>
+                      </li>
+                    </ul>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      AI Reserveringen
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Beschikbaarheidscontrole
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Automatische bevestiging
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA support
-                    </li>
-                  </ul>
-                  <button 
-                    onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300"
-                  >
-                    Contact Ons
-                  </button>
-                </div>
-              </div>
-            </div>
-            
-            {/* Combinatie Pakketten */}
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Combinatie Pakketten - Bespaar Geld!</h3>
-              <p className="text-gray-600 mb-8">Combineer services en profiteer van aantrekkelijke kortingen</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Afhaal + Bezorg Pakket */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-500/50 backdrop-blur-xl hover:bg-white hover:border-green-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-green-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
-                    €150 Voordeel
-                  </span>
-                </div>
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Afhaal + Bezorg</h3>
-                  <div className="mb-6">
-                    <div className="text-lg text-gray-500 line-through">€400</div>
-                    <span className="text-3xl font-bold text-gray-800">€250</span>
-                    <span className="text-gray-600">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Alle afhaal functies
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Alle bezorg functies
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Geïntegreerde orderverwerking
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Priority support
-                    </li>
-                  </ul>
-                  <button 
-                    onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
-                  >
-                    Contact Ons
-                  </button>
-                </div>
-              </div>
-
-              {/* Reserveringen + Afhaal/Bezorg */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-blue-500/50 backdrop-blur-xl hover:bg-white hover:border-blue-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
-                    €100 Voordeel
-                  </span>
-                </div>
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Reserveringen + Bestellingen</h3>
-                  <div className="mb-6">
-                    <div className="text-lg text-gray-500 line-through">€400</div>
-                    <span className="text-3xl font-bold text-gray-800">€300</span>
-                    <span className="text-gray-600">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Alle reservering functies
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Afhaal OF bezorg service
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Volledige integratie
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Priority support
-                    </li>
-                  </ul>
+                  
                   <button 
                     onClick={() => scrollToSection('contact')}
                     className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
                   >
-                    Contact Ons
+                    Start Nu
                   </button>
                 </div>
               </div>
 
-              {/* Op Maat Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Op Maat</h3>
-                  <div className="mb-6">
-                    <span className="text-2xl font-bold text-gray-800">Maatwerk</span>
+              {/* Combinatie Pakket - Most Popular */}
+              <div className="relative group">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="bg-green-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    MEEST POPULAIR
+                  </span>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-green-600/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border-2 border-green-300/50 shadow-2xl hover:shadow-3xl transition-all duration-500 p-8 transform group-hover:scale-105">
+                  <div className="text-center mb-8 mt-4">
+                    <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Star className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Combinatie</h3>
+                    <p className="text-gray-600">Combineer en bespaar</p>
                   </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Alle services gecombineerd
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Custom integraties
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Dedicated support
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Service garanties
-                    </li>
-                  </ul>
+                  
+                  <div className="text-center mb-8">
+                    <div className="text-4xl font-bold text-green-600 mb-2">€250-300</div>
+                    <div className="text-gray-500 line-through">€400</div>
+                    <div className="text-green-600 font-bold">Tot €150 voordeel</div>
+                  </div>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="bg-green-50/50 rounded-lg p-4">
+                      <h4 className="font-semibold text-gray-800 mb-3">Combinatie opties:</h4>
+                      <div className="space-y-3 text-sm">
+                        <div className="flex items-center justify-between">
+                          <span className="text-gray-700">Afhaal + Bezorg</span>
+                          <span className="font-bold text-green-600">€250</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-gray-700">Reserveringen + Bestellingen</span>
+                          <span className="font-bold text-green-600">€300</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">Alle functies inbegrepen</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">Geïntegreerd systeem</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">Priority support</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
                   <button 
                     onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
+                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg"
                   >
-                    Contact Ons
+                    Kies Combinatie
+                  </button>
+                </div>
+              </div>
+
+              {/* Op Maat Pakket */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border border-gray-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-gray-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Settings className="w-8 h-8 text-gray-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Op Maat</h3>
+                    <p className="text-gray-600">Volledig aangepast</p>
+                  </div>
+                  
+                  <div className="text-center mb-8">
+                    <div className="text-4xl font-bold text-gray-900 mb-2">Custom</div>
+                    <div className="text-gray-500">op aanvraag</div>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8 text-sm">
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700">Maatwerk functionaliteit</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700">Dedicated support</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700">API integraties</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700">White-label oplossing</span>
+                    </li>
+                  </ul>
+                  
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="w-full py-3 px-6 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300"
+                  >
+                    Offerte Aanvragen
                   </button>
                 </div>
               </div>
             </div>
-            
-            {/* ADD ONS Section */}
-            <div className="mt-16 text-center">
-              <h4 className="text-2xl font-bold text-gray-800 mb-8">Krachtige Uitbreidingen</h4>
-              <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
-                Breid uw AI-systeem uit met geavanceerde modules voor complete bedrijfsoptimalisatie
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                {/* Financial Analytics Add-on */}
-                <div className="group relative p-8 rounded-xl bg-white/95 border border-green-200/40 backdrop-blur-xl hover:bg-white hover:border-green-300/60 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
-                      <BarChart3 className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h5 className="text-lg font-bold text-gray-800 mb-2">Financial Analytics Pro</h5>
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                        Complete financiële rapportage en bestelanalyse met real-time dashboards. 
-                        Ideaal voor boekhouding en business intelligence.
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl font-bold text-green-600">€29,99</span>
-                          <span className="text-gray-500 text-sm">/maand</span>
-                        </div>
                       </div>
                     </div>
                   </div>
