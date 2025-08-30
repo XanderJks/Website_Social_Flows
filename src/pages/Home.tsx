@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
+import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic, ShoppingBag, Truck, Calendar, Plus, Settings } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
-import { CheckoutModal } from '../components/CheckoutModal';
 
 export function Home() {
   const [isVisible, setIsVisible] = useState(false);
