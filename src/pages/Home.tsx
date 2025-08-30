@@ -394,82 +394,102 @@ export function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Flexibele Prijsmodellen
+        <section id="pricing" className="py-32 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Transparante Prijzen
               </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Flexibele oplossingen die meegroeien met uw bedrijf. Alle plannen inclusief volledige ondersteuning.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Kies de AI-oplossing die perfect bij uw restaurant past. Alle prijzen zijn per maand, geen setup kosten.
               </p>
             </div>
             
-            {/* Simple 3-card layout */}
+            {/* Clean 3-card layout */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               
-              {/* Basis Pakket */}
+              {/* Enkele Service */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border border-blue-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border border-green-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <ShoppingBag className="w-8 h-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Mic className="w-8 h-8 text-green-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Basis</h3>
-                    <p className="text-gray-600">Kies één service</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Enkele Service</h3>
+                    <p className="text-gray-600">Start met één AI-assistent</p>
                   </div>
                   
                   <div className="text-center mb-8">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">€200</div>
+                    <div className="text-4xl font-bold text-green-600 mb-2">€200</div>
                     <div className="text-gray-500">per maand</div>
                   </div>
                   
-                  <div className="space-y-4 mb-8">
-                    <div className="bg-blue-50/50 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-800 mb-2">Keuze uit:</h4>
-                      <ul className="space-y-2 text-sm">
+                  <div className="space-y-6 mb-8">
+                    <div className="bg-green-50/50 rounded-lg p-6">
+                      <h4 className="font-bold text-gray-800 mb-4 text-center">Kies uw AI-assistent:</h4>
+                      <div className="space-y-4">
+                        <div className="flex items-start p-3 bg-white/50 rounded-lg">
+                          <ShoppingBag className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-800">Afhaal Assistent</div>
+                            <div className="text-sm text-gray-600">Neemt telefonische bestellingen aan, verwerkt menu-items, berekent prijzen en stuurt orders door naar de keuken</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start p-3 bg-white/50 rounded-lg">
+                          <Truck className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-800">Bezorg Assistent</div>
+                            <div className="text-sm text-gray-600">Handelt bezorgbestellingen af, valideert adressen, berekent bezorgtijden en coördineert met bezorgers</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start p-3 bg-white/50 rounded-lg">
+                          <Calendar className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-800">Reservering Assistent</div>
+                            <div className="text-sm text-gray-600">Beheert tafelreserveringen, controleert beschikbaarheid en stuurt bevestigingen naar gasten</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <h4 className="font-semibold text-gray-800 text-center">Wat u krijgt:</h4>
+                      <ul className="space-y-2">
                         <li className="flex items-center">
-                          <ShoppingBag className="w-4 h-4 text-blue-500 mr-2" />
-                          <span>Afhaal Service</span>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">24/7 AI telefoonassistent</span>
                         </li>
                         <li className="flex items-center">
-                          <Truck className="w-4 h-4 text-purple-500 mr-2" />
-                          <span>Bezorg Service</span>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Nederlands & Engels spraakherkenning</span>
                         </li>
                         <li className="flex items-center">
-                          <Calendar className="w-4 h-4 text-orange-500 mr-2" />
-                          <span>Reserveringen</span>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Integratie met uw bestaande systemen</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Real-time rapportage dashboard</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Technische ondersteuning</span>
                         </li>
                       </ul>
                     </div>
-                    
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">AI telefoonassistent</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">24/7 beschikbaarheid</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">Meertalige ondersteuning</span>
-                      </li>
-                    </ul>
                   </div>
                   
                   <button 
                     onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
+                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
                   >
                     Start Nu
                   </button>
                 </div>
               </div>
 
-              {/* Combinatie Pakket - Most Popular */}
+              {/* Combinatie Pakket - Meest Populair */}
               <div className="relative group">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                   <span className="bg-green-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
@@ -480,52 +500,86 @@ export function Home() {
                 <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border-2 border-green-300/50 shadow-2xl hover:shadow-3xl transition-all duration-500 p-8 transform group-hover:scale-105">
                   <div className="text-center mb-8 mt-4">
                     <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Star className="w-8 h-8 text-green-600" />
+                      <Users className="w-8 h-8 text-green-600" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Combinatie</h3>
-                    <p className="text-gray-600">Combineer en bespaar</p>
+                    <p className="text-gray-600">Meerdere AI-assistenten</p>
                   </div>
                   
                   <div className="text-center mb-8">
-                    <div className="text-4xl font-bold text-green-600 mb-2">€250-300</div>
-                    <div className="text-gray-500 line-through">€400</div>
-                    <div className="text-green-600 font-bold">Tot €150 voordeel</div>
+                    <div className="text-4xl font-bold text-green-600 mb-2">€250-€300</div>
+                    <div className="text-gray-500 line-through text-lg">€400</div>
+                    <div className="text-green-600 font-bold text-lg">Bespaar €100-€150</div>
                   </div>
                   
                   <div className="space-y-4 mb-8">
                     <div className="bg-green-50/50 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-800 mb-3">Combinatie opties:</h4>
-                      <div className="space-y-3 text-sm">
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-700">Afhaal + Bezorg</span>
-                          <span className="font-bold text-green-600">€250</span>
+                      <h4 className="font-bold text-gray-800 mb-4 text-center">Kies uw combinatie:</h4>
+                      <div className="space-y-4">
+                        <div className="bg-white/70 rounded-lg p-4 border border-green-200/30">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center">
+                              <div className="flex -space-x-1 mr-3">
+                                <div className="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center border-2 border-white">
+                                  <ShoppingBag className="w-3 h-3 text-green-600" />
+                                </div>
+                                <div className="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center border-2 border-white">
+                                  <Truck className="w-3 h-3 text-green-600" />
+                                </div>
+                              </div>
+                              <span className="font-semibold text-gray-800">Afhaal + Bezorg</span>
+                            </div>
+                            <span className="font-bold text-green-600 text-lg">€250</span>
+                          </div>
+                          <p className="text-sm text-gray-600">Complete besteloplossing voor afhaal én bezorging. Eén systeem voor alle telefonische bestellingen.</p>
                         </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-700">Reserveringen + Bestellingen</span>
-                          <span className="font-bold text-green-600">€300</span>
+                        
+                        <div className="bg-white/70 rounded-lg p-4 border border-green-200/30">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center">
+                              <div className="flex -space-x-1 mr-3">
+                                <div className="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center border-2 border-white">
+                                  <Calendar className="w-3 h-3 text-green-600" />
+                                </div>
+                                <div className="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center border-2 border-white">
+                                  <ShoppingBag className="w-3 h-3 text-green-600" />
+                                </div>
+                              </div>
+                              <span className="font-semibold text-gray-800">Reserveringen + Bestellingen</span>
+                            </div>
+                            <span className="font-bold text-green-600 text-lg">€300</span>
+                          </div>
+                          <p className="text-sm text-gray-600">Volledige restaurant ervaring: tafelreserveringen én afhaalbestellingen in één geïntegreerd systeem.</p>
                         </div>
                       </div>
                     </div>
                     
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">Alle functies inbegrepen</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">Geïntegreerd systeem</span>
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        <span className="text-gray-700">Priority support</span>
-                      </li>
-                    </ul>
+                    <div className="space-y-3">
+                      <h4 className="font-semibold text-gray-800 text-center">Inbegrepen voordelen:</h4>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Geïntegreerd dashboard voor beide services</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Gecombineerde analytics en rapportage</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Priority support en snellere implementatie</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">Klantherkenning tussen alle services</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   
                   <button 
                     onClick={() => scrollToSection('contact')}
-                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg"
+                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg text-lg"
                   >
                     Kies Combinatie
                   </button>
@@ -534,46 +588,93 @@ export function Home() {
 
               {/* Op Maat Pakket */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border border-gray-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/15 to-green-600/15 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl border border-green-200/40 shadow-xl hover:shadow-2xl transition-all duration-500 p-8">
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-gray-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Settings className="w-8 h-8 text-gray-600" />
+                    <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Settings className="w-8 h-8 text-green-600" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Op Maat</h3>
-                    <p className="text-gray-600">Volledig aangepast</p>
+                    <p className="text-gray-600">Enterprise oplossing</p>
                   </div>
                   
                   <div className="text-center mb-8">
-                    <div className="text-4xl font-bold text-gray-900 mb-2">Custom</div>
+                    <div className="text-4xl font-bold text-green-600 mb-2">Custom</div>
                     <div className="text-gray-500">op aanvraag</div>
                   </div>
                   
-                  <ul className="space-y-3 mb-8 text-sm">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">Maatwerk functionaliteit</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">Dedicated support</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">API integraties</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-gray-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">White-label oplossing</span>
-                    </li>
-                  </ul>
+                  <div className="space-y-6 mb-8">
+                    <div className="bg-green-50/50 rounded-lg p-4">
+                      <h4 className="font-bold text-gray-800 mb-3 text-center">Voor grote restaurants:</h4>
+                      <ul className="space-y-3 text-sm">
+                        <li className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-700">Maatwerk AI-training</div>
+                            <div className="text-gray-600">AI getraind op uw specifieke menu, procedures en bedrijfscultuur</div>
+                          </div>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-700">Dedicated accountmanager</div>
+                            <div className="text-gray-600">Persoonlijke begeleiding en strategische ondersteuning</div>
+                          </div>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-700">API integraties</div>
+                            <div className="text-gray-600">Koppeling met POS, CRM en andere bedrijfssystemen</div>
+                          </div>
+                        </li>
+                        <li className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <div className="font-semibold text-gray-700">White-label mogelijkheden</div>
+                            <div className="text-gray-600">Volledig in uw huisstijl en branding</div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                   
                   <button 
                     onClick={() => scrollToSection('contact')}
-                    className="w-full py-3 px-6 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-all duration-300"
+                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
                   >
                     Offerte Aanvragen
                   </button>
+                </div>
+              </div>
+            </div>
+            
+            {/* Additional Info */}
+            <div className="mt-16 text-center">
+              <div className="bg-white/90 backdrop-blur-xl rounded-xl border border-green-200/30 shadow-lg p-8 max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Waarom kiezen restaurants voor SocialFlows?</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <Zap className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="font-semibold text-gray-800 mb-2">Geen gemiste oproepen</div>
+                    <p className="text-gray-600">AI neemt elke oproep aan, zelfs tijdens piekuren</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <Shield className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="font-semibold text-gray-800 mb-2">Foutloze orders</div>
+                    <p className="text-gray-600">AI maakt geen fouten bij het opnemen van bestellingen</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <Clock className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="font-semibold text-gray-800 mb-2">Meer tijd voor gasten</div>
+                    <p className="text-gray-600">Personeel kan zich focussen op service in het restaurant</p>
+                  </div>
                 </div>
               </div>
             </div>
