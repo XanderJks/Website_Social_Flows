@@ -428,7 +428,7 @@ export function Home() {
                 <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Starter</h3>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€289</span>
+                    <span className="text-3xl font-bold text-gray-800">€99</span>
                     <span className="text-gray-600">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
@@ -477,7 +477,7 @@ export function Home() {
                 <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Pro</h3>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€349</span>
+                    <span className="text-3xl font-bold text-gray-800">€149</span>
                     <span className="text-gray-600">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
@@ -517,7 +517,7 @@ export function Home() {
                 <div className="relative z-10 text-center flex flex-col h-full">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">Elite</h3>
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€449</span>
+                    <span className="text-3xl font-bold text-gray-800">€199</span>
                     <span className="text-gray-600">/maand</span>
                   </div>
                   <ul className="space-y-3 mb-8 text-left flex-grow">
