@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic } from 'lucide-react';
+import { Phone, MessageSquare, Headphones, BarChart3, CheckCircle, Star, ArrowRight, Play, Zap, Shield, Clock, Users, Mic, ShoppingBag, Truck, Settings } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { CheckoutModal } from '../components/CheckoutModal';
 
@@ -114,9 +114,9 @@ export function Home() {
   return (
     <>
       <SEOHead 
-        title="SocialFlows - Voice AI Assistenten voor Restaurants"
-        description="Revolutioneer uw restaurant met SocialFlows Voice AI assistenten. Automatiseer reserveringen, bestellingen en klantenservice met geavanceerde spraaktechnologie."
-        keywords="voice AI, restaurant automatisering, AI assistent, reserveringen, bestellingen, klantenservice, spraaktechnologie, Nederland, horeca"
+        title="SocialFlows - Voice AI Assistenten voor Bedrijven"
+        description="Transformeer uw bedrijf met SocialFlows Voice AI assistenten. Automatiseer klantenservice, verkoop en communicatie met geavanceerde spraaktechnologie voor alle sectoren."
+        keywords="voice AI, bedrijfsautomatisering, AI assistent, klantenservice, verkoop, communicatie, spraaktechnologie, Nederland, zakelijk"
         url="https://socialflows.nl"
       />
       
@@ -127,17 +127,17 @@ export function Home() {
             {/* Badge */}
             <div className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-green-50/80 backdrop-blur-xl border border-green-200/50 text-green-700 mb-8 transition-all duration-800 shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <Shield className="w-4 h-4 mr-2 text-green-600" />
-              Professionele AI Oplossingen
+              Voice AI voor Alle Bedrijven
             </div>
             
             {/* Main Headline */}
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-600 via-green-700 to-green-800 bg-clip-text text-transparent mb-8 leading-tight transition-all duration-800 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              Professionele AI-assistenten voor uw restaurant
+              Voice AI assistenten voor elk bedrijf
             </h1>
             
             {/* Subheadline */}
             <p className={`text-lg sm:text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed transition-all duration-800 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              Verhoog uw operationele efficiëntie met geavanceerde spraaktechnologie. Automatiseer reserveringen, bestellingen en klantenservice met bewezen AI-oplossingen.
+              Transformeer uw bedrijfsprocessen met geavanceerde spraaktechnologie. Van klantenservice tot verkoop - onze AI-assistenten passen zich aan elke sector aan.
             </p>
             
             {/* Demo Video */}
@@ -244,121 +244,224 @@ export function Home() {
             {/* Section Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
-                Professionele AI-oplossingen voor restaurants
+                Voice AI voor elke sector
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Betrouwbare technologie die naadloos integreert met uw bestaande systemen en processen
+                Onze AI-assistenten passen zich aan uw specifieke bedrijfsbehoeften aan, ongeacht de sector
               </p>
             </div>
             
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Feature 1: Automatische Reserveringen */}
+            {/* Industry Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {/* Restaurants */}
               <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <Phone className="w-6 h-6 text-green-600" />
+                    <ShoppingBag className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Geautomatiseerde Reserveringen</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Restaurants & Horeca</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
-                    Professionele verwerking van telefonische reserveringen met real-time beschikbaarheidscontrole en naadloze systeemintegratie voor optimale efficiency.
+                    Automatiseer reserveringen, bestellingen en klantenservice. Verhoog uw omzet en verbeter de klantervaring.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Continue beschikbaarheid
+                      Telefonische bestellingen
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Meertalige ondersteuning
+                      Tafelreserveringen
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Volledige systeemintegratie
+                      Bezorgcoördinatie
+                    </li>
+                  </ul>
+                  <div className="mt-6">
+                    <a 
+                      href="/restaurants" 
+                      className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold text-sm"
+                    >
+                      Meer over restaurants
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* E-commerce */}
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <Truck className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">E-commerce & Retail</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed text-base">
+                    Verbeter uw klantenservice en verhoog conversies met intelligente voice assistenten voor online winkels.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Orderondersteuning
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Productadvies
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Retourverwerking
                     </li>
                   </ul>
                 </div>
               </div>
 
-              {/* Feature 2: Telefoonbestellingen */}
-              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
-                <div className="relative z-10">
-                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <MessageSquare className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Intelligente Bestellingen</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed text-base">
-                    Professionele orderverwerking met gepersonaliseerde aanbevelingen en geoptimaliseerde upselling strategieën voor maximale omzetgroei.
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Volledige menuintegratie
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      AI-gedreven upselling
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Veilige betalingsverwerking
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Feature 3: Klantenservice */}
+              {/* Healthcare */}
               <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Headphones className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Professionele Klantenservice</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Zorgverlening</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
-                    Consistente, professionele klanteninteractie met directe toegang tot complete klanthistorie en bedrijfsinformatie voor optimale service.
+                    Automatiseer afspraakplanning en patiëntencommunicatie. Verbeter toegankelijkheid en efficiëntie in de zorg.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Uitgebreide kennisdatabase
+                      Afspraak planning
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Intelligente escalatie
+                      Medicatie herinneringen
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Complete klanthistorie
+                      Patiënt screening
                     </li>
                   </ul>
                 </div>
               </div>
 
-              {/* Feature 4: Geavanceerde Analytics */}
+              {/* Real Estate */}
               <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
                 <div className="relative z-10">
                   <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
-                    <BarChart3 className="w-6 h-6 text-green-600" />
+                    <Phone className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Business Intelligence</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Makelaardij</h3>
                   <p className="text-gray-700 mb-6 leading-relaxed text-base">
-                    Uitgebreide analytics en rapportage voor datagedreven besluitvorming en continue bedrijfsoptimalisatie met real-time inzichten.
+                    Automatiseer bezichtigingen en lead kwalificatie. Verhoog uw conversie en bespaar tijd op administratie.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Real-time analytics
+                      Bezichtiging planning
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Performance dashboards
+                      Lead kwalificatie
                     </li>
                     <li className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Gedetailleerde rapportage
+                      Woningmatching
                     </li>
                   </ul>
                 </div>
+              </div>
+
+              {/* Professional Services */}
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <Users className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Professionele Diensten</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed text-base">
+                    Voor advocaten, accountants, consultants. Automatiseer intake gesprekken en afspraakplanning.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Intake gesprekken
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Consultatie planning
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Document opvolging
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Custom Solutions */}
+              <div className="group relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 shadow-lg">
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <Settings className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Maatwerk Oplossingen</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed text-base">
+                    Uw sector niet hierboven? Wij ontwikkelen custom AI-assistenten voor elke bedrijfstak.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Sector-specifieke training
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Custom integraties
+                    </li>
+                    <li className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                      Dedicated support
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            {/* Core Features */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Kernfunctionaliteiten voor alle sectoren</h3>
+              <p className="text-gray-600">Onze AI-assistenten bieden deze basisfuncties, aangepast aan uw specifieke behoeften</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="text-center p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="font-bold text-gray-800 mb-2">24/7 Beschikbaarheid</h4>
+                <p className="text-sm text-gray-600">Altijd bereikbaar voor uw klanten</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="font-bold text-gray-800 mb-2">Meertalig</h4>
+                <p className="text-sm text-gray-600">Nederlands, Engels en meer</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="font-bold text-gray-800 mb-2">Analytics</h4>
+                <p className="text-sm text-gray-600">Gedetailleerde rapportage</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl shadow-lg">
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-6 h-6 text-green-600" />
+                </div>
+                <h4 className="font-bold text-gray-800 mb-2">Veilig</h4>
+                <p className="text-sm text-gray-600">GDPR compliant</p>
               </div>
             </div>
           </div>
@@ -369,10 +472,10 @@ export function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Waarom professionals kiezen voor SocialFlows
+                Waarom bedrijven kiezen voor SocialFlows
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Bewezen resultaten en enterprise-grade oplossingen voor de moderne horeca
+                Bewezen resultaten en enterprise-grade oplossingen voor moderne bedrijven
               </p>
             </div>
             
@@ -383,7 +486,7 @@ export function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Bewezen ROI</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Gemiddeld 35% toename in telefonische bestellingen binnen de eerste maand van implementatie.
+                  Gemiddeld 40% verbetering in klantenservice efficiency binnen de eerste maand van implementatie.
                 </p>
               </div>
               
@@ -410,236 +513,124 @@ export function Home() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Pricing Overview Section */}
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50/30">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Flexibele Prijsmodellen
+                Transparante Prijzen voor Elke Sector
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Flexibele oplossingen die meegroeien met uw bedrijf. Alle plannen inclusief volledige ondersteuning.
+                Onze prijzen zijn gebaseerd op gebruik en functionaliteit, niet op uw sector. Transparant en eerlijk.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Starter Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Starter</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€99</span>
-                    <span className="text-gray-600">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Tot 500 belminuten
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maandelijkse verbruik overzicht
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA ticket support
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700 opacity-0">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Spacer item
-                    </li>
-                  </ul>
-                  <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <span 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        openCheckout('https://buy.stripe.com/cNi6oJ5AwbkN8E956OabK03', 'Starter');
-                      }}
-                      onMouseDown={(e) => e.preventDefault()}
-                      className="block cursor-pointer select-none"
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Start Nu
-                    </span>
-                  </button>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {/* Basic Plan */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-2xl border border-green-200/50 shadow-xl p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Basis</h3>
+                <div className="text-4xl font-bold text-green-600 mb-2">€200</div>
+                <div className="text-gray-500 mb-6">per maand</div>
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Eén AI-assistent
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    24/7 beschikbaarheid
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Basis rapportage
+                  </li>
+                </ul>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
+                >
+                  Start Nu
+                </button>
               </div>
-
-              {/* Pro Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-500/50 backdrop-blur-xl hover:bg-white hover:border-green-600/70 transition-all duration-300 flex flex-col h-full group shadow-lg">
+              
+              {/* Professional Plan */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-2xl border-2 border-green-300/50 shadow-2xl p-8 text-center relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-green-600 text-white px-4 py-1 rounded-lg text-xs font-semibold">
-                    Aanbevolen
+                  <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    POPULAIR
                   </span>
                 </div>
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Pro</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€199</span>
-                    <span className="text-gray-600">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Tot 750 belminuten
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maandelijkse rapportage (Verbruik, aantal calls, succes percentage, totale bestelwaarde)
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Email/WA ticket support
-                    </li>
-                  </ul>
-                  <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    <span 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        openCheckout('https://buy.stripe.com/aFa7sNfb6ewZ6w17eWabK04', 'Pro');
-                      }}
-                      onMouseDown={(e) => e.preventDefault()}
-                      className="block cursor-pointer text-white select-none"
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Start Nu
-                    </span>
-                  </button>
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Professioneel</h3>
+                <div className="text-4xl font-bold text-green-600 mb-2">€350</div>
+                <div className="text-gray-500 mb-6">per maand</div>
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Meerdere AI-assistenten
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Geavanceerde integraties
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Uitgebreide analytics
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Priority support
+                  </li>
+                </ul>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition-all duration-300"
+                >
+                  Kies Professioneel
+                </button>
               </div>
-
-              {/* Elite Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Elite</h3>
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-gray-800">€249</span>
-                    <span className="text-gray-600">/maand</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Tot 1000 belminuten
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Maandelijkse rapportage (Compleet en gereed voor boekhouding)
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Priority support
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700 opacity-0">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Spacer item
-                    </li>
-                  </ul>
-                  <button className="w-full py-3 px-6 bg-green-50 hover:bg-green-100 text-green-700 font-semibold rounded-lg transition-all duration-300 border border-green-200 hover:border-green-300">
-                    <span 
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        openCheckout('https://buy.stripe.com/8x27sN5Aw0G91bH2YGabK05', 'Elite');
-                      }}
-                      onMouseDown={(e) => e.preventDefault()}
-                      className="block cursor-pointer select-none"
-                      role="button"
-                      tabIndex={0}
-                    >
-                      Start Nu
-                    </span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Custom Plan */}
-              <div className="relative p-8 rounded-xl bg-white/90 border border-green-200/30 backdrop-blur-xl hover:bg-white hover:border-green-300/50 transition-all duration-300 flex flex-col h-full shadow-lg">
-                <div className="relative z-10 text-center flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">Enterprise</h3>
-                  <div className="mb-6">
-                    <span className="text-2xl font-bold text-gray-800">Op maat</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 text-left flex-grow">
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Onbeperkte gesprekken
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Custom integraties
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Persoonlijke support
-                    </li>
-                    <li className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
-                      Service garanties
-                    </li>
-                  </ul>
-                  <button className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    <span onClick={() => scrollToSection('contact')}>Contact Ons</span>
-                  </button>
-                </div>
+              
+              {/* Enterprise Plan */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-2xl border border-green-200/50 shadow-xl p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-green-600 mb-2">Custom</div>
+                <div className="text-gray-500 mb-6">op aanvraag</div>
+                <ul className="space-y-3 mb-8 text-left">
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Onbeperkte AI-assistenten
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Maatwerk ontwikkeling
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    Dedicated support
+                  </li>
+                  <li className="flex items-center text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 mr-3 text-green-500 flex-shrink-0" />
+                    SLA garanties
+                  </li>
+                </ul>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300"
+                >
+                  Contact Ons
+                </button>
               </div>
             </div>
             
-            {/* ADD ONS Section */}
-            <div className="mt-16 text-center">
-              <h4 className="text-2xl font-bold text-gray-800 mb-8">Krachtige Uitbreidingen</h4>
-              <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
-                Breid uw AI-systeem uit met geavanceerde modules voor complete bedrijfsoptimalisatie
+            <div className="mt-12 text-center">
+              <p className="text-gray-600 mb-4">
+                Alle plannen inclusief setup, training en ondersteuning. Geen verborgen kosten.
               </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                {/* Financial Analytics Add-on */}
-                <div className="group relative p-8 rounded-xl bg-white/95 border border-green-200/40 backdrop-blur-xl hover:bg-white hover:border-green-300/60 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
-                      <BarChart3 className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h5 className="text-lg font-bold text-gray-800 mb-2">Financial Analytics Pro</h5>
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                        Complete financiële rapportage en bestelanalyse met real-time dashboards. 
-                        Ideaal voor boekhouding en business intelligence.
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl font-bold text-green-600">€29,99</span>
-                          <span className="text-gray-500 text-sm">/maand</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* AI Chatbot Add-on */}
-                <div className="group relative p-8 rounded-xl bg-white/95 border border-green-200/40 backdrop-blur-xl hover:bg-white hover:border-green-300/60 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/30 transition-colors">
-                      <MessageSquare className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h5 className="text-lg font-bold text-gray-800 mb-2">AI Website Chatbot</h5>
-                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                        Geïntegreerde AI chatbot voor uw website met bonnenprinter synchronisatie. 
-                        24/7 online klantenservice en automatische orderverwerking.
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <span className="text-2xl font-bold text-green-600">€44,99</span>
-                          <span className="text-gray-500 text-sm">/maand</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p className="text-sm text-gray-500">
+                Prijzen zijn afhankelijk van gebruik en gewenste functionaliteiten. 
+                <a href="/restaurants" className="text-green-600 hover:text-green-700 ml-1">
+                  Bekijk restaurant-specifieke prijzen →
+                </a>
+              </p>
             </div>
           </div>
         </section>
@@ -649,7 +640,7 @@ export function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Wat onze klanten zeggen
+                Wat onze klanten uit verschillende sectoren zeggen
               </h2>
               <div className="flex justify-center mb-6">
                 {[...Array(5)].map((_, i) => (
@@ -658,17 +649,34 @@ export function Home() {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Restaurant Testimonial */}
               <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 border border-green-200/30 shadow-xl">
                 <div className="text-center">
-                  <div className="text-6xl text-green-500/20 mb-4">"</div>
-                  <blockquote className="text-lg text-gray-700 leading-relaxed mb-8 italic">
-                    Sinds we de AI Assistent gebruiken, missen we geen enkel telefoontje meer. Bestellingen komen foutloos binnen en de keuken krijgt meteen een bon — zelfs tijdens piekuren. Ik kan baliepersoneel eindelijk ook op andere vlaktes inzetten. Minder stress op de werkvloer en méér focus. Dit is echt de beste investering geweest voor onze zaak.
+                  <div className="text-4xl text-green-500/20 mb-4">"</div>
+                  <blockquote className="text-base text-gray-700 leading-relaxed mb-6 italic">
+                    Sinds we de AI Assistent gebruiken, missen we geen enkel telefoontje meer. Dit is echt de beste investering geweest voor onze zaak.
                   </blockquote>
                   <div className="flex items-center justify-center">
                     <div className="text-center">
-                      <div className="font-bold text-gray-800 text-lg">Zakariya Aachboune</div>
-                      <div className="text-gray-600">Eigenaar van Sensei Sushi Culemborg</div>
+                      <div className="font-bold text-gray-800">Zakariya Aachboune</div>
+                      <div className="text-gray-600 text-sm">Restaurant Eigenaar</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* E-commerce Testimonial */}
+              <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 border border-green-200/30 shadow-xl">
+                <div className="text-center">
+                  <div className="text-4xl text-green-500/20 mb-4">"</div>
+                  <blockquote className="text-base text-gray-700 leading-relaxed mb-6 italic">
+                    Onze klantenservice is 24/7 beschikbaar geworden zonder extra personeel. De AI begrijpt onze producten perfect.
+                  </blockquote>
+                  <div className="flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="font-bold text-gray-800">Sarah van der Berg</div>
+                      <div className="text-gray-600 text-sm">E-commerce Manager</div>
                     </div>
                   </div>
                 </div>
@@ -682,10 +690,10 @@ export function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-                Start uw digitale transformatie
+                Start uw Voice AI transformatie
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Neem contact op voor een vrijblijvend gesprek en ontdek hoe SocialFlows uw bedrijfsprocessen kan optimaliseren
+                Neem contact op voor een vrijblijvend gesprek en ontdek hoe SocialFlows uw bedrijf kan transformeren
               </p>
             </div>
             
@@ -802,14 +810,14 @@ export function Home() {
                   
                   <div>
                     <label htmlFor="restaurant" className="block text-sm font-semibold text-gray-800 mb-2">
-                      Bedrijfsnaam
+                      Bedrijf & Sector
                     </label>
                     <input
                       type="text"
                       id="restaurant"
                       name="restaurant"
                       className="w-full px-4 py-3 bg-white/90 border border-green-200/50 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-green-500 focus:bg-white transition-all duration-300 backdrop-blur-xl shadow-sm"
-                      placeholder="Naam van uw bedrijf"
+                      placeholder="Bedrijfsnaam & sector (bijv. Restaurant De Smaak)"
                       required
                     />
                   </div>
@@ -874,6 +882,7 @@ export function Home() {
                 <h4 className="text-gray-800 font-semibold mb-4">Oplossingen</h4>
                 <ul className="space-y-2">
                   <li><a href="#features" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Professionele AI</a></li>
+                  <li><a href="/restaurants" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Voor Restaurants</a></li>
                   <li><a href="#pricing" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Prijsmodellen</a></li>
                   <li><a href="#demo" className="text-gray-700 hover:text-green-600 transition-colors text-sm">Live Demo</a></li>
                 </ul>
@@ -891,7 +900,7 @@ export function Home() {
             
             <div className="mt-8 pt-8 border-t border-green-200/30 flex flex-col sm:flex-row justify-between items-center">
               <p className="text-gray-600 text-sm">
-                © 2025 SocialFlows. Alle rechten voorbehouden.
+                © 2025 SocialFlows. Voice AI voor alle bedrijven.
               </p>
               <div className="flex space-x-6 mt-4 sm:mt-0">
                 <a href="/privacy" className="text-gray-600 hover:text-green-600 transition-colors text-sm">Privacy Policy</a>

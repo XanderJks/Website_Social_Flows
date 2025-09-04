@@ -93,9 +93,13 @@ export function Navigation() {
                 isScrolled ? 'space-x-2 text-xs ml-4' : 'space-x-3 text-xs ml-6'
               }`}>
                 <button onClick={() => scrollToSection('features')} className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
-                  Features
+                  Sectoren
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
                 </button>
+                <a href="/restaurants" className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
+                  Restaurants
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
+                </a>
                 <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-green-600 transition-colors duration-300 relative group px-1.5 py-0.5 rounded-full hover:bg-green-50/50">
                   Prijzen
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></span>
@@ -164,14 +168,14 @@ export function Navigation() {
                   onClick={() => scrollToSection('features')}
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
                 >
-                  Features
+                  Sectoren
                 </button>
-                <button 
-                  onClick={() => scrollToSection('process')}
+                <a 
+                  href="/restaurants"
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"
                 >
-                  Proces
-                </button>
+                  Restaurants
+                </a>
                 <button 
                   onClick={() => scrollToSection('pricing')}
                   className="block w-full text-left px-1.5 py-0.5 text-xs text-gray-800 hover:bg-green-50/50 rounded-lg transition-colors font-medium"

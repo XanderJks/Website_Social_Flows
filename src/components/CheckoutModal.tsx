@@ -79,7 +79,6 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             </p>
           </div>
           
-          {/* Security Features */}
           {/* Action Buttons */}
           <div className="space-y-3">
             <button
