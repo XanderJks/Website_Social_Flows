@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { Home } from './pages/Home';
+import { Restaurants } from './pages/Restaurants';
 import SystemStatus from './pages/SystemStatus';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
@@ -99,6 +100,7 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/restaurants" element={<Restaurants />} />
           <Route path="/system-status" element={<SystemStatus />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
